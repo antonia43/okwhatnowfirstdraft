@@ -181,7 +181,7 @@ if st.session_state.get("logged_in") and st.session_state.user:
             st.session_state.username = None
             st.session_state.user_type = None
             st.session_state.user = None
-        st.session_state.user_id = None
+            st.session_state.user_id = None
             st.session_state.welcome_animated = False  # Reset animation flag
 
         st.button("Logout", on_click=logout)
