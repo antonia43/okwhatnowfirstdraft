@@ -618,7 +618,7 @@ def calculate_and_save_grade():
                     save_report(
                         user_id=st.session_state.username,
                         report_type="grades",
-                        title=f"Grades - CIF {final_grade:.1f}/20 - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+                        title=f"Grades - CIF {final_grade:.1f}/200 ({final_grade / 10:.2f}/20) - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
                         content=json.dumps({
                             "student_grades_data": st.session_state.student_grades_data,
                             "final_cif": float(final_grade),
@@ -711,7 +711,7 @@ def calculate_and_save_grade():
                 save_report(
                     user_id=st.session_state.username,
                     report_type="grades",
-                    title=f"Grades - CIF {final_grade:.1f}/20 - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
+                    title=f"Grades - CIF {final_grade:.1f}/200 ({final_grade / 10:.2f}/20) - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
                     content=json.dumps({
                         "student_grades_data": st.session_state.student_grades_data,
                         "final_cif": float(final_grade),
