@@ -8,9 +8,8 @@ from dotenv import load_dotenv
 from services.authentication import init_db, login_ui, register_ui, google_login_button, get_redirect_uri, DB_PATH
 from services.langfuse_helper import get_user_id
 from pages.student_dashboard import render_student_dashboard
-from pages.professional_dashboard import render_professional_dashboard
 from styles import apply_custom_css
-from utils.database import load_user_cv, load_user_quiz
+from utils.database import load_user_quiz
 import traceback
 import warnings
 warnings.filterwarnings("ignore", message=".*Session State.*|.*widget with key.*")
@@ -59,10 +58,6 @@ if "universities_df" not in st.session_state:
 if st.session_state["universities_df"].empty and not DATA_PATH.exists():
     st.error("DGES data not found")
 
-# reset function to go back to main welcome screen
-def reset():
-    st.session_state.user_type = None
-
 conn = init_db()
 
 if "user_type" not in st.session_state:
@@ -75,8 +70,6 @@ if "username" not in st.session_state:
     st.session_state.username = None
 if "redirect_to" not in st.session_state:
     st.session_state.redirect_to = None
-
-print("hello world!")
 
 query_params = st.query_params
 
@@ -133,7 +126,6 @@ if "code" in query_params and not st.session_state.get("logged_in", False):
         else:
             error_msg = token_json.get('error_description', token_json.get('error', 'Unknown error'))
             st.error(f"Google login failed: {error_msg}")
-            st.write(f"Token response: {token_json}")  # Debug
             st.query_params.clear()
     except Exception as e:
         st.error(f"OAuth error: {str(e)}")
@@ -164,15 +156,6 @@ if not st.session_state.get("logged_in") or not st.session_state.user:
 # NOW USER IS LOGGED IN - Load their data
 if st.session_state.get("logged_in") and st.session_state.user:
     user_id = get_user_id()
-    stored_cv = load_user_cv(user_id)
-    if stored_cv:
-        if "parsed_data" in stored_cv:
-            st.session_state.cv_data = stored_cv["parsed_data"]
-        elif "cv_data" in stored_cv:
-            st.session_state.cv_data = stored_cv["cv_data"]
-        else:
-            st.session_state.cv_data = stored_cv
-
     quiz_row = load_user_quiz(user_id)
     if quiz_row:
         st.session_state.quiz_result = quiz_row
@@ -192,104 +175,8 @@ if st.session_state.get("logged_in") and st.session_state.user:
         st.button("Logout", on_click=logout)
         st.markdown("---")
 
-# ONLY SHOW WELCOME SCREEN IF NO USER TYPE SELECTED
-if st.session_state.user_type is None:
-    # INJECT CSS FIRST (before any content to prevent FOUC)
-    animation_css = """
-    <style>
-    /* Prevent flash of unstyled content */
-    .welcome-fade-up {
-        animation: fadeUp 1s ease-out forwards;
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    .typewriter-delayed {
-        font-family: DMSans;
-        overflow: hidden;
-        border-right: .15em solid orange;
-        white-space: nowrap;
-        opacity: 0;
-        width: 0;
-        display: inline-block;
-        animation: 
-            fadeIn 0.1s ease-in 0.8s forwards,
-            typing 2s steps(40, end) 1s forwards, 
-            blink-caret .75s step-end infinite 1s;
-    }
-
-    .buttons-fade-up {
-        animation: fadeUp 1s ease-out 2.5s forwards;
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange; }
-    }
-    </style>
-    """
-    st.markdown(animation_css, unsafe_allow_html=True)
-
-    # Mark as animated
-    if not st.session_state.welcome_animated:
-        st.session_state.welcome_animated = True
-
-    # Welcome title with fade up (using HTML to avoid Streamlit's default rendering)
-    st.markdown("""
-    <div class="welcome-fade-up">
-        <h1>Welcome to Career Corner!</h1>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Typewriter with delay
-    st.markdown("""
-    <p class="typewriter-delayed">Hi there! Please pick the option that best describes you to begin your career counseling journey!</p>
-    """, unsafe_allow_html=True)
-
-    # Add spacing
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Buttons with fade up delay - wrap in div BEFORE creating buttons
-    st.markdown('<div class="buttons-fade-up">', unsafe_allow_html=True)
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Student", width='stretch', key="btn_student", type="primary"):
-            st.session_state.user_type = "student"
-            st.rerun()
-    with col2:
-        if st.button("Professional", width='stretch', key="btn_professional", type="primary"):
-            st.session_state.user_type = "professional"
-            st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
-
 # STUDENT DASHBOARD
-if (
-    st.session_state.get("logged_in")
-    and st.session_state.user
-    and st.session_state.user_type == "student"
-):
+if st.session_state.get("logged_in") and st.session_state.user:
     st.sidebar.title("Student Menu")
 
     STUDENT_OPTIONS = [
@@ -319,39 +206,4 @@ if (
         key="student_choice",
     )
 
-    st.sidebar.button("← Back", on_click=reset)
     render_student_dashboard(choice)
-
-# PROFESSIONAL DASHBOARD
-elif st.session_state.get("logged_in") and st.session_state.user and st.session_state.user_type == "professional":
-    st.sidebar.title("Professional Menu")
-
-    PROF_OPTIONS = [
-        "Dashboard",
-        "CV Analysis",
-        "Career Growth",
-        "Interview Prep",
-        "CV Builder",
-        "Your Next Steps",
-        "My Reports"
-    ]
-
-    redirect_target = st.session_state.get("redirect_to")
-    if redirect_target and redirect_target in PROF_OPTIONS:
-        st.session_state.professional_choice = redirect_target
-        del st.session_state.redirect_to
-        st.rerun()
-
-    current_prof = st.session_state.get("professional_choice", "Dashboard")
-    if current_prof not in PROF_OPTIONS:
-        current_prof = "Dashboard"
-
-    choice = st.sidebar.radio(
-        "Go to:",
-        PROF_OPTIONS,
-        index=PROF_OPTIONS.index(current_prof),
-        key="professional_choice",
-    )
-
-    st.sidebar.button("← Back", on_click=reset)
-    render_professional_dashboard(choice)
