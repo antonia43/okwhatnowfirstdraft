@@ -86,13 +86,16 @@ def test_compare_proposal_example():
     # GPA 17.8 (=178) vs IST 17.2 (=172) and NOVA FCT 138.5 on the 0-200 scale
     ist = compare_with_cutoff(178.0, 172.0)
     nova = compare_with_cutoff(178.0, 138.5)
-    assert ist["status"] == "safe" and ist["margin_200"] == pytest.approx(6.0)
+    assert ist["status"] == "target" and ist["margin_200"] == pytest.approx(6.0)
     assert nova["status"] == "safe" and nova["margin_200"] == pytest.approx(39.5)
 
 
 def test_compare_bands():
     assert compare_with_cutoff(170, 172)["status"] == "target"
-    assert compare_with_cutoff(177, 172)["status"] == "safe"
-    assert compare_with_cutoff(166, 172)["status"] == "reach"
+    assert compare_with_cutoff(177, 172)["status"] == "target"
+    assert compare_with_cutoff(182, 172)["status"] == "safe"      # exactly 10 above
+    assert compare_with_cutoff(162, 172)["status"] == "target"    # exactly 10 below
+    assert compare_with_cutoff(161.9, 172)["status"] == "reach"
+    assert compare_with_cutoff(177, 172, margin_200=5)["status"] == "safe"
     for bad in (None, 0, float("nan"), ""):
         assert compare_with_cutoff(170, bad)["status"] == "unknown"
