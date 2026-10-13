@@ -171,8 +171,12 @@ def check_course_grade_range(course_name, student_grade_200, df=None):
     if not grades:
         return {"found": len(programs), "message": "No valid entry grades found for this course."}
 
-    student = float(student_grade_200)
     low, high, avg = min(grades), max(grades), sum(grades) / len(grades)
+    if student_grade_200 is None:  # no grade known yet: just the range
+        return {"found": len(programs), "course_name": course_name, "lowest_entry": low,
+                "highest_entry": high, "average_entry": avg,
+                "message": "No grade known yet, so this is only the range of last-placed grades."}
+    student = float(student_grade_200)
 
     if student < low:
         status, position = "Below minimum - Need to improve", 0.0
