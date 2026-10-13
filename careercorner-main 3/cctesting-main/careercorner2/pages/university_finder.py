@@ -573,7 +573,7 @@ def search_universities(degree, location, uni_type, ranking, show_grade_filter=T
     for _, row in results.iterrows():
         avg_grade_str = "N/A"
         if "last_grade" in row.index and pd.notna(row.get("last_grade")):
-            avg_grade_str = f"{row['last_grade']:.1f}/20"
+            avg_grade_str = f"{row['last_grade'] / 10:.2f}/20"
 
         lat = row.get("lat", None)
         lon = row.get("lon", None)
