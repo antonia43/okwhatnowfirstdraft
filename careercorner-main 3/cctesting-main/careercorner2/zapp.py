@@ -148,6 +148,16 @@ def login_modal():
     with tab2:
         register_ui()
 
+    st.markdown("---")
+    if st.button("Continue as guest", key="guest_btn", width="stretch"):
+        import uuid
+        gid = f"guest-{uuid.uuid4().hex[:8]}"
+        st.session_state.logged_in = True
+        st.session_state.user_id = gid
+        st.session_state.username = gid
+        st.session_state.user = {"display_name": "Guest", "email": "", "username": gid, "is_guest": True}
+        st.rerun()
+
 # SHOW LOGIN MODAL FIRST - Don't render anything else until logged in
 if not st.session_state.get("logged_in") or not st.session_state.user:
     login_modal()
@@ -156,7 +166,8 @@ if not st.session_state.get("logged_in") or not st.session_state.user:
 # NOW USER IS LOGGED IN - Load their data
 if st.session_state.get("logged_in") and st.session_state.user:
     user_id = get_user_id()
-    quiz_row = load_user_quiz(user_id)
+    is_guest = st.session_state.user.get("is_guest", False)
+    quiz_row = None if is_guest else load_user_quiz(user_id)
     if quiz_row:
         st.session_state.quiz_result = quiz_row
 
@@ -170,6 +181,7 @@ if st.session_state.get("logged_in") and st.session_state.user:
             st.session_state.username = None
             st.session_state.user_type = None
             st.session_state.user = None
+        st.session_state.user_id = None
             st.session_state.welcome_animated = False  # Reset animation flag
 
         st.button("Logout", on_click=logout)
