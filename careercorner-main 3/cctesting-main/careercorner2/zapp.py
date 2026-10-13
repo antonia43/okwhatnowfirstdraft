@@ -102,8 +102,8 @@ if "code" in query_params and not st.session_state.get("logged_in", False):
             userinfo_resp = requests.get(userinfo_url, headers=headers)
             user_data = userinfo_resp.json()
 
-            email = user_data.get("email", "")
-            username = email.split("@")[0] if email else None
+            email = user_data.get("email", "").strip().lower()
+            username = email  # one id per student: the lowercase email, same as local login
             display_name = user_data.get("name", "Unknown User")
             
             # Save to database if new user
