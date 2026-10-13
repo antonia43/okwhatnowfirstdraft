@@ -100,8 +100,8 @@ def render_degree_picker():
             st.session_state.sectors_display = sectors_display
         else:
             
-            DB_PATH = Path(tempfile.gettempdir()) / "career_corner.db"
-            conn = sqlite3.connect(DB_PATH)
+            from utils.db import connect
+            conn = connect()
             c = conn.cursor()
             c.execute("SELECT DISTINCT user_id FROM professional_reports WHERE report_type='career_quiz'")
             all_user_ids = [row[0] for row in c.fetchall()]
