@@ -107,8 +107,9 @@ if "code" in query_params and not st.session_state.get("logged_in", False):
             display_name = user_data.get("name", "Unknown User")
             
             # Save to database if new user
-            from services.authentication import get_user_by_username, create_user, DB_PATH
-            with sqlite3.connect(DB_PATH, check_same_thread=False) as conn:
+            from services.authentication import get_user_by_username, create_user
+            from utils.db import connect
+            with connect() as conn:
                 existing_user = get_user_by_username(conn, email)
                 if not existing_user:
                     create_user(conn, username, display_name, email, "google_oauth_placeholder")
