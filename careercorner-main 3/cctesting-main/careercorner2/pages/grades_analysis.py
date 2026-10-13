@@ -7,7 +7,7 @@ import json
 import pandas as pd
 from utils.database import save_report, load_reports
 from datetime import datetime
-from pages.university_finder import normalize_text
+from utils.dges import normalize_text
 import base64
 import mimetypes
 
