@@ -1,6 +1,7 @@
 import streamlit as st
 from services.langfuse_helper import LangfuseGeminiWrapper, get_user_id, get_session_id
 from utils.database import save_report, load_user_quiz, load_career_quiz_metadata
+from utils.saved_data import extract_degree_names
 from datetime import datetime
 import os
 import re
@@ -495,7 +496,7 @@ REPORT:
                             report_type="degree",
                             title=f"Degree Picker - {sector} ({region}) - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
                             content=report,
-                            cv_data=None,
+                            cv_data={"degrees": extract_degree_names(report)},
                         )
                         st.session_state.degree_report_saved = True
                         st.success("🗂️ Report automatically saved to My Reports!")
