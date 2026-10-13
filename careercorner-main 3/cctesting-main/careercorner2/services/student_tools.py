@@ -5,7 +5,7 @@ from typing import Optional, List, Dict, Any
 from google.genai import types
 import pandas as pd
 from utils.database import get_saved_universities, load_reports
-from pages.university_finder import normalize_text
+from utils.dges import normalize_text
 from langfuse import observe
 import time
 from streamlit import session_state
