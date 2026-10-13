@@ -22,7 +22,8 @@ WEIGHT_PRESETS = {
 DEFAULT_WEIGHTS = WEIGHT_PRESETS["standard"]
 
 # Distance (on the 0-200 scale) from the last-placed grade that counts as "close".
-CLOSE_MARGIN = 5.0
+# The grades page always used 1 point on the 0-20 scale, which is 10 here.
+CLOSE_MARGIN = 10.0
 
 YEARS = ("10th", "11th", "12th")
 
@@ -176,12 +177,12 @@ def calculate_cif(grades_data, weights=None):
 
 # ---- comparison with DGES last-placed grades --------------------------------
 
-def compare_with_cutoff(student_grade_200, last_placed_200):
+def compare_with_cutoff(student_grade_200, last_placed_200, margin_200=None):
     """Compare a student's grade (0-200) with the last-placed grade (0-200).
 
-    safe   : 5+ points above last year's cut-off
-    target : within 5 points either way
-    reach  : more than 5 points below
+    safe   : margin_200 (default 10) or more above last year's cut-off
+    target : within margin_200 either way
+    reach  : more than margin_200 below
     unknown: no cut-off published
     """
     try:
@@ -192,11 +193,12 @@ def compare_with_cutoff(student_grade_200, last_placed_200):
         return {"status": "unknown", "margin_200": None,
                 "message": "No last-placed grade is published for this program."}
 
+    close = CLOSE_MARGIN if margin_200 is None else float(margin_200)
     student = float(student_grade_200)
     margin = student - cutoff
-    if margin >= CLOSE_MARGIN:
+    if margin >= close:
         status = "safe"
-    elif margin >= -CLOSE_MARGIN:
+    elif margin >= -close:
         status = "target"
     else:
         status = "reach"
