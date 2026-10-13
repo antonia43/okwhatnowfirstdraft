@@ -8,3 +8,4 @@ folium>=0.15.0
 streamlit-folium>=0.25.0
 PyPDF2
 docx2txt
+psycopg[binary]>=3.2.10
