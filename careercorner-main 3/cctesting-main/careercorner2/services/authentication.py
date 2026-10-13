@@ -11,7 +11,7 @@ from utils.database import init_database
 
 load_dotenv()
 
-DB_PATH = Path(tempfile.gettempdir()) / "career_corner.db"
+from utils.db import connect, IntegrityError, DB_PATH
 
 def init_db():
     return init_database()
@@ -38,12 +38,12 @@ def create_user(conn, username, display_name, email, password):
         )
         conn.commit()
         return True
-    except sqlite3.IntegrityError:
+    except IntegrityError:
         return False
 
 def login_ui(conn=None):
     if conn is None:
-        conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        conn = connect()
     
     st.subheader("Login")
     username = st.text_input("Username/Email", key="login_username").strip().lower()
@@ -67,7 +67,7 @@ def login_ui(conn=None):
 
 def register_ui(conn=None):
     if conn is None:
-        conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        conn = connect()
     
     st.subheader("Register")
     display_name = st.text_input("Full name")
