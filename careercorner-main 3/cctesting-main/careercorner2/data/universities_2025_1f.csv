@@ -1,0 +1,1133 @@
+course_code,institution_name,course_name,degree_type,placed,last_grade,region,type,lat,lon
+8086,Universidade dos Açores - Faculdade de Ciências Agrárias e do Ambiente,Medicina Veterinária (Preparatórios),PM,22.0,157.5,Other,Public,,
+9022,Universidade dos Açores - Faculdade de Ciências Agrárias e do Ambiente,Ciências Agrárias,L1,4.0,,Other,Public,,
+L344,Universidade dos Açores - Faculdade de Ciências Agrárias e do Ambiente,Guias de Natureza e Património,L1,6.0,119.5,Other,Public,,
+9135,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Estudos Europeus,L1,6.0,129.0,Other,Public,,
+9181,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,História,L1,25.0,140.3,Other,Public,,
+9219,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Psicologia,L1,40.0,151.5,Other,Public,,
+9238,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Serviço Social,L1,22.0,112.5,Other,Public,,
+9240,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Sociologia,L1,4.0,113.3,Other,Public,,
+9652,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Comunicação e Relações Públicas,L1,20.0,119.0,Other,Public,,
+9853,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Educação Básica,L1,27.0,141.5,Other,Public,,
+L041,Universidade dos Açores - Faculdade de Ciências Sociais e Humanas,Estudos Portugueses e Ingleses,L1,23.0,111.3,Other,Public,,
+8083,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Ciclo Básico de Medicina,PM,50.0,176.2,Other,Public,,
+8524,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Proteção Civil e Gestão de Riscos,L1,2.0,,Other,Public,,
+8571,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Ciênc de Engenharia-Eng Mecânica; Eng Eletrotécnica e de Computadores (Pre),PL,7.0,172.8,Other,Public,,
+9011,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Biologia,L1,12.0,129.5,Other,Public,,
+9185,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Informática,L1,4.0,144.8,Other,Public,,
+A017,Universidade dos Açores - Faculdade de Ciências e Tecnologia,Ciências do Oceano (ensino em inglês),L1,2.0,138.0,Other,Public,,
+9081,Universidade dos Açores - Faculdade de Economia e Gestão,Economia,L1,4.0,145.8,Other,Public,,
+9147,Universidade dos Açores - Faculdade de Economia e Gestão,Gestão,L1,46.0,112.3,Other,Public,,
+9254,Universidade dos Açores - Faculdade de Economia e Gestão,Turismo,L1,15.0,120.3,Other,Public,,
+8509,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,Património Cultural e Arqueologia,L1,24.0,114.3,Faro,Public,37.0194,-7.9322
+9204,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,"Línguas, Literaturas e Culturas",L1,28.0,118.8,Faro,Public,37.0194,-7.9322
+9219,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,Psicologia,L1,65.0,156.0,Faro,Public,37.0194,-7.9322
+9817,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,Artes Visuais,L1,27.0,125.8,Faro,Public,37.0194,-7.9322
+9821,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,Ciências da Educação e da Formação,L1,23.0,108.0,Faro,Public,37.0194,-7.9322
+L252,Universidade do Algarve - Faculdade de Ciências Humanas e Sociais,Línguas e Comunicação Intercultural,L1,32.0,115.0,Faro,Public,37.0194,-7.9322
+8258,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Arquitetura Paisagista,L1,21.0,113.5,Faro,Public,37.0194,-7.9322
+9003,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Agronomia,L1,0.0,,Faro,Public,37.0194,-7.9322
+9011,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Biologia,L1,25.0,123.3,Faro,Public,37.0194,-7.9322
+9013,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Biologia Marinha,L1,49.0,116.8,Faro,Public,37.0194,-7.9322
+9015,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Bioquímica,L1,12.0,122.8,Faro,Public,37.0194,-7.9322
+9016,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Biotecnologia,L1,11.0,122.0,Faro,Public,37.0194,-7.9322
+9119,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Engenharia Informática,L1,49.0,119.3,Faro,Public,37.0194,-7.9322
+9210,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Matemática Aplicada à Economia e à Gestão,L1,12.0,130.8,Faro,Public,37.0194,-7.9322
+9494,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Ciências Farmacêuticas,MI,50.0,138.8,Faro,Public,37.0194,-7.9322
+9540,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Bioengenharia,L1,4.0,120.5,Faro,Public,37.0194,-7.9322
+L123,Universidade do Algarve - Faculdade de Ciências e Tecnologia,Gestão Marinha e Costeira,L1,11.0,116.5,Faro,Public,37.0194,-7.9322
+9081,Universidade do Algarve - Faculdade de Economia,Economia,L1,24.0,117.8,Faro,Public,37.0194,-7.9322
+9152,Universidade do Algarve - Faculdade de Economia,Gestão de Empresas,L1,70.0,127.0,Faro,Public,37.0194,-7.9322
+9240,Universidade do Algarve - Faculdade de Economia,Sociologia,L1,30.0,117.5,Faro,Public,37.0194,-7.9322
+9351,Universidade do Algarve - Faculdade de Medicina e Ciências Biomédicas,Ciências Biomédicas,L1,53.0,143.0,Faro,Public,37.0194,-7.9322
+9002,Universidade de Aveiro,Administração Pública,L1,55.0,140.8,Aveiro,Public,40.6306,-8.659
+9011,Universidade de Aveiro,Biologia,L1,56.0,114.0,Aveiro,Public,40.6306,-8.659
+9012,Universidade de Aveiro,Biologia e Geologia,L1,16.0,129.8,Aveiro,Public,40.6306,-8.659
+9015,Universidade de Aveiro,Bioquímica,L1,39.0,120.3,Aveiro,Public,40.6306,-8.659
+9016,Universidade de Aveiro,Biotecnologia,L1,46.0,120.5,Aveiro,Public,40.6306,-8.659
+9041,Universidade de Aveiro,Ciências do Mar,L1,3.0,131.3,Aveiro,Public,40.6306,-8.659
+9069,Universidade de Aveiro,Design,L1,52.0,153.5,Aveiro,Public,40.6306,-8.659
+9081,Universidade de Aveiro,Economia,L1,47.0,158.5,Aveiro,Public,40.6306,-8.659
+9089,Universidade de Aveiro,Engenharia Civil,L1,25.0,144.0,Aveiro,Public,40.6306,-8.659
+9096,Universidade de Aveiro,Engenharia de Materiais,L1,18.0,125.8,Aveiro,Public,40.6306,-8.659
+9099,Universidade de Aveiro,Engenharia do Ambiente,L1,7.0,119.5,Aveiro,Public,40.6306,-8.659
+9104,Universidade de Aveiro,Engenharia e Gestão Industrial,L1,74.0,159.0,Aveiro,Public,40.6306,-8.659
+9113,Universidade de Aveiro,Engenharia Física,L1,36.0,120.8,Aveiro,Public,40.6306,-8.659
+9119,Universidade de Aveiro,Engenharia Informática,L1,78.0,158.5,Aveiro,Public,40.6306,-8.659
+9123,Universidade de Aveiro,Engenharia Mecânica,L1,101.0,155.5,Aveiro,Public,40.6306,-8.659
+9125,Universidade de Aveiro,Engenharia Química,L1,33.0,125.8,Aveiro,Public,40.6306,-8.659
+9141,Universidade de Aveiro,Física,L1,7.0,147.5,Aveiro,Public,40.6306,-8.659
+9146,Universidade de Aveiro,Geologia,L1,1.0,138.8,Aveiro,Public,40.6306,-8.659
+9147,Universidade de Aveiro,Gestão,L1,39.0,165.3,Aveiro,Public,40.6306,-8.659
+9194,Universidade de Aveiro,Línguas e Estudos Editoriais,L1,24.0,138.0,Aveiro,Public,40.6306,-8.659
+9196,Universidade de Aveiro,Línguas e Relações Empresariais,L1,70.0,156.3,Aveiro,Public,40.6306,-8.659
+9204,Universidade de Aveiro,"Línguas, Literaturas e Culturas",L1,28.0,152.3,Aveiro,Public,40.6306,-8.659
+9209,Universidade de Aveiro,Matemática,L1,37.0,142.0,Aveiro,Public,40.6306,-8.659
+9219,Universidade de Aveiro,Psicologia,L1,33.0,167.0,Aveiro,Public,40.6306,-8.659
+9223,Universidade de Aveiro,Química,L1,3.0,140.0,Aveiro,Public,40.6306,-8.659
+9252,Universidade de Aveiro,Tradução,L1,35.0,145.0,Aveiro,Public,40.6306,-8.659
+9351,Universidade de Aveiro,Ciências Biomédicas,L1,77.0,166.3,Aveiro,Public,40.6306,-8.659
+9455,Universidade de Aveiro,Engenharia Biomédica,L1,37.0,160.3,Aveiro,Public,40.6306,-8.659
+9813,Universidade de Aveiro,Medicina,MI,40.0,182.8,Aveiro,Public,40.6306,-8.659
+9853,Universidade de Aveiro,Educação Básica,L1,53.0,149.3,Aveiro,Public,40.6306,-8.659
+L187,Universidade de Aveiro,Gestão e Planeamento em Turismo,L1,26.0,134.3,Aveiro,Public,40.6306,-8.659
+L202,Universidade de Aveiro,Engenharia de Automação Industrial,L1,22.0,121.8,Aveiro,Public,40.6306,-8.659
+L209,Universidade de Aveiro,Engenharia Eletrotécnica e de Computadores,L1,56.0,129.5,Aveiro,Public,40.6306,-8.659
+L217,Universidade de Aveiro,Engenharia de Computadores e Informática,L1,54.0,120.0,Aveiro,Public,40.6306,-8.659
+L221,Universidade de Aveiro,Engenharia Aeroespacial,L1,50.0,183.8,Aveiro,Public,40.6306,-8.659
+L223,Universidade de Aveiro,Engenharia Computacional,L1,18.0,120.0,Aveiro,Public,40.6306,-8.659
+L254,Universidade de Aveiro,Multimédia e Tecnologias da Comunicação,L1,65.0,121.3,Aveiro,Public,40.6306,-8.659
+L298,Universidade de Aveiro,"Meteorologia, Oceanografia e Clima",L1,1.0,,Aveiro,Public,40.6306,-8.659
+8184,Universidade da Beira Interior,Optometria e Ciências da Visão,L1,24.0,120.3,Covilhã,Public,40.2773,-7.506
+9015,Universidade da Beira Interior,Bioquímica,L1,34.0,108.5,Covilhã,Public,40.2773,-7.506
+9016,Universidade da Beira Interior,Biotecnologia,L1,29.0,120.0,Covilhã,Public,40.2773,-7.506
+9020,Universidade da Beira Interior,Ciência Política e Relações Internacionais,L1,31.0,156.8,Covilhã,Public,40.2773,-7.506
+9023,Universidade da Beira Interior,Ciências da Comunicação,L1,68.0,129.9,Covilhã,Public,40.2773,-7.506
+9025,Universidade da Beira Interior,Ciências da Cultura,L1,9.0,118.8,Covilhã,Public,40.2773,-7.506
+9048,Universidade da Beira Interior,Cinema,L1,50.0,126.5,Covilhã,Public,40.2773,-7.506
+9071,Universidade da Beira Interior,Design de Moda,L1,60.0,147.3,Covilhã,Public,40.2773,-7.506
+9074,Universidade da Beira Interior,Design Industrial,L1,49.0,123.5,Covilhã,Public,40.2773,-7.506
+9075,Universidade da Beira Interior,Design Multimédia,L1,49.0,135.5,Covilhã,Public,40.2773,-7.506
+9081,Universidade da Beira Interior,Economia,L1,31.0,123.8,Covilhã,Public,40.2773,-7.506
+9089,Universidade da Beira Interior,Engenharia Civil,L1,5.0,124.3,Covilhã,Public,40.2773,-7.506
+9104,Universidade da Beira Interior,Engenharia e Gestão Industrial,L1,5.0,125.0,Covilhã,Public,40.2773,-7.506
+9105,Universidade da Beira Interior,Engenharia Eletromecânica,L1,11.0,129.3,Covilhã,Public,40.2773,-7.506
+9112,Universidade da Beira Interior,Engenharia Eletrotécnica e de Computadores,L1,3.0,128.8,Covilhã,Public,40.2773,-7.506
+9119,Universidade da Beira Interior,Engenharia Informática,L1,40.0,117.8,Covilhã,Public,40.2773,-7.506
+9139,Universidade da Beira Interior,Filosofia,L1,11.0,125.6,Covilhã,Public,40.2773,-7.506
+9147,Universidade da Beira Interior,Gestão,L1,81.0,145.1,Covilhã,Public,40.2773,-7.506
+9205,Universidade da Beira Interior,Marketing,L1,39.0,130.0,Covilhã,Public,40.2773,-7.506
+9219,Universidade da Beira Interior,Psicologia,L1,55.0,158.8,Covilhã,Public,40.2773,-7.506
+9225,Universidade da Beira Interior,Química Industrial,L1,12.0,128.5,Covilhã,Public,40.2773,-7.506
+9240,Universidade da Beira Interior,Sociologia,L1,47.0,123.3,Covilhã,Public,40.2773,-7.506
+9257,Universidade da Beira Interior,Arquitetura,MI,64.0,149.8,Covilhã,Public,40.2773,-7.506
+9351,Universidade da Beira Interior,Ciências Biomédicas,L1,44.0,122.3,Covilhã,Public,40.2773,-7.506
+9494,Universidade da Beira Interior,Ciências Farmacêuticas,MI,47.0,121.5,Covilhã,Public,40.2773,-7.506
+9707,Universidade da Beira Interior,Ciências do Desporto,L1,32.0,118.8,Covilhã,Public,40.2773,-7.506
+9740,Universidade da Beira Interior,Engenharia Aeronáutica,L1,60.0,146.3,Covilhã,Public,40.2773,-7.506
+9813,Universidade da Beira Interior,Medicina,MI,150.0,177.2,Covilhã,Public,40.2773,-7.506
+9835,Universidade da Beira Interior,Matemática e Aplicações,L1,3.0,132.3,Covilhã,Public,40.2773,-7.506
+9918,Universidade da Beira Interior,Estudos Portugueses e Espanhóis,L1,22.0,122.5,Covilhã,Public,40.2773,-7.506
+L205,Universidade da Beira Interior,Física e Aplicações,L1,1.0,160.0,Covilhã,Public,40.2773,-7.506
+L227,Universidade da Beira Interior,Inteligência Artificial e Ciência de Dados,L1,11.0,119.3,Covilhã,Public,40.2773,-7.506
+L258,Universidade da Beira Interior,Tecnologia e Produto de Moda Sustentável,L1,6.0,120.3,Covilhã,Public,40.2773,-7.506
+L295,Universidade da Beira Interior,Engenharia Mecânica Computacional,L1,1.0,,Covilhã,Public,40.2773,-7.506
+L303,Universidade da Beira Interior,"Informática Web, Móvel e na Nuvem",L1,2.0,130.8,Covilhã,Public,40.2773,-7.506
+L331,Universidade da Beira Interior,Computação Criativa e Realidade Virtual,L1,20.0,141.0,Covilhã,Public,40.2773,-7.506
+8408,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Química Medicinal,L1,4.0,127.3,Coimbra,Public,40.207,-8.424
+9011,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Biologia,L1,64.0,119.0,Coimbra,Public,40.207,-8.424
+9015,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Bioquímica,L1,64.0,116.0,Coimbra,Public,40.207,-8.424
+9089,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Civil,L1,39.0,132.0,Coimbra,Public,40.207,-8.424
+9099,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia do Ambiente,L1,4.0,130.8,Coimbra,Public,40.207,-8.424
+9104,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia e Gestão Industrial,L1,57.0,153.3,Coimbra,Public,40.207,-8.424
+9113,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Física,L1,33.0,128.8,Coimbra,Public,40.207,-8.424
+9119,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Informática,L1,156.0,145.3,Coimbra,Public,40.207,-8.424
+9123,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Mecânica,L1,109.0,135.0,Coimbra,Public,40.207,-8.424
+9125,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Química,L1,27.0,126.8,Coimbra,Public,40.207,-8.424
+9141,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Física,L1,14.0,137.5,Coimbra,Public,40.207,-8.424
+9146,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Geologia,L1,4.0,117.8,Coimbra,Public,40.207,-8.424
+9209,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Matemática,L1,40.0,137.2,Coimbra,Public,40.207,-8.424
+9223,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Química,L1,4.0,123.8,Coimbra,Public,40.207,-8.424
+9257,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Arquitetura,MI,61.0,165.8,Coimbra,Public,40.207,-8.424
+9448,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Antropologia,L1,47.0,122.8,Coimbra,Public,40.207,-8.424
+9455,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Biomédica,L1,64.0,155.0,Coimbra,Public,40.207,-8.424
+9891,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Design e Multimédia,L1,77.0,147.8,Coimbra,Public,40.207,-8.424
+L209,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Engenharia Eletrotécnica e de Computadores,L1,74.0,112.8,Coimbra,Public,40.207,-8.424
+L227,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Inteligência Artificial e Ciência de Dados,L1,40.0,145.5,Coimbra,Public,40.207,-8.424
+L285,Universidade de Coimbra - Faculdade de Ciências e Tecnologia,Gestão de Cidades Sustentáveis e Inteligentes,L1,9.0,111.5,Coimbra,Public,40.207,-8.424
+9002,Universidade de Coimbra - Faculdade de Direito,Administração Pública,L1,41.0,146.3,Coimbra,Public,40.207,-8.424
+9078,Universidade de Coimbra - Faculdade de Direito,Direito,L1,340.0,165.0,Coimbra,Public,40.207,-8.424
+9081,Universidade de Coimbra - Faculdade de Economia,Economia,L1,151.0,152.3,Coimbra,Public,40.207,-8.424
+9147,Universidade de Coimbra - Faculdade de Economia,Gestão,L1,90.0,161.5,Coimbra,Public,40.207,-8.424
+9229,Universidade de Coimbra - Faculdade de Economia,Relações Internacionais,L1,53.0,167.5,Coimbra,Public,40.207,-8.424
+9240,Universidade de Coimbra - Faculdade de Economia,Sociologia,L1,40.0,146.0,Coimbra,Public,40.207,-8.424
+9494,Universidade de Coimbra - Faculdade de Farmácia,Ciências Farmacêuticas,MI,212.0,138.5,Coimbra,Public,40.207,-8.424
+9819,Universidade de Coimbra - Faculdade de Farmácia,Ciências Bioanalíticas,L1,20.0,126.3,Coimbra,Public,40.207,-8.424
+9832,Universidade de Coimbra - Faculdade de Farmácia,Farmácia Biomédica,L1,26.0,122.0,Coimbra,Public,40.207,-8.424
+8393,Universidade de Coimbra - Faculdade de Letras,Português,L1,36.0,145.8,Coimbra,Public,40.207,-8.424
+9006,Universidade de Coimbra - Faculdade de Letras,Arqueologia,L1,26.0,137.5,Coimbra,Public,40.207,-8.424
+9132,Universidade de Coimbra - Faculdade de Letras,Estudos Artísticos,L1,38.0,120.0,Coimbra,Public,40.207,-8.424
+9133,Universidade de Coimbra - Faculdade de Letras,Estudos Clássicos,L1,21.0,128.3,Coimbra,Public,40.207,-8.424
+9135,Universidade de Coimbra - Faculdade de Letras,Estudos Europeus,L1,35.0,154.8,Coimbra,Public,40.207,-8.424
+9139,Universidade de Coimbra - Faculdade de Letras,Filosofia,L1,27.0,140.0,Coimbra,Public,40.207,-8.424
+9143,Universidade de Coimbra - Faculdade de Letras,Geografia,L1,69.0,139.3,Coimbra,Public,40.207,-8.424
+9181,Universidade de Coimbra - Faculdade de Letras,História,L1,63.0,156.8,Coimbra,Public,40.207,-8.424
+9182,Universidade de Coimbra - Faculdade de Letras,História da Arte,L1,24.0,139.8,Coimbra,Public,40.207,-8.424
+9694,Universidade de Coimbra - Faculdade de Letras,Ciência da Informação,L1,29.0,133.5,Coimbra,Public,40.207,-8.424
+9773,Universidade de Coimbra - Faculdade de Letras,Jornalismo e Comunicação,L1,52.0,157.0,Coimbra,Public,40.207,-8.424
+9779,Universidade de Coimbra - Faculdade de Letras,Línguas Modernas,L1,84.0,137.0,Coimbra,Public,40.207,-8.424
+L109,Universidade de Coimbra - Faculdade de Letras,"Turismo, Território e Patrimónios",L1,33.0,122.5,Coimbra,Public,40.207,-8.424
+9548,Universidade de Coimbra - Faculdade de Medicina,Medicina Dentária,MI,60.0,177.8,Coimbra,Public,40.207,-8.424
+9813,Universidade de Coimbra - Faculdade de Medicina,Medicina,MI,287.0,179.0,Coimbra,Public,40.207,-8.424
+9026,Universidade de Coimbra - Faculdade de Psicologia e de Ciências da Educação,Ciências da Educação,L1,73.0,141.0,Coimbra,Public,40.207,-8.424
+9219,Universidade de Coimbra - Faculdade de Psicologia e de Ciências da Educação,Psicologia,L1,131.0,167.3,Coimbra,Public,40.207,-8.424
+9238,Universidade de Coimbra - Faculdade de Psicologia e de Ciências da Educação,Serviço Social,L1,32.0,144.3,Coimbra,Public,40.207,-8.424
+9707,Universidade de Coimbra - Faculdade de Ciências do Desporto e Educação Física,Ciências do Desporto,L1,95.0,108.3,Porto,Public,40.207,-8.424
+9013,Universidade de Coimbra - Faculdade de Ciências e Tecnologia (Campus Figueira da Foz),Biologia Marinha,L1,10.0,112.3,Coimbra,Public,40.207,-8.424
+8262,Universidade de Évora - Escola de Ciências e Tecnologia,Biologia Humana,L1,29.0,119.5,Évora,Public,38.5729,-7.9081
+9003,Universidade de Évora - Escola de Ciências e Tecnologia,Agronomia,L1,31.0,108.8,Évora,Public,38.5729,-7.9081
+9011,Universidade de Évora - Escola de Ciências e Tecnologia,Biologia,L1,36.0,129.3,Évora,Public,38.5729,-7.9081
+9012,Universidade de Évora - Escola de Ciências e Tecnologia,Biologia e Geologia,L1,9.0,117.0,Évora,Public,38.5729,-7.9081
+9015,Universidade de Évora - Escola de Ciências e Tecnologia,Bioquímica,L1,29.0,121.5,Évora,Public,38.5729,-7.9081
+9016,Universidade de Évora - Escola de Ciências e Tecnologia,Biotecnologia,L1,26.0,117.5,Évora,Public,38.5729,-7.9081
+9119,Universidade de Évora - Escola de Ciências e Tecnologia,Engenharia Informática,L1,31.0,122.3,Évora,Public,38.5729,-7.9081
+9143,Universidade de Évora - Escola de Ciências e Tecnologia,Geografia,L1,30.0,128.5,Évora,Public,38.5729,-7.9081
+9209,Universidade de Évora - Escola de Ciências e Tecnologia,Matemática,L1,5.0,130.8,Évora,Public,38.5729,-7.9081
+9210,Universidade de Évora - Escola de Ciências e Tecnologia,Matemática Aplicada à Economia e à Gestão,L1,19.0,117.5,Évora,Public,38.5729,-7.9081
+9751,Universidade de Évora - Escola de Ciências e Tecnologia,Engenharia Mecatrónica,L1,9.0,127.3,Évora,Public,38.5729,-7.9081
+9752,Universidade de Évora - Escola de Ciências e Tecnologia,Enologia,L1,9.0,114.0,Évora,Public,38.5729,-7.9081
+9818,Universidade de Évora - Escola de Ciências e Tecnologia,Ciência e Tecnologia Animal,L1,34.0,123.3,Évora,Public,38.5729,-7.9081
+9847,Universidade de Évora - Escola de Ciências e Tecnologia,Medicina Veterinária,MI,58.0,161.3,Évora,Public,38.5729,-7.9081
+9910,Universidade de Évora - Escola de Ciências e Tecnologia,Engenharia de Energias Renováveis,L1,3.0,121.8,Évora,Public,38.5729,-7.9081
+L090,Universidade de Évora - Escola de Ciências e Tecnologia,Ecologia e Ambiente,L1,4.0,130.8,Évora,Public,38.5729,-7.9081
+L221,Universidade de Évora - Escola de Ciências e Tecnologia,Engenharia Aeroespacial,L1,20.0,171.0,Évora,Public,38.5729,-7.9081
+L227,Universidade de Évora - Escola de Ciências e Tecnologia,Inteligência Artificial e Ciência de Dados,L1,8.0,113.3,Évora,Public,38.5729,-7.9081
+9069,Universidade de Évora - Escola de Artes,Design,L1,38.0,148.0,Évora,Public,38.5729,-7.9081
+9243,Universidade de Évora - Escola de Artes,Teatro,L1,22.0,127.8,Évora,Public,38.5729,-7.9081
+9257,Universidade de Évora - Escola de Artes,Arquitetura,MI,36.0,158.3,Évora,Public,38.5729,-7.9081
+9347,Universidade de Évora - Escola de Artes,Artes Plásticas e Multimédia,L1,34.0,142.3,Évora,Public,38.5729,-7.9081
+8251,Universidade de Évora - Escola de Ciências Sociais,História e Arqueologia,L1,40.0,135.5,Évora,Public,38.5729,-7.9081
+9026,Universidade de Évora - Escola de Ciências Sociais,Ciências da Educação,L1,27.0,109.0,Évora,Public,38.5729,-7.9081
+9081,Universidade de Évora - Escola de Ciências Sociais,Economia,L1,30.0,119.3,Évora,Public,38.5729,-7.9081
+9147,Universidade de Évora - Escola de Ciências Sociais,Gestão,L1,70.0,150.3,Évora,Public,38.5729,-7.9081
+9219,Universidade de Évora - Escola de Ciências Sociais,Psicologia,L1,55.0,161.5,Évora,Public,38.5729,-7.9081
+9229,Universidade de Évora - Escola de Ciências Sociais,Relações Internacionais,L1,68.0,149.5,Évora,Public,38.5729,-7.9081
+9240,Universidade de Évora - Escola de Ciências Sociais,Sociologia,L1,42.0,125.8,Évora,Public,38.5729,-7.9081
+9254,Universidade de Évora - Escola de Ciências Sociais,Turismo,L1,45.0,119.8,Évora,Public,38.5729,-7.9081
+9787,Universidade de Évora - Escola de Ciências Sociais,Património Cultural,L1,14.0,107.0,Évora,Public,38.5729,-7.9081
+9853,Universidade de Évora - Escola de Ciências Sociais,Educação Básica,L1,30.0,142.0,Évora,Public,38.5729,-7.9081
+L047,Universidade de Évora - Escola de Ciências Sociais,Línguas e Literaturas,L1,49.0,111.8,Évora,Public,38.5729,-7.9081
+L365,Universidade de Évora - Escola de Ciências Sociais,Filosofia e Cultura Contemporânea,L1,6.0,117.3,Évora,Public,38.5729,-7.9081
+9494,Universidade de Évora - Escola de Saúde e Desenvolvimento Humano,Ciências Farmacêuticas,MI,20.0,153.0,Évora,Public,38.5729,-7.9081
+9707,Universidade de Évora - Escola de Saúde e Desenvolvimento Humano,Ciências do Desporto,L1,45.0,106.0,Évora,Public,38.5729,-7.9081
+9841,Universidade de Évora - Escola de Saúde e Desenvolvimento Humano,Reabilitação Psicomotora,L1,24.0,127.8,Évora,Public,38.5729,-7.9081
+L256,Universidade de Évora - Escola de Saúde e Desenvolvimento Humano,Ciências Biomédicas e da Saúde,L1,32.0,138.5,Évora,Public,38.5729,-7.9081
+9554,Universidade Nova de Lisboa - Faculdade de Ciências Médicas,Ciências da Nutrição,L1,20.0,162.0,Lisbon,Public,38.7376,-9.1545
+9813,Universidade Nova de Lisboa - Faculdade de Ciências Médicas,Medicina,MI,231.0,180.3,Lisbon,Public,38.7376,-9.1545
+8109,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Sociologia (regime pós-laboral),L1,18.0,116.0,Lisbon,Public,38.7376,-9.1545
+9006,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Arqueologia,L1,27.0,133.5,Lisbon,Public,38.7376,-9.1545
+9020,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Ciência Política e Relações Internacionais,L1,99.0,170.5,Lisbon,Public,38.7376,-9.1545
+9023,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Ciências da Comunicação,L1,96.0,163.5,Lisbon,Public,38.7376,-9.1545
+9040,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Ciências da Linguagem,L1,20.0,129.5,Lisbon,Public,38.7376,-9.1545
+9046,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Ciências Musicais,L1,24.0,120.0,Lisbon,Public,38.7376,-9.1545
+9139,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Filosofia,L1,25.0,152.5,Lisbon,Public,38.7376,-9.1545
+9145,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Geografia e Planeamento Regional,L1,57.0,138.0,Lisbon,Public,38.7376,-9.1545
+9181,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,História,L1,45.0,161.3,Lisbon,Public,38.7376,-9.1545
+9182,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,História da Arte,L1,40.0,141.0,Lisbon,Public,38.7376,-9.1545
+9204,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,"Línguas, Literaturas e Culturas",L1,75.0,141.0,Lisbon,Public,38.7376,-9.1545
+9240,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Sociologia,L1,57.0,137.3,Lisbon,Public,38.7376,-9.1545
+9252,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Tradução,L1,60.0,134.0,Lisbon,Public,38.7376,-9.1545
+9448,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Antropologia,L1,43.0,113.5,Lisbon,Public,38.7376,-9.1545
+9917,Universidade Nova de Lisboa - Faculdade de Ciências Sociais e Humanas,Estudos Portugueses,L1,13.0,120.5,Lisbon,Public,38.7376,-9.1545
+8036,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Conservação - Restauro,L1,24.0,148.5,Lisbon,Public,38.7376,-9.1545
+9015,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Bioquímica,L1,80.0,148.3,Lisbon,Public,38.7376,-9.1545
+9089,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Civil,L1,47.0,138.5,Lisbon,Public,38.7376,-9.1545
+9096,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia de Materiais,L1,23.0,133.5,Lisbon,Public,38.7376,-9.1545
+9099,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia do Ambiente,L1,30.0,114.3,Lisbon,Public,38.7376,-9.1545
+9104,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia e Gestão Industrial,L1,55.0,163.8,Lisbon,Public,38.7376,-9.1545
+9113,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Física,L1,25.0,170.8,Lisbon,Public,38.7376,-9.1545
+9119,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Informática,L1,170.0,138.5,Lisbon,Public,38.7376,-9.1545
+9123,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Mecânica,L1,76.0,165.8,Lisbon,Public,38.7376,-9.1545
+9126,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Química e Biológica,L1,67.0,129.3,Lisbon,Public,38.7376,-9.1545
+9209,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Matemática,L1,25.0,158.1,Lisbon,Public,38.7376,-9.1545
+9224,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Química Aplicada,L1,27.0,120.5,Lisbon,Public,38.7376,-9.1545
+9348,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Biologia Celular e Molecular,L1,65.0,165.0,Lisbon,Public,38.7376,-9.1545
+9455,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Biomédica,L1,57.0,167.5,Lisbon,Public,38.7376,-9.1545
+L167,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Matemática Aplicada à Gestão do Risco,L1,22.0,170.3,Lisbon,Public,38.7376,-9.1545
+L209,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia Eletrotécnica e de Computadores,L1,165.0,119.3,Lisbon,Public,38.7376,-9.1545
+L231,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia de Micro e Nanotecnologias,L1,45.0,108.5,Lisbon,Public,38.7376,-9.1545
+L286,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Tecnologia Agro-Industrial,L1,9.0,124.3,Lisbon,Public,38.7376,-9.1545
+L358,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Engenharia de Comunicações e de Informação,L1,17.0,127.8,Lisbon,Public,38.7376,-9.1545
+L370,Universidade Nova de Lisboa - Faculdade de Ciências e Tecnologia,Geologia para a Sustentabilidade,L1,20.0,123.0,Lisbon,Public,38.7376,-9.1545
+9081,Universidade Nova de Lisboa - Faculdade de Economia,Economia,L1,195.0,174.6,Lisbon,Public,38.7376,-9.1545
+9147,Universidade Nova de Lisboa - Faculdade de Economia,Gestão,L1,295.0,177.6,Lisbon,Public,38.7376,-9.1545
+L313,Universidade Nova de Lisboa - Faculdade de Economia,Estudos do Mar,L1,34.0,137.5,Lisbon,Public,38.7376,-9.1545
+8259,Universidade Nova de Lisboa - Instituto Superior de Estatística e Gestão de Informação,Sistemas e Tecnologias de Informação,L1,32.0,117.8,Lisbon,Public,38.7376,-9.1545
+9155,Universidade Nova de Lisboa - Instituto Superior de Estatística e Gestão de Informação,Gestão de Informação,L1,59.0,131.5,Lisbon,Public,38.7376,-9.1545
+L188,Universidade Nova de Lisboa - Instituto Superior de Estatística e Gestão de Informação,Ciência de Dados,L1,45.0,168.0,Lisbon,Public,38.7376,-9.1545
+9078,Universidade Nova de Lisboa - Faculdade de Direito,Direito,L1,100.0,178.0,Lisbon,Public,38.7376,-9.1545
+8183,Universidade do Minho,Geografia e Planeamento,L1,45.0,137.5,Braga,Public,41.5607,-8.397
+8184,Universidade do Minho,Optometria e Ciências da Visão,L1,20.0,117.3,Braga,Public,41.5607,-8.397
+8358,Universidade do Minho,Direito (regime pós-laboral),L1,15.0,167.5,Braga,Public,41.5607,-8.397
+8427,Universidade do Minho,Educação (regime pós-laboral),L1,7.0,123.5,Braga,Public,41.5607,-8.397
+8494,Universidade do Minho,Design de Produto,L1,33.0,162.8,Braga,Public,41.5607,-8.397
+9002,Universidade do Minho,Administração Pública,L1,41.0,150.5,Braga,Public,41.5607,-8.397
+9006,Universidade do Minho,Arqueologia,L1,20.0,141.8,Braga,Public,41.5607,-8.397
+9012,Universidade do Minho,Biologia e Geologia,L1,23.0,122.3,Braga,Public,41.5607,-8.397
+9015,Universidade do Minho,Bioquímica,L1,61.0,137.0,Braga,Public,41.5607,-8.397
+9019,Universidade do Minho,Ciência Política,L1,31.0,125.0,Braga,Public,41.5607,-8.397
+9023,Universidade do Minho,Ciências da Comunicação,L1,65.0,163.8,Braga,Public,41.5607,-8.397
+9056,Universidade do Minho,Contabilidade,L1,35.0,162.5,Braga,Public,41.5607,-8.397
+9078,Universidade do Minho,Direito,L1,110.0,173.3,Braga,Public,41.5607,-8.397
+9081,Universidade do Minho,Economia,L1,84.0,164.5,Braga,Public,41.5607,-8.397
+9089,Universidade do Minho,Engenharia Civil,L1,34.0,148.3,Braga,Public,41.5607,-8.397
+9096,Universidade do Minho,Engenharia de Materiais,L1,26.0,116.3,Braga,Public,41.5607,-8.397
+9098,Universidade do Minho,Engenharia de Telecomunicações e Informática,L1,14.0,121.5,Braga,Public,41.5607,-8.397
+9104,Universidade do Minho,Engenharia e Gestão Industrial,L1,68.0,169.5,Braga,Public,41.5607,-8.397
+9113,Universidade do Minho,Engenharia Física,L1,35.0,133.5,Braga,Public,41.5607,-8.397
+9119,Universidade do Minho,Engenharia Informática,L1,170.0,135.5,Braga,Public,41.5607,-8.397
+9123,Universidade do Minho,Engenharia Mecânica,L1,83.0,159.8,Braga,Public,41.5607,-8.397
+9126,Universidade do Minho,Engenharia Química e Biológica,L1,32.0,128.8,Braga,Public,41.5607,-8.397
+9127,Universidade do Minho,Engenharia Têxtil,L1,4.0,127.5,Braga,Public,41.5607,-8.397
+9134,Universidade do Minho,Estudos Culturais,L1,20.0,118.5,Braga,Public,41.5607,-8.397
+9139,Universidade do Minho,Filosofia,L1,27.0,145.0,Braga,Public,41.5607,-8.397
+9141,Universidade do Minho,Física,L1,8.0,131.8,Braga,Public,41.5607,-8.397
+9146,Universidade do Minho,Geologia,L1,2.0,125.8,Braga,Public,41.5607,-8.397
+9147,Universidade do Minho,Gestão,L1,94.0,168.8,Braga,Public,41.5607,-8.397
+9181,Universidade do Minho,História,L1,43.0,156.0,Braga,Public,41.5607,-8.397
+9192,Universidade do Minho,Línguas Aplicadas,L1,51.0,144.5,Braga,Public,41.5607,-8.397
+9195,Universidade do Minho,Línguas e Literaturas Europeias,L1,38.0,127.8,Braga,Public,41.5607,-8.397
+9205,Universidade do Minho,Marketing,L1,45.0,160.0,Braga,Public,41.5607,-8.397
+9209,Universidade do Minho,Matemática,L1,35.0,127.3,Braga,Public,41.5607,-8.397
+9219,Universidade do Minho,Psicologia,L1,67.0,169.8,Braga,Public,41.5607,-8.397
+9223,Universidade do Minho,Química,L1,2.0,119.3,Braga,Public,41.5607,-8.397
+9229,Universidade do Minho,Relações Internacionais,L1,67.0,142.0,Braga,Public,41.5607,-8.397
+9240,Universidade do Minho,Sociologia,L1,56.0,145.3,Braga,Public,41.5607,-8.397
+9243,Universidade do Minho,Teatro,L1,25.0,122.0,Braga,Public,41.5607,-8.397
+9257,Universidade do Minho,Arquitetura,MI,55.0,172.8,Braga,Public,41.5607,-8.397
+9353,Universidade do Minho,Educação,L1,51.0,119.0,Braga,Public,41.5607,-8.397
+9379,Universidade do Minho,Ciências do Ambiente,L1,9.0,123.0,Braga,Public,41.5607,-8.397
+9381,Universidade do Minho,Estatística Aplicada,L1,22.0,117.0,Braga,Public,41.5607,-8.397
+9397,Universidade do Minho,Ciências da Computação,L1,33.0,118.0,Braga,Public,41.5607,-8.397
+9455,Universidade do Minho,Engenharia Biomédica,L1,65.0,156.8,Braga,Public,41.5607,-8.397
+9499,Universidade do Minho,Design e Marketing de Moda,L1,30.0,151.5,Braga,Public,41.5607,-8.397
+9688,Universidade do Minho,Biologia Aplicada,L1,21.0,127.8,Braga,Public,41.5607,-8.397
+9785,Universidade do Minho,Negócios Internacionais,L1,33.0,160.0,Braga,Public,41.5607,-8.397
+9813,Universidade do Minho,Medicina,MI,122.0,183.5,Braga,Public,41.5607,-8.397
+9817,Universidade do Minho,Artes Visuais,L1,26.0,156.5,Braga,Public,41.5607,-8.397
+9853,Universidade do Minho,Educação Básica,L1,69.0,153.8,Braga,Public,41.5607,-8.397
+9917,Universidade do Minho,Estudos Portugueses,L1,23.0,126.3,Braga,Public,41.5607,-8.397
+L078,Universidade do Minho,Criminologia e Justiça Criminal,L1,35.0,158.5,Braga,Public,41.5607,-8.397
+L112,Universidade do Minho,Proteção Civil e Gestão do Território,L1,21.0,127.3,Braga,Public,41.5607,-8.397
+L147,Universidade do Minho,Estudos Orientais: Estudos Chineses e Japoneses,L1,16.0,123.0,Braga,Public,41.5607,-8.397
+L188,Universidade do Minho,Ciência de Dados,L1,34.0,144.5,Braga,Public,41.5607,-8.397
+L215,Universidade do Minho,Engenharia e Gestão de Sistemas de Informação,L1,141.0,137.0,Braga,Public,41.5607,-8.397
+L218,Universidade do Minho,Engenharia Eletrónica Industrial e Computadores,L1,88.0,117.5,Braga,Public,41.5607,-8.397
+L221,Universidade do Minho,Engenharia Aeroespacial,L1,31.0,188.5,Braga,Public,41.5607,-8.397
+L229,Universidade do Minho,Engenharia de Polímeros,L1,20.0,129.0,Braga,Public,41.5607,-8.397
+9554,Universidade do Porto - Faculdade de Ciências da Nutrição e da Alimentação,Ciências da Nutrição,L1,49.0,142.8,Porto,Public,41.1523,-8.636
+9257,Universidade do Porto - Faculdade de Arquitetura,Arquitetura,MI,124.0,178.8,Porto,Public,41.1523,-8.636
+8258,Universidade do Porto - Faculdade de Ciências,Arquitetura Paisagista,L1,25.0,149.3,Porto,Public,41.1523,-8.636
+9011,Universidade do Porto - Faculdade de Ciências,Biologia,L1,131.0,155.3,Porto,Public,41.1523,-8.636
+9015,Universidade do Porto - Faculdade de Ciências,Bioquímica,L1,92.0,151.3,Porto,Public,41.1523,-8.636
+9086,Universidade do Porto - Faculdade de Ciências,Engenharia Agronómica,L1,10.0,113.8,Porto,Public,41.1523,-8.636
+9113,Universidade do Porto - Faculdade de Ciências,Engenharia Física,L1,59.0,137.3,Porto,Public,41.1523,-8.636
+9141,Universidade do Porto - Faculdade de Ciências,Física,L1,39.0,120.3,Porto,Public,41.1523,-8.636
+9146,Universidade do Porto - Faculdade de Ciências,Geologia,L1,16.0,110.3,Porto,Public,41.1523,-8.636
+9209,Universidade do Porto - Faculdade de Ciências,Matemática,L1,56.0,145.0,Porto,Public,41.1523,-8.636
+9223,Universidade do Porto - Faculdade de Ciências,Química,L1,8.0,125.8,Porto,Public,41.1523,-8.636
+9385,Universidade do Porto - Faculdade de Ciências,Matemática Aplicada,L1,60.0,154.8,Porto,Public,41.1523,-8.636
+9687,Universidade do Porto - Faculdade de Ciências,Bioinformática,L1,36.0,128.3,Porto,Public,41.1523,-8.636
+9696,Universidade do Porto - Faculdade de Ciências,Ciência de Computadores,L1,60.0,136.3,Porto,Public,41.1523,-8.636
+9709,Universidade do Porto - Faculdade de Ciências,Ciências e Tecnologia do Ambiente,L1,40.0,138.8,Porto,Public,41.1523,-8.636
+L096,Universidade do Porto - Faculdade de Ciências,Engenharia Geoespacial,L1,7.0,116.3,Porto,Public,41.1523,-8.636
+L227,Universidade do Porto - Faculdade de Ciências,Inteligência Artificial e Ciência de Dados,L1,65.0,173.0,Porto,Public,41.1523,-8.636
+9081,Universidade do Porto - Faculdade de Economia,Economia,L1,208.0,172.3,Porto,Public,41.1523,-8.636
+9147,Universidade do Porto - Faculdade de Economia,Gestão,L1,208.0,178.0,Porto,Public,41.1523,-8.636
+9089,Universidade do Porto - Faculdade de Engenharia,Engenharia Civil,L1,121.0,152.5,Porto,Public,41.1523,-8.636
+9096,Universidade do Porto - Faculdade de Engenharia,Engenharia de Materiais,L1,27.0,148.5,Porto,Public,41.1523,-8.636
+9099,Universidade do Porto - Faculdade de Engenharia,Engenharia do Ambiente,L1,34.0,138.0,Porto,Public,41.1523,-8.636
+9104,Universidade do Porto - Faculdade de Engenharia,Engenharia e Gestão Industrial,L1,112.0,186.5,Porto,Public,41.1523,-8.636
+9123,Universidade do Porto - Faculdade de Engenharia,Engenharia Mecânica,L1,210.0,179.8,Porto,Public,41.1523,-8.636
+9125,Universidade do Porto - Faculdade de Engenharia,Engenharia Química,L1,63.0,165.3,Porto,Public,41.1523,-8.636
+9540,Universidade do Porto - Faculdade de Engenharia,Bioengenharia,L1,98.0,180.0,Porto,Public,41.1523,-8.636
+L209,Universidade do Porto - Faculdade de Engenharia,Engenharia Eletrotécnica e de Computadores,L1,230.0,148.3,Porto,Public,41.1523,-8.636
+L221,Universidade do Porto - Faculdade de Engenharia,Engenharia Aeroespacial,L1,30.0,194.3,Porto,Public,41.1523,-8.636
+L224,Universidade do Porto - Faculdade de Engenharia,Engenharia Informática e Computação,L1,284.0,167.3,Porto,Public,41.1523,-8.636
+L236,Universidade do Porto - Faculdade de Engenharia,Engenharia de Minas e Geo-Ambiente,L1,20.0,129.0,Porto,Public,41.1523,-8.636
+9494,Universidade do Porto - Faculdade de Farmácia,Ciências Farmacêuticas,MI,175.0,151.0,Porto,Public,41.1523,-8.636
+9006,Universidade do Porto - Faculdade de Letras,Arqueologia,L1,29.0,141.5,Porto,Public,41.1523,-8.636
+9023,Universidade do Porto - Faculdade de Letras,Ciências da Comunicação,L1,75.0,174.0,Porto,Public,41.1523,-8.636
+9040,Universidade do Porto - Faculdade de Letras,Ciências da Linguagem,L1,24.0,146.3,Porto,Public,41.1523,-8.636
+9139,Universidade do Porto - Faculdade de Letras,Filosofia,L1,55.0,151.0,Porto,Public,41.1523,-8.636
+9143,Universidade do Porto - Faculdade de Letras,Geografia,L1,69.0,145.5,Porto,Public,41.1523,-8.636
+9181,Universidade do Porto - Faculdade de Letras,História,L1,77.0,159.0,Porto,Public,41.1523,-8.636
+9182,Universidade do Porto - Faculdade de Letras,História da Arte,L1,38.0,152.8,Porto,Public,41.1523,-8.636
+9192,Universidade do Porto - Faculdade de Letras,Línguas Aplicadas,L1,60.0,154.5,Porto,Public,41.1523,-8.636
+9197,Universidade do Porto - Faculdade de Letras,Línguas e Relações Internacionais,L1,80.0,171.5,Porto,Public,41.1523,-8.636
+9204,Universidade do Porto - Faculdade de Letras,"Línguas, Literaturas e Culturas",L1,79.0,149.5,Porto,Public,41.1523,-8.636
+9240,Universidade do Porto - Faculdade de Letras,Sociologia,L1,44.0,156.5,Porto,Public,41.1523,-8.636
+9694,Universidade do Porto - Faculdade de Letras,Ciência da Informação,L1,46.0,138.3,Porto,Public,41.1523,-8.636
+L251,Universidade do Porto - Faculdade de Letras,Literatura e Estudos Interartes,L1,42.0,154.3,Porto,Public,41.1523,-8.636
+9813,Universidade do Porto - Faculdade de Medicina,Medicina,MI,275.0,185.3,Porto,Public,41.1523,-8.636
+L307,Universidade do Porto - Faculdade de Medicina,Saúde Digital e Inovação Biomédica,L1,35.0,178.8,Porto,Public,41.1523,-8.636
+9026,Universidade do Porto - Faculdade de Psicologia e de Ciências da Educação,Ciências da Educação,L1,47.0,152.3,Porto,Public,41.1523,-8.636
+9219,Universidade do Porto - Faculdade de Psicologia e de Ciências da Educação,Psicologia,L1,123.0,174.0,Porto,Public,41.1523,-8.636
+9708,Universidade do Porto - Instituto de Ciências Biomédicas Abel Salazar,Ciências do Meio Aquático,L1,15.0,147.5,Porto,Public,41.1523,-8.636
+9813,Universidade do Porto - Instituto de Ciências Biomédicas Abel Salazar,Medicina,MI,155.0,184.7,Porto,Public,41.1523,-8.636
+9847,Universidade do Porto - Instituto de Ciências Biomédicas Abel Salazar,Medicina Veterinária,MI,63.0,171.3,Porto,Public,41.1523,-8.636
+9707,Universidade do Porto - Faculdade de Desporto,Ciências do Desporto,L1,123.0,143.5,Porto,Public,41.1523,-8.636
+9548,Universidade do Porto - Faculdade de Medicina Dentária,Medicina Dentária,MI,66.0,178.3,Porto,Public,41.1523,-8.636
+9066,Universidade do Porto - Faculdade de Direito,Criminologia,L1,46.0,164.0,Porto,Public,41.1523,-8.636
+9078,Universidade do Porto - Faculdade de Direito,Direito,L1,155.0,177.8,Porto,Public,41.1523,-8.636
+9003,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias,Agronomia,L1,22.0,117.8,Other,Public,,
+9752,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias,Enologia,L1,14.0,115.7,Other,Public,,
+9847,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias,Medicina Veterinária,MI,92.0,162.3,Other,Public,,
+L352,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias,Ciência Animal,L1,25.0,125.8,Other,Public,,
+L372,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Agrárias e Veterinárias,Ciências e Tecnologias Florestais,L1,3.0,130.3,Other,Public,,
+9005,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Animação Sociocultural,L1,10.0,118.8,Other,Public,,
+9023,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Ciências da Comunicação,L1,69.0,148.3,Other,Public,,
+9081,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Economia,L1,52.0,126.0,Other,Public,,
+9147,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Gestão,L1,71.0,153.8,Other,Public,,
+9196,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Línguas e Relações Empresariais,L1,60.0,143.3,Other,Public,,
+9204,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,"Línguas, Literaturas e Culturas",L1,39.0,139.3,Other,Public,,
+9219,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Psicologia,L1,72.0,161.0,Other,Public,,
+9238,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Serviço Social,L1,46.0,140.0,Other,Public,,
+9254,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Turismo,L1,35.0,113.8,Other,Public,,
+9803,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Teatro e Artes Performativas,L1,16.0,119.0,Other,Public,,
+9853,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Educação Básica,L1,48.0,142.5,Other,Public,,
+L312,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências Humanas e Sociais,Cultura e Transformação Digital,L1,34.0,110.3,Other,Public,,
+9052,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Comunicação e Multimédia,L1,35.0,114.0,Other,Public,,
+9089,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Civil,L1,12.0,124.0,Other,Public,,
+9104,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia e Gestão Industrial,L1,24.0,120.0,Other,Public,,
+9113,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Física,L1,2.0,147.0,Other,Public,,
+9119,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Informática,L1,62.0,117.3,Other,Public,,
+9123,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Mecânica,L1,27.0,126.0,Other,Public,,
+9455,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Biomédica,L1,25.0,122.5,Other,Public,,
+L193,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Matemática Aplicada e Ciência de Dados,L1,10.0,129.3,Other,Public,,
+L209,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Engenharia Eletrotécnica e de Computadores,L1,12.0,113.8,Other,Public,,
+L253,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Design Sustentável,L1,33.0,120.8,Other,Public,,
+L345,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências e Tecnologia,Cidades Sustentáveis e Inteligentes,L1,0.0,,Other,Public,,
+9011,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Biologia,L1,35.0,142.3,Other,Public,,
+9012,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Biologia e Geologia,L1,20.0,124.8,Other,Public,,
+9015,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Bioquímica,L1,48.0,115.8,Other,Public,,
+9351,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Ciências Biomédicas,L1,38.0,153.5,Other,Public,,
+9379,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Ciências do Ambiente,L1,18.0,117.8,Other,Public,,
+9540,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Bioengenharia,L1,9.0,132.0,Other,Public,,
+9554,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Ciências da Nutrição,L1,42.0,143.5,Other,Public,,
+9707,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Ciências do Desporto,L1,126.0,132.5,Other,Public,,
+9761,Universidade de Trás-os-Montes e Alto Douro - Escola de Ciências da Vida e do Ambiente,Genética e Biotecnologia,L1,51.0,115.3,Other,Public,,
+9069,Universidade da Madeira - Faculdade de Artes e Humanidades,Design,L1,31.0,123.8,Other,Public,,
+9196,Universidade da Madeira - Faculdade de Artes e Humanidades,Línguas e Relações Empresariais,L1,41.0,117.3,Other,Public,,
+9219,Universidade da Madeira - Faculdade de Artes e Humanidades,Psicologia,L1,30.0,151.0,Other,Public,,
+9720,Universidade da Madeira - Faculdade de Artes e Humanidades,"Comunicação, Cultura e Organizações",L1,25.0,112.0,Other,Public,,
+9817,Universidade da Madeira - Faculdade de Artes e Humanidades,Artes Visuais,L1,10.0,115.0,Other,Public,,
+L150,Universidade da Madeira - Faculdade de Artes e Humanidades,Estudos de Cultura,L1,5.0,,Other,Public,,
+9015,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Bioquímica,L1,5.0,,Other,Public,,
+9089,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Engenharia Civil,L1,7.0,126.8,Other,Public,,
+9107,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Engenharia Eletrónica e Telecomunicações,L1,3.0,,Other,Public,,
+9119,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Engenharia Informática,L1,54.0,142.0,Other,Public,,
+9209,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Matemática,L1,7.0,149.4,Other,Public,,
+9455,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Engenharia Biomédica,L1,17.0,132.0,Other,Public,,
+L367,Universidade da Madeira - Faculdade de Ciências Exatas e da Engenharia,Engenharia Física e Computacional,L1,6.0,162.0,Other,Public,,
+9026,Universidade da Madeira - Faculdade de Ciências Sociais,Ciências da Educação,L1,19.0,127.0,Other,Public,,
+9081,Universidade da Madeira - Faculdade de Ciências Sociais,Economia,L1,4.0,137.3,Other,Public,,
+9147,Universidade da Madeira - Faculdade de Ciências Sociais,Gestão,L1,55.0,129.5,Other,Public,,
+9736,Universidade da Madeira - Faculdade de Ciências Sociais,Educação Física e Desporto,L1,31.0,131.3,Other,Public,,
+9853,Universidade da Madeira - Faculdade de Ciências Sociais,Educação Básica,L1,25.0,152.3,Other,Public,,
+8083,Universidade da Madeira - Faculdade de Ciências da Vida,Ciclo Básico de Medicina,PM,38.0,176.8,Other,Public,,
+9011,Universidade da Madeira - Faculdade de Ciências da Vida,Biologia,L1,16.0,126.0,Other,Public,,
+9500,Universidade da Madeira - Escola Superior de Saúde,Enfermagem,L1,26.0,150.0,Other,Public,,
+9076,Universidade da Madeira - Escola Superior de Tecnologias e Gestão,Direção e Gestão Hoteleira,L1,12.0,144.5,Other,Public,,
+9069,Universidade de Lisboa - Faculdade de Arquitetura,Design,L1,50.0,173.5,Lisbon,Public,38.7485,-9.1604
+9071,Universidade de Lisboa - Faculdade de Arquitetura,Design de Moda,L1,50.0,164.5,Lisbon,Public,38.7485,-9.1604
+9257,Universidade de Lisboa - Faculdade de Arquitetura,Arquitetura,MI,209.0,161.3,Lisbon,Public,38.7485,-9.1604
+8399,Universidade de Lisboa - Faculdade de Belas-Artes,Desenho,L1,54.0,162.8,Lisbon,Public,38.7485,-9.1604
+9070,Universidade de Lisboa - Faculdade de Belas-Artes,Design de Comunicação,L1,84.0,160.8,Lisbon,Public,38.7485,-9.1604
+9072,Universidade de Lisboa - Faculdade de Belas-Artes,Design de Equipamento,L1,55.0,156.0,Lisbon,Public,38.7485,-9.1604
+9754,Universidade de Lisboa - Faculdade de Belas-Artes,Escultura,L1,55.0,146.8,Lisbon,Public,38.7485,-9.1604
+9790,Universidade de Lisboa - Faculdade de Belas-Artes,Pintura,L1,55.0,158.0,Lisbon,Public,38.7485,-9.1604
+9904,Universidade de Lisboa - Faculdade de Belas-Artes,Arte Multimédia,L1,73.0,154.5,Lisbon,Public,38.7485,-9.1604
+L010,Universidade de Lisboa - Faculdade de Belas-Artes,Ciências da Arte e do Património,L1,30.0,153.8,Lisbon,Public,38.7485,-9.1604
+9011,Universidade de Lisboa - Faculdade de Ciências,Biologia,L1,174.0,136.3,Lisbon,Public,38.7485,-9.1604
+9015,Universidade de Lisboa - Faculdade de Ciências,Bioquímica,L1,70.0,141.8,Lisbon,Public,38.7485,-9.1604
+9113,Universidade de Lisboa - Faculdade de Ciências,Engenharia Física,L1,40.0,153.5,Lisbon,Public,38.7485,-9.1604
+9119,Universidade de Lisboa - Faculdade de Ciências,Engenharia Informática,L1,105.0,134.3,Lisbon,Public,38.7485,-9.1604
+9141,Universidade de Lisboa - Faculdade de Ciências,Física,L1,40.0,146.5,Lisbon,Public,38.7485,-9.1604
+9146,Universidade de Lisboa - Faculdade de Ciências,Geologia,L1,26.0,121.0,Lisbon,Public,38.7485,-9.1604
+9209,Universidade de Lisboa - Faculdade de Ciências,Matemática,L1,26.0,140.0,Lisbon,Public,38.7485,-9.1604
+9212,Universidade de Lisboa - Faculdade de Ciências,"Meteorologia, Oceanografia e Geofísica",L1,10.0,114.0,Lisbon,Public,38.7485,-9.1604
+9223,Universidade de Lisboa - Faculdade de Ciências,Química,L1,27.0,137.3,Lisbon,Public,38.7485,-9.1604
+9226,Universidade de Lisboa - Faculdade de Ciências,Química Tecnológica,L1,11.0,119.8,Lisbon,Public,38.7485,-9.1604
+9381,Universidade de Lisboa - Faculdade de Ciências,Estatística Aplicada,L1,20.0,128.8,Lisbon,Public,38.7485,-9.1604
+9385,Universidade de Lisboa - Faculdade de Ciências,Matemática Aplicada,L1,77.0,146.5,Lisbon,Public,38.7485,-9.1604
+L079,Universidade de Lisboa - Faculdade de Ciências,Tecnologias de Informação,L1,27.0,125.0,Lisbon,Public,38.7485,-9.1604
+L096,Universidade de Lisboa - Faculdade de Ciências,Engenharia Geoespacial,L1,2.0,115.8,Lisbon,Public,38.7485,-9.1604
+L204,Universidade de Lisboa - Faculdade de Ciências,Engenharia Biomédica e Biofísica,L1,43.0,154.8,Lisbon,Public,38.7485,-9.1604
+L214,Universidade de Lisboa - Faculdade de Ciências,Engenharia da Energia e Ambiente,L1,18.0,121.5,Lisbon,Public,38.7485,-9.1604
+8358,Universidade de Lisboa - Faculdade de Direito,Direito (regime pós-laboral),L1,82.0,158.8,Lisbon,Public,38.7485,-9.1604
+9078,Universidade de Lisboa - Faculdade de Direito,Direito,L1,445.0,163.3,Lisbon,Public,38.7485,-9.1604
+9494,Universidade de Lisboa - Faculdade de Farmácia,Ciências Farmacêuticas,MI,215.0,148.8,Lisbon,Public,38.7485,-9.1604
+8413,Universidade de Lisboa - Faculdade de Letras,Artes e Humanidades,L1,62.0,114.8,Lisbon,Public,38.7485,-9.1604
+8458,Universidade de Lisboa - Faculdade de Letras,Estudos Gerais,L1,59.0,110.3,Lisbon,Public,38.7485,-9.1604
+9006,Universidade de Lisboa - Faculdade de Letras,Arqueologia,L1,36.0,120.5,Lisbon,Public,38.7485,-9.1604
+9040,Universidade de Lisboa - Faculdade de Letras,Ciências da Linguagem,L1,31.0,134.3,Lisbon,Public,38.7485,-9.1604
+9131,Universidade de Lisboa - Faculdade de Letras,Estudos Africanos,L1,20.0,119.5,Lisbon,Public,38.7485,-9.1604
+9132,Universidade de Lisboa - Faculdade de Letras,Estudos Artísticos,L1,49.0,145.8,Lisbon,Public,38.7485,-9.1604
+9133,Universidade de Lisboa - Faculdade de Letras,Estudos Clássicos,L1,14.0,117.3,Lisbon,Public,38.7485,-9.1604
+9135,Universidade de Lisboa - Faculdade de Letras,Estudos Europeus,L1,56.0,143.0,Lisbon,Public,38.7485,-9.1604
+9139,Universidade de Lisboa - Faculdade de Letras,Filosofia,L1,43.0,140.0,Lisbon,Public,38.7485,-9.1604
+9181,Universidade de Lisboa - Faculdade de Letras,História,L1,61.0,150.5,Lisbon,Public,38.7485,-9.1604
+9182,Universidade de Lisboa - Faculdade de Letras,História da Arte,L1,40.0,139.8,Lisbon,Public,38.7485,-9.1604
+9204,Universidade de Lisboa - Faculdade de Letras,"Línguas, Literaturas e Culturas",L1,211.0,131.5,Lisbon,Public,38.7485,-9.1604
+9252,Universidade de Lisboa - Faculdade de Letras,Tradução,L1,58.0,141.8,Lisbon,Public,38.7485,-9.1604
+9914,Universidade de Lisboa - Faculdade de Letras,Estudos Asiáticos,L1,27.0,132.0,Lisbon,Public,38.7485,-9.1604
+9917,Universidade de Lisboa - Faculdade de Letras,Estudos Portugueses,L1,20.0,133.3,Lisbon,Public,38.7485,-9.1604
+L097,Universidade de Lisboa - Faculdade de Letras,Estudos Comparatistas,L1,20.0,125.8,Lisbon,Public,38.7485,-9.1604
+L288,Universidade de Lisboa - Faculdade de Letras,Estudos de Cultura e Comunicação Intercultural,L1,56.0,129.3,Lisbon,Public,38.7485,-9.1604
+9554,Universidade de Lisboa - Faculdade de Medicina,Ciências da Nutrição,L1,30.0,162.0,Lisbon,Public,38.7485,-9.1604
+9813,Universidade de Lisboa - Faculdade de Medicina,Medicina,MI,299.0,178.7,Lisbon,Public,38.7485,-9.1604
+9548,Universidade de Lisboa - Faculdade de Medicina Dentária,Medicina Dentária,MI,70.0,177.8,Lisbon,Public,38.7485,-9.1604
+9556,Universidade de Lisboa - Faculdade de Medicina Dentária,Higiene Oral,L1,44.0,158.0,Lisbon,Public,38.7485,-9.1604
+9791,Universidade de Lisboa - Faculdade de Medicina Dentária,Prótese Dentária,L1,27.0,148.8,Lisbon,Public,38.7485,-9.1604
+9847,Universidade de Lisboa - Faculdade de Medicina Veterinária,Medicina Veterinária,MI,109.0,166.3,Lisbon,Public,38.7485,-9.1604
+9068,Universidade de Lisboa - Faculdade de Motricidade Humana,Dança,L1,14.0,121.3,Lisbon,Public,38.7485,-9.1604
+9162,Universidade de Lisboa - Faculdade de Motricidade Humana,Gestão do Desporto,L1,31.0,139.0,Lisbon,Public,38.7485,-9.1604
+9707,Universidade de Lisboa - Faculdade de Motricidade Humana,Ciências do Desporto,L1,140.0,112.5,Lisbon,Public,38.7485,-9.1604
+9841,Universidade de Lisboa - Faculdade de Motricidade Humana,Reabilitação Psicomotora,L1,49.0,147.0,Lisbon,Public,38.7485,-9.1604
+9219,Universidade de Lisboa - Faculdade de Psicologia,Psicologia,L1,137.0,168.0,Lisbon,Public,38.7485,-9.1604
+L040,Universidade de Lisboa - Instituto de Educação,Educação e Formação,L1,72.0,108.3,Lisbon,Public,38.7485,-9.1604
+8411,Universidade de Lisboa - Instituto de Geografia e Ordenamento do Território,Planeamento e Gestão do Território,L1,11.0,126.5,Lisbon,Public,38.7485,-9.1604
+9143,Universidade de Lisboa - Instituto de Geografia e Ordenamento do Território,Geografia,L1,106.0,130.8,Lisbon,Public,38.7485,-9.1604
+8258,Universidade de Lisboa - Instituto Superior de Agronomia,Arquitetura Paisagista,L1,21.0,140.8,Lisbon,Public,38.7485,-9.1604
+8377,Universidade de Lisboa - Instituto Superior de Agronomia,Engenharia Florestal e dos Recursos Naturais,L1,4.0,141.8,Lisbon,Public,38.7485,-9.1604
+9011,Universidade de Lisboa - Instituto Superior de Agronomia,Biologia,L1,38.0,132.8,Lisbon,Public,38.7485,-9.1604
+9086,Universidade de Lisboa - Instituto Superior de Agronomia,Engenharia Agronómica,L1,35.0,109.5,Lisbon,Public,38.7485,-9.1604
+9087,Universidade de Lisboa - Instituto Superior de Agronomia,Engenharia Alimentar,L1,11.0,113.0,Lisbon,Public,38.7485,-9.1604
+9099,Universidade de Lisboa - Instituto Superior de Agronomia,Engenharia do Ambiente,L1,4.0,117.0,Lisbon,Public,38.7485,-9.1604
+9129,Universidade de Lisboa - Instituto Superior de Agronomia,Engenharia Zootécnica,L1,24.0,118.0,Lisbon,Public,38.7485,-9.1604
+8014,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Serviço Social (regime pós-laboral),L1,29.0,131.5,Lisbon,Public,38.7485,-9.1604
+8102,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Administração Pública (regime pós-laboral),L1,41.0,131.8,Lisbon,Public,38.7485,-9.1604
+8109,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Sociologia (regime pós-laboral),L1,29.0,120.3,Lisbon,Public,38.7485,-9.1604
+8111,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Gestão de Recursos Humanos (regime pós-laboral),L1,52.0,142.3,Lisbon,Public,38.7485,-9.1604
+8363,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Administração Pública e Políticas do Território (regime pós-laboral),L1,31.0,120.3,Lisbon,Public,38.7485,-9.1604
+8364,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Relações Internacionais (regime pós-laboral),L1,52.0,150.3,Lisbon,Public,38.7485,-9.1604
+9002,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Administração Pública,L1,68.0,147.5,Lisbon,Public,38.7485,-9.1604
+9019,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Ciência Política,L1,44.0,158.3,Lisbon,Public,38.7485,-9.1604
+9023,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Ciências da Comunicação,L1,40.0,160.0,Lisbon,Public,38.7485,-9.1604
+9157,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Gestão de Recursos Humanos,L1,65.0,156.3,Lisbon,Public,38.7485,-9.1604
+9229,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Relações Internacionais,L1,70.0,160.8,Lisbon,Public,38.7485,-9.1604
+9238,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Serviço Social,L1,54.0,146.5,Lisbon,Public,38.7485,-9.1604
+9240,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Sociologia,L1,46.0,144.5,Lisbon,Public,38.7485,-9.1604
+9448,Universidade de Lisboa - Instituto Superior de Ciências Sociais e Políticas,Antropologia,L1,41.0,127.0,Lisbon,Public,38.7485,-9.1604
+9081,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Economia,L1,132.0,161.9,Lisbon,Public,38.7485,-9.1604
+9147,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Gestão,L1,137.0,167.1,Lisbon,Public,38.7485,-9.1604
+9210,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Matemática Aplicada à Economia e à Gestão,L1,30.0,185.1,Lisbon,Public,38.7485,-9.1604
+A001,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Gestão (ensino em Inglês),L1,60.0,171.0,Lisbon,Public,38.7485,-9.1604
+A006,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Economia (ensino em Inglês),L1,30.0,169.9,Lisbon,Public,38.7485,-9.1604
+A013,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Finanças (ensino em inglês),L1,32.0,162.9,Lisbon,Public,38.7485,-9.1604
+A018,Universidade de Lisboa - Instituto Superior de Economia e Gestão,Matemática Aplicada à Economia e à Gestão (ensino em inglês),L1,30.0,183.9,Lisbon,Public,38.7485,-9.1604
+9089,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Civil,L1,138.0,141.3,Lisbon,Public,38.7369,-9.1395
+9096,Universidade de Lisboa - Instituto Superior Técnico,Engenharia de Materiais,L1,25.0,151.3,Lisbon,Public,38.7369,-9.1395
+9099,Universidade de Lisboa - Instituto Superior Técnico,Engenharia do Ambiente,L1,31.0,134.8,Lisbon,Public,38.7369,-9.1395
+9121,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Informática e de Computadores,L1,183.0,166.3,Lisbon,Public,38.7369,-9.1395
+9123,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Mecânica,L1,160.0,175.0,Lisbon,Public,38.7369,-9.1395
+9125,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Química,L1,75.0,153.5,Lisbon,Public,38.7369,-9.1395
+9257,Universidade de Lisboa - Instituto Superior Técnico,Arquitetura,MI,47.0,156.8,Lisbon,Public,38.7369,-9.1395
+9345,Universidade de Lisboa - Instituto Superior Técnico,Matemática Aplicada e Computação,L1,68.0,167.3,Lisbon,Public,38.7369,-9.1395
+9455,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Biomédica,L1,102.0,174.0,Lisbon,Public,38.7369,-9.1395
+9474,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Biológica,L1,61.0,156.8,Lisbon,Public,38.7369,-9.1395
+L162,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Naval e Oceânica,L1,30.0,163.8,Lisbon,Public,38.7369,-9.1395
+L209,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Eletrotécnica e de Computadores,L1,220.0,140.0,Lisbon,Public,38.7369,-9.1395
+L221,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Aeroespacial,L1,135.0,185.0,Lisbon,Public,38.7369,-9.1395
+L233,Universidade de Lisboa - Instituto Superior Técnico,Engenharia Física Tecnológica,L1,112.0,177.8,Lisbon,Public,38.7369,-9.1395
+L239,Universidade de Lisboa - Instituto Superior Técnico,Engenharia de Minas e Recursos Energéticos,L1,20.0,129.5,Lisbon,Public,38.7369,-9.1395
+9098,Universidade de Lisboa - Instituto Superior Técnico (Tagus Park),Engenharia de Telecomunicações e Informática,L1,25.0,121.0,Lisbon,Public,38.7369,-9.1395
+9104,Universidade de Lisboa - Instituto Superior Técnico (Tagus Park),Engenharia e Gestão Industrial,L1,81.0,168.5,Lisbon,Public,38.7369,-9.1395
+9121,Universidade de Lisboa - Instituto Superior Técnico (Tagus Park),Engenharia Informática e de Computadores,L1,85.0,136.3,Lisbon,Public,38.7369,-9.1395
+9912,Universidade de Lisboa - Instituto Superior Técnico (Tagus Park),Engenharia Eletrónica,L1,26.0,120.3,Lisbon,Public,38.7369,-9.1395
+8005,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Marketing (regime pós-laboral),L1,8.0,103.0,Aveiro,Public,40.6306,-8.659
+9056,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Contabilidade,L1,73.0,122.0,Aveiro,Public,40.6306,-8.659
+9140,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Finanças,L1,20.0,157.8,Aveiro,Public,40.6306,-8.659
+9205,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Marketing,L1,33.0,140.8,Aveiro,Public,40.6306,-8.659
+9869,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Contabilidade (regime pós-laboral),L1,5.0,163.8,Aveiro,Public,40.6306,-8.659
+9888,Universidade de Aveiro - Instituto Superior de Contabilidade e Administração de Aveiro,Finanças (regime pós-laboral),L1,8.0,123.3,Aveiro,Public,40.6306,-8.659
+8405,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Gestão da Qualidade,L1,3.0,,Aveiro,Public,40.6306,-8.659
+9235,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Secretariado e Comunicação Empresarial,L1,21.0,122.3,Aveiro,Public,40.6306,-8.659
+L021,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Gestão Comercial,L1,23.0,121.8,Aveiro,Public,40.6306,-8.659
+L140,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Gestão Pública,L1,7.0,135.3,Aveiro,Public,40.6306,-8.659
+L194,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Eletrónica e Mecânica Industrial,L1,11.0,118.3,Aveiro,Public,40.6306,-8.659
+L346,Universidade de Aveiro - Escola Superior de Tecnologia e Gestão de Águeda,Engenharia Informática Aplicada,L1,21.0,118.5,Aveiro,Public,40.6306,-8.659
+9500,Universidade de Aveiro - Escola Superior de Saúde de Aveiro,Enfermagem,L1,82.0,141.0,Aveiro,Public,40.6306,-8.659
+9504,Universidade de Aveiro - Escola Superior de Saúde de Aveiro,Fisioterapia,L1,40.0,154.3,Aveiro,Public,40.6306,-8.659
+9890,Universidade de Aveiro - Escola Superior de Saúde de Aveiro,Terapia da Fala,L1,24.0,134.3,Aveiro,Public,40.6306,-8.659
+L066,Universidade de Aveiro - Escola Superior de Saúde de Aveiro,Imagem Médica e Radioterapia,L1,25.0,140.0,Aveiro,Public,40.6306,-8.659
+L138,"Universidade de Aveiro - Escola Superior de Design, Gestão e Tecnologia da Produção de Aveiro-Norte",Design de Produto e Tecnologia,L1,38.0,131.8,Aveiro,Public,40.6306,-8.659
+L299,"Universidade de Aveiro - Escola Superior de Design, Gestão e Tecnologia da Produção de Aveiro-Norte",Automação e Sistemas de Produção,L1,22.0,140.0,Aveiro,Public,40.6306,-8.659
+9003,Instituto Politécnico de Beja - Escola Superior Agrária,Agronomia,L1,0.0,,Other,Polytechnic,,
+9099,Instituto Politécnico de Beja - Escola Superior Agrária,Engenharia do Ambiente,L1,0.0,,Other,Polytechnic,,
+9350,Instituto Politécnico de Beja - Escola Superior Agrária,Ciência e Tecnologia dos Alimentos,L1,0.0,,Other,Polytechnic,,
+9010,Instituto Politécnico de Beja - Escola Superior de Educação,Audiovisual e Multimédia,L1,23.0,122.0,Other,Polytechnic,,
+9238,Instituto Politécnico de Beja - Escola Superior de Educação,Serviço Social,L1,14.0,119.3,Other,Polytechnic,,
+9563,Instituto Politécnico de Beja - Escola Superior de Educação,Desporto,L1,15.0,112.8,Other,Polytechnic,,
+9853,Instituto Politécnico de Beja - Escola Superior de Educação,Educação Básica,L1,40.0,122.8,Other,Polytechnic,,
+9119,Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão,Engenharia Informática,L1,6.0,166.0,Other,Polytechnic,,
+9152,Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão,Gestão de Empresas,L1,5.0,114.8,Other,Polytechnic,,
+9242,Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão,Solicitadoria,L1,39.0,116.8,Other,Polytechnic,,
+9254,Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão,Turismo,L1,4.0,,Other,Polytechnic,,
+9994,Instituto Politécnico de Beja - Escola Superior de Tecnologia e de Gestão,Gestão de Empresas (regime pós-laboral),L1,1.0,,Other,Polytechnic,,
+8015,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Solicitadoria (regime pós-laboral),L1,28.0,119.8,Other,Polytechnic,,
+9056,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Contabilidade,L1,36.0,125.5,Other,Polytechnic,,
+9140,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Finanças,L1,32.0,132.0,Other,Polytechnic,,
+9152,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Gestão de Empresas,L1,40.0,151.8,Other,Polytechnic,,
+9242,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Solicitadoria,L1,39.0,152.0,Other,Polytechnic,,
+9759,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Fiscalidade,L1,13.0,128.8,Other,Polytechnic,,
+9869,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Contabilidade (regime pós-laboral),L1,6.0,139.3,Other,Polytechnic,,
+9990,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Fiscalidade (regime pós-laboral),L1,2.0,133.0,Other,Polytechnic,,
+9994,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Gestão de Empresas (regime pós-laboral),L1,23.0,116.8,Other,Polytechnic,,
+L140,Instituto Politécnico do Cávado e do Ave - Escola Superior de Gestão,Gestão Pública,L1,27.0,116.5,Other,Polytechnic,,
+8311,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia em Desenvolvimento de Jogos Digitais,L1,15.0,126.0,Other,Polytechnic,,
+8409,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia de Sistemas Informáticos,L1,27.0,119.0,Other,Polytechnic,,
+8417,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia de Sistemas Informáticos (regime pós-laboral),L1,4.0,189.5,Other,Polytechnic,,
+9104,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia e Gestão Industrial,L1,12.0,126.8,Other,Polytechnic,,
+9112,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia Eletrotécnica e de Computadores,L1,7.0,136.3,Other,Polytechnic,,
+L181,Instituto Politécnico do Cávado e do Ave - Escola Superior de Tecnologia,Engenharia Informática Médica,L1,5.0,136.3,Other,Polytechnic,,
+9074,Instituto Politécnico do Cávado e do Ave - Escola Superior de Design,Design Industrial,L1,39.0,145.8,Other,Polytechnic,,
+9470,Instituto Politécnico do Cávado e do Ave - Escola Superior de Design,Design Gráfico,L1,44.0,161.0,Other,Polytechnic,,
+9873,Instituto Politécnico do Cávado e do Ave - Escola Superior de Design,Design Gráfico (regime pós-laboral),L1,28.0,137.0,Other,Polytechnic,,
+L260,Instituto Politécnico do Cávado e do Ave - Escola Superior de Design,Design Audiovisual,L1,31.0,144.5,Other,Polytechnic,,
+8156,Instituto Politécnico do Cávado e do Ave - Escola Superior de Hotelaria e Turismo,Gestão de Atividades Turísticas,L1,38.0,110.0,Other,Polytechnic,,
+8341,Instituto Politécnico do Cávado e do Ave - Escola Superior de Hotelaria e Turismo,Gestão de Atividades Turísticas (regime pós-laboral),L1,6.0,119.0,Other,Polytechnic,,
+9173,Instituto Politécnico do Cávado e do Ave - Escola Superior de Hotelaria e Turismo,Gestão Hoteleira,L1,32.0,112.8,Other,Polytechnic,,
+9563,"Instituto Politécnico do Cávado e do Ave - Escola Superior de Desporto, Bem-Estar e Sistemas Biomédicos",Desporto,L1,12.0,151.5,Porto,Polytechnic,,
+9085,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Enfermagem Veterinária,L1,27.0,114.5,Braga,Polytechnic,41.8057,-6.7571
+9086,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Engenharia Agronómica,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9087,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Engenharia Alimentar,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9099,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Engenharia do Ambiente,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9129,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Engenharia Zootécnica,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9752,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Enologia,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+L029,Instituto Politécnico de Bragança - Escola Superior Agrária de Bragança,Biologia e Biotecnologia,L1,1.0,144.5,Braga,Polytechnic,41.8057,-6.7571
+8323,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Línguas Estrangeiras: Inglês e Espanhol,L1,15.0,125.5,Braga,Polytechnic,41.8057,-6.7571
+8374,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Línguas para Relações Internacionais,L1,54.0,117.0,Braga,Polytechnic,41.8057,-6.7571
+9082,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Educação Ambiental,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9084,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Educação Social,L1,31.0,116.8,Braga,Polytechnic,41.8057,-6.7571
+9563,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Desporto,L1,24.0,112.5,Braga,Polytechnic,41.8057,-6.7571
+9853,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Educação Básica,L1,75.0,134.3,Braga,Polytechnic,41.8057,-6.7571
+9898,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Arte e Design,L1,42.0,120.0,Braga,Polytechnic,41.8057,-6.7571
+9933,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Animação e Produção Artística,L1,3.0,124.0,Braga,Polytechnic,41.8057,-6.7571
+L088,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Relações Lusófonas e Língua Portuguesa,L1,1.0,149.3,Braga,Polytechnic,41.8057,-6.7571
+L175,Instituto Politécnico de Bragança - Escola Superior de Educação de Bragança,Música em Contextos Comunitários,L1,1.0,,Braga,Polytechnic,41.8057,-6.7571
+9056,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Contabilidade,L1,10.0,109.0,Braga,Polytechnic,41.8057,-6.7571
+9089,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia Civil,L1,1.0,122.8,Braga,Polytechnic,41.8057,-6.7571
+9104,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia e Gestão Industrial,L1,1.0,141.8,Braga,Polytechnic,41.8057,-6.7571
+9112,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia Eletrotécnica e de Computadores,L1,1.0,,Braga,Polytechnic,41.8057,-6.7571
+9119,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia Informática,L1,10.0,145.0,Braga,Polytechnic,41.8057,-6.7571
+9123,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia Mecânica,L1,1.0,,Braga,Polytechnic,41.8057,-6.7571
+9125,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia Química,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9147,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Gestão,L1,95.0,102.0,Braga,Polytechnic,41.8057,-6.7571
+9186,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Informática de Gestão,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9910,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Engenharia de Energias Renováveis,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+A004,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,"Gestão de Negócios Internacionais (Curso Europeu, ensino em Inglês)",L1,12.0,108.5,Braga,Polytechnic,41.8057,-6.7571
+L069,Instituto Politécnico de Bragança - Escola Superior de Tecnologia e de Gestão de Bragança,Tecnologia Biomédica,L1,9.0,121.0,Braga,Polytechnic,41.8057,-6.7571
+8309,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Design de Jogos Digitais,L1,18.0,115.8,Braga,Polytechnic,41.8057,-6.7571
+9165,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Gestão e Administração Pública,L1,14.0,119.3,Braga,Polytechnic,41.8057,-6.7571
+9188,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Informática e Comunicações,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+9205,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Marketing,L1,40.0,119.5,Braga,Polytechnic,41.8057,-6.7571
+9213,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Multimédia,L1,19.0,118.5,Braga,Polytechnic,41.8057,-6.7571
+9242,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Solicitadoria,L1,59.0,131.3,Braga,Polytechnic,41.8057,-6.7571
+9254,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Turismo,L1,10.0,115.3,Braga,Polytechnic,41.8057,-6.7571
+9773,"Instituto Politécnico de Bragança - Escola Superior de Comunicação, Administração e Turismo de Mirandela",Jornalismo e Comunicação,L1,18.0,114.8,Braga,Polytechnic,41.8057,-6.7571
+9076,Instituto Politécnico de Bragança - Escola Superior de Hotelaria e Bem-Estar,Direção e Gestão Hoteleira,L1,11.0,117.0,Braga,Polytechnic,41.8057,-6.7571
+L136,Instituto Politécnico de Bragança - Escola Superior de Hotelaria e Bem-Estar,Osteopatia,L1,3.0,126.8,Braga,Polytechnic,41.8057,-6.7571
+L361,Instituto Politécnico de Bragança - Escola Superior de Hotelaria e Bem-Estar,Restauração e Tecnologia Alimentar,L1,2.0,136.8,Braga,Polytechnic,41.8057,-6.7571
+8397,Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco,Engenharia de Proteção Civil,L1,1.0,,Other,Polytechnic,,
+9003,Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco,Agronomia,L1,1.0,103.3,Other,Polytechnic,,
+9085,Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco,Enfermagem Veterinária,L1,21.0,118.5,Other,Polytechnic,,
+L093,Instituto Politécnico de Castelo Branco - Escola Superior Agrária de Castelo Branco,Biotecnologia Alimentar,L1,1.0,108.8,Other,Polytechnic,,
+9238,Instituto Politécnico de Castelo Branco - Escola Superior de Educação de Castelo Branco,Serviço Social,L1,25.0,121.5,Other,Polytechnic,,
+9485,Instituto Politécnico de Castelo Branco - Escola Superior de Educação de Castelo Branco,Secretariado,L1,8.0,121.0,Other,Polytechnic,,
+9850,Instituto Politécnico de Castelo Branco - Escola Superior de Educação de Castelo Branco,Desporto e Atividade Física,L1,37.0,113.8,Other,Polytechnic,,
+9853,Instituto Politécnico de Castelo Branco - Escola Superior de Educação de Castelo Branco,Educação Básica,L1,42.0,129.8,Other,Polytechnic,,
+8463,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Engenharia das Energias Renováveis,L1,0.0,,Other,Polytechnic,,
+9089,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Engenharia Civil,L1,0.0,,Other,Polytechnic,,
+9104,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Engenharia e Gestão Industrial,L1,0.0,,Other,Polytechnic,,
+9111,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Engenharia Eletrotécnica e das Telecomunicações,L1,1.0,,Other,Polytechnic,,
+9119,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Engenharia Informática,L1,16.0,119.0,Other,Polytechnic,,
+L275,Instituto Politécnico de Castelo Branco - Escola Superior de Tecnologia de Castelo Branco,Informática e Multimédia,L1,2.0,,Other,Polytechnic,,
+9002,Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova,Administração Pública,L1,0.0,,Other,Polytechnic,,
+9147,Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova,Gestão,L1,4.0,96.0,Other,Polytechnic,,
+9242,Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova,Solicitadoria,L1,20.0,111.0,Other,Polytechnic,,
+9254,Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova,Turismo,L1,2.0,131.3,Other,Polytechnic,,
+L021,Instituto Politécnico de Castelo Branco - Escola Superior de Gestão de Idanha-a-Nova,Gestão Comercial,L1,1.0,123.8,Other,Polytechnic,,
+9725,Instituto Politécnico de Castelo Branco - Escola Superior de Artes Aplicadas,Design de Interiores e Equipamento,L1,45.0,139.5,Other,Polytechnic,,
+9726,Instituto Politécnico de Castelo Branco - Escola Superior de Artes Aplicadas,Design de Moda e Têxtil,L1,44.0,129.0,Other,Polytechnic,,
+L158,Instituto Politécnico de Castelo Branco - Escola Superior de Artes Aplicadas,Design de Comunicação e Audiovisual,L1,41.0,125.3,Other,Polytechnic,,
+9003,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Agronomia,L1,10.0,125.3,Coimbra,Polytechnic,40.2033,-8.4103
+9016,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Biotecnologia,L1,6.0,130.5,Coimbra,Polytechnic,40.2033,-8.4103
+9085,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Enfermagem Veterinária,L1,28.0,113.8,Coimbra,Polytechnic,40.2033,-8.4103
+L003,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Zootecnia,L1,15.0,105.0,Coimbra,Polytechnic,40.2033,-8.4103
+L009,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Ciências Florestais e Recursos Naturais,L1,6.0,109.0,Coimbra,Polytechnic,40.2033,-8.4103
+L015,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Tecnologia Alimentar,L1,4.0,114.0,Coimbra,Polytechnic,40.2033,-8.4103
+L178,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Turismo em Espaços Rurais e Naturais,L1,7.0,113.8,Coimbra,Polytechnic,40.2033,-8.4103
+L348,Instituto Politécnico de Coimbra - Escola Superior Agrária de Coimbra,Tecnologia e Gestão do Ambiente,L1,1.0,135.0,Coimbra,Polytechnic,40.2033,-8.4103
+8093,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Animação Socioeducativa (regime pós-laboral),L1,1.0,,Coimbra,Polytechnic,40.2033,-8.4103
+8114,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Turismo (regime pós-laboral),L1,0.0,,Coimbra,Polytechnic,40.2033,-8.4103
+8342,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Comunicação Organizacional (regime pós-laboral),L1,12.0,109.0,Coimbra,Polytechnic,40.2033,-8.4103
+9054,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Comunicação Social,L1,38.0,134.8,Coimbra,Polytechnic,40.2033,-8.4103
+9254,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Turismo,L1,32.0,110.5,Coimbra,Polytechnic,40.2033,-8.4103
+9675,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Animação Socioeducativa,L1,39.0,113.8,Coimbra,Polytechnic,40.2033,-8.4103
+9717,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Comunicação Organizacional,L1,43.0,136.8,Coimbra,Polytechnic,40.2033,-8.4103
+9731,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Desporto e Lazer,L1,21.0,130.3,Coimbra,Polytechnic,40.2033,-8.4103
+9774,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Língua Gestual Portuguesa,L1,11.0,117.3,Coimbra,Polytechnic,40.2033,-8.4103
+9833,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Gerontologia,L1,11.0,115.3,Coimbra,Polytechnic,40.2033,-8.4103
+9853,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Educação Básica,L1,70.0,150.3,Coimbra,Polytechnic,40.2033,-8.4103
+9894,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Comunicação e Design Multimédia,L1,39.0,128.5,Coimbra,Polytechnic,40.2033,-8.4103
+9898,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Arte e Design,L1,32.0,157.3,Coimbra,Polytechnic,40.2033,-8.4103
+L095,Instituto Politécnico de Coimbra - Escola Superior de Educação de Coimbra,Gastronomia,L1,15.0,114.3,Coimbra,Polytechnic,40.2033,-8.4103
+8029,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Finanças e Contabilidade,L1,13.0,127.0,Coimbra,Polytechnic,40.2033,-8.4103
+8276,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Assessoria de Direção,L1,43.0,116.8,Coimbra,Polytechnic,40.2033,-8.4103
+9061,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Contabilidade e Auditoria,L1,34.0,108.5,Coimbra,Polytechnic,40.2033,-8.4103
+9152,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Gestão de Empresas,L1,101.0,127.5,Coimbra,Polytechnic,40.2033,-8.4103
+9186,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Informática de Gestão,L1,17.0,121.8,Coimbra,Polytechnic,40.2033,-8.4103
+9722,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Contabilidade e Gestão Pública,L1,8.0,121.8,Coimbra,Polytechnic,40.2033,-8.4103
+9801,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Solicitadoria e Administração,L1,66.0,148.0,Coimbra,Polytechnic,40.2033,-8.4103
+L023,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Marketing e Negócios Internacionais,L1,43.0,120.3,Coimbra,Polytechnic,40.2033,-8.4103
+L056,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Comércio e Relações Económicas Internacionais,L1,6.0,141.3,Coimbra,Polytechnic,40.2033,-8.4103
+L310,Instituto Politécnico de Coimbra - Instituto Superior de Contabilidade e Administração de Coimbra,Ciência de Dados para a Gestão,L1,27.0,126.3,Coimbra,Polytechnic,40.2033,-8.4103
+9089,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Civil,L1,18.0,118.5,Coimbra,Polytechnic,40.2033,-8.4103
+9104,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia e Gestão Industrial,L1,25.0,134.3,Coimbra,Polytechnic,40.2033,-8.4103
+9105,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Eletromecânica,L1,10.0,118.5,Coimbra,Polytechnic,40.2033,-8.4103
+9119,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Informática,L1,124.0,111.3,Coimbra,Polytechnic,40.2033,-8.4103
+9123,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Mecânica,L1,31.0,123.5,Coimbra,Polytechnic,40.2033,-8.4103
+9455,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Biomédica,L1,18.0,129.5,Coimbra,Polytechnic,40.2033,-8.4103
+9540,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Bioengenharia,L1,8.0,129.5,Coimbra,Polytechnic,40.2033,-8.4103
+9770,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Informática (Curso Europeu),L1,13.0,125.5,Coimbra,Polytechnic,40.2033,-8.4103
+9885,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Informática (regime pós-laboral),L1,1.0,,Coimbra,Polytechnic,40.2033,-8.4103
+L155,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Gestão Sustentável das Cidades,L1,31.0,117.3,Coimbra,Polytechnic,40.2033,-8.4103
+L209,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Engenharia Eletrotécnica e de Computadores,L1,32.0,108.3,Coimbra,Polytechnic,40.2033,-8.4103
+L226,Instituto Politécnico de Coimbra - Instituto Superior de Engenharia de Coimbra,Informática Industrial,L1,8.0,,Coimbra,Polytechnic,40.2033,-8.4103
+9058,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Contabilidade e Administração,L1,15.0,122.2,Coimbra,Polytechnic,40.2033,-8.4103
+9119,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Engenharia Informática,L1,2.0,121.7,Coimbra,Polytechnic,40.2033,-8.4103
+9147,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Gestão,L1,36.0,132.6,Coimbra,Polytechnic,40.2033,-8.4103
+9205,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Marketing,L1,31.0,111.7,Coimbra,Polytechnic,40.2033,-8.4103
+9895,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Gestão do Território,L1,3.0,126.5,Coimbra,Polytechnic,40.2033,-8.4103
+L305,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia e Gestão de Oliveira do Hospital,Gestão e Biociências,L1,6.0,119.8,Coimbra,Polytechnic,40.2033,-8.4103
+8337,Universidade do Algarve - Escola Superior de Educação e Comunicação,Imagem Animada,L1,35.0,123.8,Faro,Public,37.0194,-7.9322
+9023,Universidade do Algarve - Escola Superior de Educação e Comunicação,Ciências da Comunicação,L1,41.0,143.0,Faro,Public,37.0194,-7.9322
+9070,Universidade do Algarve - Escola Superior de Educação e Comunicação,Design de Comunicação,L1,39.0,135.0,Faro,Public,37.0194,-7.9322
+9084,Universidade do Algarve - Escola Superior de Educação e Comunicação,Educação Social,L1,18.0,124.8,Faro,Public,37.0194,-7.9322
+9563,Universidade do Algarve - Escola Superior de Educação e Comunicação,Desporto,L1,41.0,114.0,Faro,Public,37.0194,-7.9322
+9853,Universidade do Algarve - Escola Superior de Educação e Comunicação,Educação Básica,L1,42.0,135.0,Faro,Public,37.0194,-7.9322
+9147,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",Gestão,L1,76.0,129.0,Faro,Public,37.0194,-7.9322
+9148,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",Gestão (regime noturno),L1,5.0,116.8,Faro,Public,37.0194,-7.9322
+9173,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",Gestão Hoteleira,L1,44.0,120.3,Faro,Public,37.0194,-7.9322
+9205,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",Marketing,L1,33.0,136.8,Faro,Public,37.0194,-7.9322
+9254,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo",Turismo,L1,43.0,110.5,Faro,Public,37.0194,-7.9322
+9089,Universidade do Algarve - Instituto Superior de Engenharia,Engenharia Civil,L1,9.0,134.3,Faro,Public,37.0194,-7.9322
+9123,Universidade do Algarve - Instituto Superior de Engenharia,Engenharia Mecânica,L1,18.0,125.5,Faro,Public,37.0194,-7.9322
+L209,Universidade do Algarve - Instituto Superior de Engenharia,Engenharia Eletrotécnica e de Computadores,L1,6.0,177.0,Faro,Public,37.0194,-7.9322
+L269,Universidade do Algarve - Instituto Superior de Engenharia,Engenharia de Sistemas e Tecnologias Informáticas,L1,1.0,,Faro,Public,37.0194,-7.9322
+9147,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo (Portimão)",Gestão,L1,27.0,117.8,Faro,Public,37.0194,-7.9322
+9148,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo (Portimão)",Gestão (regime noturno),L1,3.0,123.5,Faro,Public,37.0194,-7.9322
+9254,"Universidade do Algarve - Escola Superior de Gestão, Hotelaria e Turismo (Portimão)",Turismo,L1,11.0,106.0,Faro,Public,37.0194,-7.9322
+8339,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Comunicação Multimédia,L1,13.0,114.8,Porto,Polytechnic,,
+9005,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Animação Sociocultural,L1,3.0,,Porto,Polytechnic,,
+9473,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Educação Social Gerontológica,L1,0.0,,Porto,Polytechnic,,
+9563,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Desporto,L1,11.0,124.0,Porto,Polytechnic,,
+9652,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Comunicação e Relações Públicas,L1,13.0,111.0,Porto,Polytechnic,,
+9853,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto",Educação Básica,L1,44.0,130.3,Porto,Polytechnic,,
+L034,"Instituto Politécnico da Guarda - Escola Superior de Educação, Comunicação e Desporto","Desporto, Condição Física e Saúde",L1,1.0,130.8,Porto,Polytechnic,,
+9056,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Contabilidade,L1,5.0,133.3,Other,Polytechnic,,
+9089,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Engenharia Civil,L1,0.0,,Other,Polytechnic,,
+9119,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Engenharia Informática,L1,3.0,135.0,Other,Polytechnic,,
+9128,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Engenharia Topográfica,L1,0.0,,Other,Polytechnic,,
+9147,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Gestão,L1,15.0,116.0,Other,Polytechnic,,
+9157,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Gestão de Recursos Humanos,L1,9.0,116.3,Other,Polytechnic,,
+9205,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Marketing,L1,4.0,121.0,Other,Polytechnic,,
+9855,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Energia e Ambiente,L1,1.0,124.5,Other,Polytechnic,,
+L196,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Mecânica e Informática Industrial,L1,15.0,109.8,Other,Polytechnic,,
+L283,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Ciência de Dados e Inteligência Artificial,L1,1.0,112.3,Other,Polytechnic,,
+L335,Instituto Politécnico da Guarda - Escola Superior de Tecnologia e Gestão,Design de Equipamento e Ambientes,L1,18.0,121.5,Other,Polytechnic,,
+9173,Instituto Politécnico da Guarda - Escola Superior de Turismo e Hotelaria,Gestão Hoteleira,L1,0.0,,Other,Polytechnic,,
+9255,Instituto Politécnico da Guarda - Escola Superior de Turismo e Hotelaria,Turismo e Lazer,L1,1.0,,Other,Polytechnic,,
+9484,Instituto Politécnico da Guarda - Escola Superior de Turismo e Hotelaria,Restauração e Catering,L1,0.0,,Other,Polytechnic,,
+L061,Instituto Politécnico da Guarda - Escola Superior de Turismo e Hotelaria,Gestão do Turismo e da Hospitalidade,L1,1.0,,Other,Polytechnic,,
+8014,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Serviço Social (regime pós-laboral),L1,1.0,139.5,Leiria,Polytechnic,39.7436,-8.807
+9084,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Educação Social,L1,36.0,112.5,Leiria,Polytechnic,39.7436,-8.807
+9238,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Serviço Social,L1,28.0,117.3,Leiria,Polytechnic,39.7436,-8.807
+9492,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Tradução e Interpretação: Português/Chinês - Chinês/Português,L1,13.0,124.3,Leiria,Polytechnic,39.7436,-8.807
+9797,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Relações Humanas e Comunicação Organizacional,L1,33.0,106.5,Leiria,Polytechnic,39.7436,-8.807
+9851,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Desporto e Bem-Estar,L1,34.0,110.8,Leiria,Polytechnic,39.7436,-8.807
+9853,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Educação Básica,L1,97.0,135.3,Leiria,Polytechnic,39.7436,-8.807
+L099,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Comunicação e Media,L1,40.0,132.5,Leiria,Polytechnic,39.7436,-8.807
+L306,Instituto Politécnico de Leiria - Escola Superior de Educação e Ciências Sociais,Relações Humanas e Comunicação Organizacional (regime pós-laboral),L1,4.0,119.8,Leiria,Polytechnic,39.7436,-8.807
+8015,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Solicitadoria (regime pós-laboral),L1,18.0,117.8,Leiria,Polytechnic,39.7436,-8.807
+9002,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Administração Pública,L1,26.0,111.8,Leiria,Polytechnic,39.7436,-8.807
+9089,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Civil,L1,10.0,110.5,Leiria,Polytechnic,39.7436,-8.807
+9104,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia e Gestão Industrial,L1,8.0,127.8,Leiria,Polytechnic,39.7436,-8.807
+9112,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Eletrotécnica e de Computadores,L1,18.0,117.8,Leiria,Polytechnic,39.7436,-8.807
+9119,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Informática,L1,94.0,118.0,Leiria,Polytechnic,39.7436,-8.807
+9123,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Mecânica,L1,18.0,120.3,Leiria,Polytechnic,39.7436,-8.807
+9147,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Gestão,L1,102.0,131.3,Leiria,Polytechnic,39.7436,-8.807
+9205,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Marketing,L1,50.0,122.5,Leiria,Polytechnic,39.7436,-8.807
+9242,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Solicitadoria,L1,62.0,138.0,Leiria,Polytechnic,39.7436,-8.807
+9627,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Contabilidade e Finanças,L1,37.0,113.8,Leiria,Polytechnic,39.7436,-8.807
+9648,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia da Energia e do Ambiente,L1,3.0,,Leiria,Polytechnic,39.7436,-8.807
+9690,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Biomecânica,L1,25.0,115.0,Leiria,Polytechnic,39.7436,-8.807
+9741,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Automóvel,L1,21.0,121.3,Leiria,Polytechnic,39.7436,-8.807
+9885,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Informática (regime pós-laboral),L1,2.0,,Leiria,Polytechnic,39.7436,-8.807
+9886,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Mecânica (regime pós-laboral),L1,2.0,,Leiria,Polytechnic,39.7436,-8.807
+9991,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Gestão (regime pós-laboral),L1,9.0,121.3,Leiria,Polytechnic,39.7436,-8.807
+A014,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Jogos Digitais e Multimédia (ensino em inglês),L1,31.0,118.8,Leiria,Polytechnic,39.7436,-8.807
+L266,Instituto Politécnico de Leiria - Escola Superior de Tecnologia e Gestão,Engenharia Eletrotécnica e de Computadores (regime noturno),L1,0.0,,Leiria,Polytechnic,39.7436,-8.807
+8126,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Design Gráfico e Multimédia (regime pós-laboral),L1,11.0,112.0,Leiria,Polytechnic,39.7436,-8.807
+8525,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Design de Produto - Cerâmica e Vidro,L1,24.0,137.0,Leiria,Polytechnic,39.7436,-8.807
+9007,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Artes Plásticas,L1,53.0,131.0,Leiria,Polytechnic,39.7436,-8.807
+9074,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Design Industrial,L1,28.0,145.8,Leiria,Polytechnic,39.7436,-8.807
+9243,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Teatro,L1,24.0,140.5,Leiria,Polytechnic,39.7436,-8.807
+9457,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Som e Imagem,L1,65.0,131.5,Leiria,Polytechnic,39.7436,-8.807
+9729,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Design Gráfico e Multimédia,L1,80.0,153.5,Leiria,Polytechnic,39.7436,-8.807
+L127,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Programação e Produção Cultural,L1,9.0,121.8,Leiria,Polytechnic,39.7436,-8.807
+L257,Instituto Politécnico de Leiria - Escola Superior de Artes e Design,Design de Espaços,L1,27.0,144.5,Leiria,Polytechnic,39.7436,-8.807
+8514,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Gestão de Eventos,L1,3.0,110.0,Leiria,Polytechnic,39.7436,-8.807
+9013,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Biologia Marinha,L1,6.0,120.8,Leiria,Polytechnic,39.7436,-8.807
+9016,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Biotecnologia,L1,17.0,112.5,Leiria,Polytechnic,39.7436,-8.807
+9087,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Engenharia Alimentar,L1,0.0,,Leiria,Polytechnic,39.7436,-8.807
+9178,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Gestão Turística e Hoteleira,L1,12.0,150.0,Leiria,Polytechnic,39.7436,-8.807
+9207,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Marketing Turístico,L1,6.0,117.0,Leiria,Polytechnic,39.7436,-8.807
+9254,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Turismo,L1,15.0,116.0,Leiria,Polytechnic,39.7436,-8.807
+9848,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Animação Turística,L1,2.0,141.3,Leiria,Polytechnic,39.7436,-8.807
+L131,Instituto Politécnico de Leiria - Escola Superior de Turismo e Tecnologia do Mar,Gestão da Restauração e Catering,L1,1.0,,Leiria,Polytechnic,39.7436,-8.807
+8307,Instituto Politécnico de Lisboa - Escola Superior de Educação,Artes Visuais e Tecnologias,L1,86.0,141.3,Lisbon,Polytechnic,38.7223,-9.1393
+9005,Instituto Politécnico de Lisboa - Escola Superior de Educação,Animação Sociocultural,L1,29.0,120.0,Lisbon,Polytechnic,38.7223,-9.1393
+9853,Instituto Politécnico de Lisboa - Escola Superior de Educação,Educação Básica,L1,90.0,153.3,Lisbon,Polytechnic,38.7223,-9.1393
+9876,Instituto Politécnico de Lisboa - Escola Superior de Educação,Educação Básica (regime pós-laboral),L1,22.0,143.0,Lisbon,Polytechnic,38.7223,-9.1393
+L134,Instituto Politécnico de Lisboa - Escola Superior de Educação,Mediação Artística e Cultural,L1,13.0,109.0,Lisbon,Polytechnic,38.7223,-9.1393
+8438,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Relações Públicas e Comunicação Empresarial (regime pós-laboral),L1,29.0,124.3,Lisbon,Polytechnic,38.7223,-9.1393
+8439,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Publicidade e Marketing (regime pós-laboral),L1,31.0,136.3,Lisbon,Polytechnic,38.7223,-9.1393
+9010,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Audiovisual e Multimédia,L1,88.0,144.0,Lisbon,Polytechnic,38.7223,-9.1393
+9191,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Jornalismo,L1,61.0,153.0,Lisbon,Polytechnic,38.7223,-9.1393
+9222,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Publicidade e Marketing,L1,59.0,155.0,Lisbon,Polytechnic,38.7223,-9.1393
+9231,Instituto Politécnico de Lisboa - Escola Superior de Comunicação Social,Relações Públicas e Comunicação Empresarial,L1,59.0,146.5,Lisbon,Polytechnic,38.7223,-9.1393
+8015,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Solicitadoria (regime pós-laboral),L1,49.0,113.8,Lisbon,Polytechnic,38.7223,-9.1393
+9056,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Contabilidade,L1,122.0,141.8,Lisbon,Polytechnic,38.7223,-9.1393
+9147,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Gestão,L1,106.0,156.0,Lisbon,Polytechnic,38.7223,-9.1393
+9242,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Solicitadoria,L1,55.0,146.3,Lisbon,Polytechnic,38.7223,-9.1393
+9476,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Finanças Empresariais,L1,55.0,153.5,Lisbon,Polytechnic,38.7223,-9.1393
+9869,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Contabilidade (regime pós-laboral),L1,33.0,115.5,Lisbon,Polytechnic,38.7223,-9.1393
+9889,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Finanças Empresariais (regime pós-laboral),L1,37.0,124.5,Lisbon,Polytechnic,38.7223,-9.1393
+9991,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Gestão (regime pós-laboral),L1,89.0,139.8,Lisbon,Polytechnic,38.7223,-9.1393
+L035,Instituto Politécnico de Lisboa - Instituto Superior de Contabilidade e Administração de Lisboa,Comércio e Negócios Internacionais (regime pós-laboral),L1,56.0,129.0,Lisbon,Polytechnic,38.7223,-9.1393
+9089,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Civil,L1,41.0,120.8,Lisbon,Polytechnic,38.7223,-9.1393
+9108,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Eletrónica e Telecomunicações e de Computadores,L1,24.0,113.5,Lisbon,Polytechnic,38.7223,-9.1393
+9109,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Eletrotécnica,L1,32.0,103.8,Lisbon,Polytechnic,38.7223,-9.1393
+9121,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Informática e de Computadores,L1,119.0,116.3,Lisbon,Polytechnic,38.7223,-9.1393
+9123,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Mecânica,L1,104.0,121.3,Lisbon,Polytechnic,38.7223,-9.1393
+9126,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Química e Biológica,L1,12.0,119.5,Lisbon,Polytechnic,38.7223,-9.1393
+9455,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Biomédica,L1,26.0,144.0,Lisbon,Polytechnic,38.7223,-9.1393
+L052,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Informática e Multimédia,L1,45.0,118.8,Lisbon,Polytechnic,38.7223,-9.1393
+L085,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Tecnologias e Gestão Municipal,L1,3.0,119.8,Lisbon,Polytechnic,38.7223,-9.1393
+L117,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Matemática Aplicada à Tecnologia e à Empresa,L1,19.0,119.8,Lisbon,Polytechnic,38.7223,-9.1393
+L119,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,"Engenharia Informática, Redes e Telecomunicações",L1,11.0,112.0,Lisbon,Polytechnic,38.7223,-9.1393
+L213,Instituto Politécnico de Lisboa - Instituto Superior de Engenharia de Lisboa,Engenharia Física Aplicada,L1,5.0,133.5,Lisbon,Polytechnic,38.7223,-9.1393
+8014,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Serviço Social (regime pós-laboral),L1,0.0,,Other,Polytechnic,,
+9084,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Educação Social,L1,2.0,135.8,Other,Polytechnic,,
+9238,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Serviço Social,L1,22.0,115.3,Other,Polytechnic,,
+9254,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Turismo,L1,1.0,120.8,Other,Polytechnic,,
+9773,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Jornalismo e Comunicação,L1,40.0,123.0,Other,Polytechnic,,
+9853,Instituto Politécnico de Portalegre - Escola Superior de Educação e Ciências Sociais,Educação Básica,L1,40.0,125.0,Other,Polytechnic,,
+9070,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Design de Comunicação,L1,26.0,126.8,Other,Polytechnic,,
+9089,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Engenharia Civil,L1,0.0,,Other,Polytechnic,,
+9119,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Engenharia Informática,L1,2.0,,Other,Polytechnic,,
+9147,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Gestão,L1,24.0,110.0,Other,Polytechnic,,
+9670,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Administração de Publicidade e Marketing,L1,14.0,114.5,Other,Polytechnic,,
+9991,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Gestão (regime pós-laboral),L1,0.0,,Other,Polytechnic,,
+L308,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Design de Animação,L1,30.0,118.0,Other,Polytechnic,,
+L309,"Instituto Politécnico de Portalegre - Escola Superior de Tecnologia, Gestão e Design",Engenharia de Produção de Biocombustíveis,L1,0.0,,Other,Polytechnic,,
+9003,Instituto Politécnico de Portalegre - Escola Superior de Biociências de Elvas,Agronomia,L1,0.0,,Other,Polytechnic,,
+9085,Instituto Politécnico de Portalegre - Escola Superior de Biociências de Elvas,Enfermagem Veterinária,L1,16.0,103.5,Other,Polytechnic,,
+9130,Instituto Politécnico de Portalegre - Escola Superior de Biociências de Elvas,Equinicultura,L1,1.0,134.3,Other,Polytechnic,,
+9563,Instituto Politécnico de Portalegre - Escola Superior de Biociências de Elvas,Desporto,L1,2.0,,Other,Polytechnic,,
+8002,Instituto Politécnico do Porto - Escola Superior de Educação,Línguas e Culturas Estrangeiras,L1,55.0,144.0,Porto,Polytechnic,41.1784,-8.6068
+8264,Instituto Politécnico do Porto - Escola Superior de Educação,Artes Visuais e Tecnologias Artísticas,L1,28.0,163.3,Porto,Polytechnic,41.1784,-8.6068
+9084,Instituto Politécnico do Porto - Escola Superior de Educação,Educação Social,L1,54.0,147.3,Porto,Polytechnic,41.1784,-8.6068
+9563,Instituto Politécnico do Porto - Escola Superior de Educação,Desporto,L1,25.0,131.3,Porto,Polytechnic,41.1784,-8.6068
+9807,Instituto Politécnico do Porto - Escola Superior de Educação,Tradução e Interpretação em Língua Gestual Portuguesa,L1,22.0,117.3,Porto,Polytechnic,41.1784,-8.6068
+9853,Instituto Politécnico do Porto - Escola Superior de Educação,Educação Básica,L1,120.0,156.3,Porto,Polytechnic,41.1784,-8.6068
+9878,Instituto Politécnico do Porto - Escola Superior de Educação,Educação Musical,L1,10.0,156.2,Porto,Polytechnic,41.1784,-8.6068
+9879,Instituto Politécnico do Porto - Escola Superior de Educação,Educação Social (regime pós-laboral),L1,23.0,116.8,Porto,Polytechnic,41.1784,-8.6068
+L246,Instituto Politécnico do Porto - Escola Superior de Educação,Gestão do Património Cultural,L1,33.0,119.5,Porto,Polytechnic,41.1784,-8.6068
+L272,Instituto Politécnico do Porto - Escola Superior de Educação,Tecnologias para a Educação STEAM,L1,20.0,122.8,Porto,Polytechnic,41.1784,-8.6068
+8005,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Marketing (regime pós-laboral),L1,27.0,124.3,Porto,Polytechnic,41.1784,-8.6068
+9009,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Assessoria e Tradução,L1,43.0,125.0,Porto,Polytechnic,41.1784,-8.6068
+9043,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Ciências e Tecnologias da Documentação e Informação,L1,21.0,126.3,Porto,Polytechnic,41.1784,-8.6068
+9053,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Comunicação Empresarial,L1,43.0,160.3,Porto,Polytechnic,41.1784,-8.6068
+9058,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Contabilidade e Administração,L1,206.0,106.5,Porto,Polytechnic,41.1784,-8.6068
+9205,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Marketing,L1,90.0,146.0,Porto,Polytechnic,41.1784,-8.6068
+9227,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Recursos Humanos,L1,46.0,148.5,Porto,Polytechnic,41.1784,-8.6068
+9716,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Comércio Internacional,L1,35.0,157.5,Porto,Polytechnic,41.1784,-8.6068
+9829,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Assessoria e Tradução (regime pós-laboral),L1,10.0,124.8,Porto,Polytechnic,41.1784,-8.6068
+9866,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Comércio Internacional (regime pós-laboral),L1,24.0,132.5,Porto,Polytechnic,41.1784,-8.6068
+9867,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Comunicação Empresarial (regime pós-laboral),L1,24.0,148.5,Porto,Polytechnic,41.1784,-8.6068
+9870,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Contabilidade e Administração (regime pós-laboral),L1,14.0,125.5,Porto,Polytechnic,41.1784,-8.6068
+L070,Instituto Politécnico do Porto - Instituto Superior de Contabilidade e Administração do Porto,Criatividade e Inovação Empresarial,L1,32.0,151.3,Porto,Polytechnic,41.1784,-8.6068
+8316,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia de Sistemas,L1,37.0,116.5,Porto,Polytechnic,41.1784,-8.6068
+9089,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Civil,L1,51.0,148.0,Porto,Polytechnic,41.1784,-8.6068
+9098,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia de Telecomunicações e Informática,L1,40.0,121.8,Porto,Polytechnic,41.1784,-8.6068
+9104,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia e Gestão Industrial,L1,40.0,176.0,Porto,Polytechnic,41.1784,-8.6068
+9110,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Eletrotécnica - Sistemas Elétricos de Energia,L1,45.0,138.5,Porto,Polytechnic,41.1784,-8.6068
+9112,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Eletrotécnica e de Computadores,L1,167.0,142.5,Porto,Polytechnic,41.1784,-8.6068
+9117,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Geotécnica e Geoambiente,L1,20.0,119.0,Porto,Polytechnic,41.1784,-8.6068
+9119,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Informática,L1,201.0,150.0,Porto,Polytechnic,41.1784,-8.6068
+9123,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Mecânica,L1,120.0,155.8,Porto,Polytechnic,41.1784,-8.6068
+9125,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Química,L1,51.0,131.5,Porto,Polytechnic,41.1784,-8.6068
+9455,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Biomédica,L1,49.0,162.5,Porto,Polytechnic,41.1784,-8.6068
+9936,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Engenharia Mecânica Automóvel,L1,43.0,143.0,Porto,Polytechnic,41.1784,-8.6068
+L089,Instituto Politécnico do Porto - Instituto Superior de Engenharia do Porto,Biorrecursos,L1,13.0,130.5,Porto,Polytechnic,41.1784,-8.6068
+8015,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Solicitadoria (regime pós-laboral),L1,19.0,147.0,Porto,Polytechnic,41.1784,-8.6068
+8097,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Ciências Empresariais (regime pós-laboral),L1,21.0,137.5,Porto,Polytechnic,41.1784,-8.6068
+8288,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Sistemas de Informação para Gestão,L1,17.0,118.8,Porto,Polytechnic,41.1784,-8.6068
+8398,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Segurança Informática em Redes de Computadores,L1,18.0,116.0,Porto,Polytechnic,41.1784,-8.6068
+9045,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Ciências Empresariais,L1,40.0,151.0,Porto,Polytechnic,41.1784,-8.6068
+9119,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Engenharia Informática,L1,64.0,117.0,Porto,Polytechnic,41.1784,-8.6068
+9242,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Solicitadoria,L1,38.0,159.5,Porto,Polytechnic,41.1784,-8.6068
+L030,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Gestão Industrial e Logística,L1,20.0,148.5,Porto,Polytechnic,41.1784,-8.6068
+L091,Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão,Segurança do Trabalho e Ambiente,L1,20.0,122.8,Porto,Polytechnic,41.1784,-8.6068
+8442,Instituto Politécnico do Porto - Escola Superior de Hotelaria e Turismo,Gestão das Atividades Turísticas (regime pós-laboral),L1,5.0,124.0,Porto,Polytechnic,41.1784,-8.6068
+9164,Instituto Politécnico do Porto - Escola Superior de Hotelaria e Turismo,Gestão e Administração Hoteleira,L1,44.0,134.5,Porto,Polytechnic,41.1784,-8.6068
+9921,Instituto Politécnico do Porto - Escola Superior de Hotelaria e Turismo,Gestão das Atividades Turísticas,L1,33.0,130.0,Porto,Polytechnic,41.1784,-8.6068
+L131,Instituto Politécnico do Porto - Escola Superior de Hotelaria e Turismo,Gestão da Restauração e Catering,L1,5.0,115.5,Porto,Polytechnic,41.1784,-8.6068
+8419,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Agronomia (regime pós-laboral),L1,0.0,,Other,Polytechnic,,
+9003,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Agronomia,L1,9.0,125.0,Other,Polytechnic,,
+9085,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Enfermagem Veterinária,L1,26.0,135.3,Other,Polytechnic,,
+L003,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Zootecnia,L1,7.0,104.0,Other,Polytechnic,,
+L080,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Qualidade Alimentar e Nutrição Humana,L1,4.0,122.3,Other,Polytechnic,,
+L259,Instituto Politécnico de Santarém - Escola Superior Agrária de Santarém,Biologia e Biotecnologia Alimentar,L1,9.0,119.0,Other,Polytechnic,,
+9084,Instituto Politécnico de Santarém - Escola Superior de Educação de Santarém,Educação Social,L1,25.0,114.5,Other,Polytechnic,,
+9853,Instituto Politécnico de Santarém - Escola Superior de Educação de Santarém,Educação Básica,L1,70.0,133.8,Other,Polytechnic,,
+L130,Instituto Politécnico de Santarém - Escola Superior de Educação de Santarém,Educação Ambiental e Turismo de Natureza,L1,5.0,113.5,Other,Polytechnic,,
+L179,Instituto Politécnico de Santarém - Escola Superior de Educação de Santarém,Produção Multimédia em Educação,L1,19.0,116.5,Other,Polytechnic,,
+9147,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Gestão,L1,63.0,102.0,Other,Polytechnic,,
+9156,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Gestão de Marketing,L1,15.0,123.8,Other,Polytechnic,,
+9185,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Informática,L1,7.0,116.0,Other,Polytechnic,,
+9498,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Contabilidade e Fiscalidade,L1,6.0,95.5,Other,Polytechnic,,
+9785,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Negócios Internacionais,L1,1.0,,Other,Polytechnic,,
+9991,Instituto Politécnico de Santarém - Escola Superior de Gestão e Tecnologia de Santarém,Gestão (regime pós-laboral),L1,1.0,,Other,Polytechnic,,
+9730,Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior,Desporto de Natureza e Turismo Ativo,L1,8.0,112.5,Porto,Polytechnic,,
+9763,Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior,Gestão das Organizações Desportivas,L1,23.0,128.3,Porto,Polytechnic,,
+9808,Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior,Treino Desportivo,L1,57.0,111.3,Porto,Polytechnic,,
+L008,Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior,Atividade Física e Estilos de Vida Saudáveis,L1,5.0,123.3,Porto,Polytechnic,,
+L034,Instituto Politécnico de Santarém - Escola Superior de Desporto de Rio Maior,"Desporto, Condição Física e Saúde",L1,50.0,107.0,Porto,Polytechnic,,
+9005,Instituto Politécnico de Setúbal - Escola Superior de Educação,Animação Sociocultural,L1,15.0,111.5,Setúbal,Polytechnic,38.5244,-8.8882
+9054,Instituto Politécnico de Setúbal - Escola Superior de Educação,Comunicação Social,L1,33.0,146.0,Setúbal,Polytechnic,38.5244,-8.8882
+9563,Instituto Politécnico de Setúbal - Escola Superior de Educação,Desporto,L1,28.0,119.0,Setúbal,Polytechnic,38.5244,-8.8882
+9633,Instituto Politécnico de Setúbal - Escola Superior de Educação,Tradução e Interpretação de Língua Gestual Portuguesa,L1,6.0,115.3,Setúbal,Polytechnic,38.5244,-8.8882
+9853,Instituto Politécnico de Setúbal - Escola Superior de Educação,Educação Básica,L1,57.0,142.5,Setúbal,Polytechnic,38.5244,-8.8882
+8515,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Tecnologias de Energia,L1,29.0,113.8,Setúbal,Polytechnic,38.5244,-8.8882
+9092,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,"Engenharia de Automação, Controlo e Instrumentação",L1,0.0,,Setúbal,Polytechnic,38.5244,-8.8882
+9112,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Engenharia Eletrotécnica e de Computadores,L1,7.0,128.3,Setúbal,Polytechnic,38.5244,-8.8882
+9119,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Engenharia Informática,L1,66.0,118.0,Setúbal,Polytechnic,38.5244,-8.8882
+9123,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Engenharia Mecânica,L1,9.0,132.0,Setúbal,Polytechnic,38.5244,-8.8882
+9862,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Tecnologia e Gestão Industrial (regime noturno),L1,3.0,142.0,Setúbal,Polytechnic,38.5244,-8.8882
+L069,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Tecnologia Biomédica,L1,45.0,117.8,Setúbal,Polytechnic,38.5244,-8.8882
+L124,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia de Setúbal,Tecnologias do Ambiente e do Mar,L1,21.0,112.0,Setúbal,Polytechnic,38.5244,-8.8882
+8111,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Gestão de Recursos Humanos (regime pós-laboral),L1,26.0,122.5,Setúbal,Polytechnic,38.5244,-8.8882
+9157,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Gestão de Recursos Humanos,L1,53.0,131.5,Setúbal,Polytechnic,38.5244,-8.8882
+9205,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Marketing,L1,55.0,143.5,Setúbal,Polytechnic,38.5244,-8.8882
+9627,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Contabilidade e Finanças,L1,57.0,125.5,Setúbal,Polytechnic,38.5244,-8.8882
+9628,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Contabilidade e Finanças (regime noturno),L1,6.0,113.0,Setúbal,Polytechnic,38.5244,-8.8882
+9629,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Gestão da Distribuição e da Logística,L1,46.0,111.0,Setúbal,Polytechnic,38.5244,-8.8882
+9630,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Gestão de Sistemas de Informação,L1,10.0,122.8,Setúbal,Polytechnic,38.5244,-8.8882
+9993,Instituto Politécnico de Setúbal - Escola Superior de Ciências Empresariais,Gestão da Distribuição e da Logística (regime pós-laboral),L1,8.0,112.0,Setúbal,Polytechnic,38.5244,-8.8882
+9016,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro,Biotecnologia,L1,7.0,116.3,Setúbal,Polytechnic,38.5244,-8.8882
+9089,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro,Engenharia Civil,L1,3.0,120.5,Setúbal,Polytechnic,38.5244,-8.8882
+9090,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro,Engenharia Civil (regime noturno),L1,0.0,,Setúbal,Polytechnic,38.5244,-8.8882
+9687,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro,Bioinformática,L1,4.0,127.3,Setúbal,Polytechnic,38.5244,-8.8882
+L100,Instituto Politécnico de Setúbal - Escola Superior de Tecnologia do Barreiro,Tecnologias do Petróleo,L1,1.0,146.8,Setúbal,Polytechnic,38.5244,-8.8882
+9500,Instituto Politécnico de Setúbal - Escola Superior de Saúde,Enfermagem,L1,46.0,149.3,Setúbal,Polytechnic,38.5244,-8.8882
+9504,Instituto Politécnico de Setúbal - Escola Superior de Saúde,Fisioterapia,L1,44.0,153.3,Setúbal,Polytechnic,38.5244,-8.8882
+9890,Instituto Politécnico de Setúbal - Escola Superior de Saúde,Terapia da Fala,L1,26.0,141.5,Setúbal,Polytechnic,38.5244,-8.8882
+9003,Instituto Politécnico de Viana do Castelo - Escola Superior Agrária,Agronomia,L1,2.0,,Other,Polytechnic,41.6938,-8.8341
+9016,Instituto Politécnico de Viana do Castelo - Escola Superior Agrária,Biotecnologia,L1,6.0,134.5,Other,Polytechnic,41.6938,-8.8341
+9085,Instituto Politécnico de Viana do Castelo - Escola Superior Agrária,Enfermagem Veterinária,L1,21.0,126.8,Other,Polytechnic,41.6938,-8.8341
+L164,Instituto Politécnico de Viana do Castelo - Escola Superior Agrária,Engenharia do Ambiente e Geoinformática,L1,0.0,,Other,Polytechnic,41.6938,-8.8341
+9833,Instituto Politécnico de Viana do Castelo - Escola Superior de Educação,Gerontologia,L1,10.0,118.8,Other,Polytechnic,41.6938,-8.8341
+9853,Instituto Politécnico de Viana do Castelo - Escola Superior de Educação,Educação Básica,L1,71.0,141.5,Other,Polytechnic,41.6938,-8.8341
+L122,Instituto Politécnico de Viana do Castelo - Escola Superior de Educação,Artes Plásticas e Tecnologias Artísticas,L1,30.0,138.0,Other,Polytechnic,41.6938,-8.8341
+L284,Instituto Politécnico de Viana do Castelo - Escola Superior de Educação,Artes e Cinema Digital,L1,20.0,138.3,Other,Polytechnic,41.6938,-8.8341
+8407,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia da Computação Gráfica e Multimédia,L1,7.0,136.3,Other,Polytechnic,41.6938,-8.8341
+9119,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia Informática,L1,60.0,117.3,Other,Polytechnic,41.6938,-8.8341
+9123,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia Mecânica,L1,21.0,116.8,Other,Polytechnic,41.6938,-8.8341
+9147,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Gestão,L1,48.0,144.8,Other,Polytechnic,41.6938,-8.8341
+9148,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Gestão (regime noturno),L1,11.0,144.8,Other,Polytechnic,41.6938,-8.8341
+9254,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Turismo,L1,28.0,122.8,Other,Polytechnic,41.6938,-8.8341
+9723,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Design de Ambientes,L1,28.0,148.5,Other,Polytechnic,41.6938,-8.8341
+9727,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Design do Produto,L1,35.0,129.5,Other,Polytechnic,41.6938,-8.8341
+9743,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia Civil e do Ambiente,L1,7.0,123.0,Other,Polytechnic,41.6938,-8.8341
+9751,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia Mecatrónica,L1,1.0,,Other,Polytechnic,41.6938,-8.8341
+L153,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Engenharia de Redes e Sistemas de Computadores,L1,1.0,,Other,Polytechnic,41.6938,-8.8341
+L261,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Gastronomia e Artes Culinárias,L1,3.0,138.0,Other,Polytechnic,41.6938,-8.8341
+L362,Instituto Politécnico de Viana do Castelo - Escola Superior de Tecnologia e Gestão,Tecnologia Alimentar e Nutrição,L1,8.0,135.0,Other,Polytechnic,41.6938,-8.8341
+8464,Instituto Politécnico de Viana do Castelo - Escola Superior de Ciências Empresariais,Gestão da Distribuição e Logística,L1,4.0,126.8,Other,Polytechnic,41.6938,-8.8341
+8516,Instituto Politécnico de Viana do Castelo - Escola Superior de Ciências Empresariais,Organização e Gestão Empresariais,L1,14.0,124.8,Other,Polytechnic,41.6938,-8.8341
+9498,Instituto Politécnico de Viana do Castelo - Escola Superior de Ciências Empresariais,Contabilidade e Fiscalidade,L1,4.0,,Other,Polytechnic,41.6938,-8.8341
+L366,Instituto Politécnico de Viana do Castelo - Escola Superior de Ciências Empresariais,Marketing e Comunicação Empresariais,L1,27.0,115.0,Other,Polytechnic,41.6938,-8.8341
+9731,Instituto Politécnico de Viana do Castelo - Escola Superior de Desporto e Lazer,Desporto e Lazer,L1,30.0,122.0,Porto,Polytechnic,41.6938,-8.8341
+L375,Instituto Politécnico de Viana do Castelo - Escola Superior de Desporto e Lazer,Animação Desportiva e Turismo Ativo,L1,1.0,141.0,Porto,Polytechnic,41.6938,-8.8341
+9054,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Comunicação Social,L1,37.0,113.0,Other,Polytechnic,,
+9084,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Educação Social,L1,24.0,117.8,Other,Polytechnic,,
+9347,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Artes Plásticas e Multimédia,L1,45.0,131.8,Other,Polytechnic,,
+9681,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Artes Performativas,L1,10.0,120.8,Other,Polytechnic,,
+9850,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Desporto e Atividade Física,L1,37.0,113.8,Other,Polytechnic,,
+9853,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Educação Básica,L1,65.0,140.5,Other,Polytechnic,,
+9930,Instituto Politécnico de Viseu - Escola Superior de Educação de Viseu,Publicidade e Relações Públicas,L1,31.0,114.5,Other,Polytechnic,,
+8296,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Gestão Industrial,L1,35.0,120.3,Other,Polytechnic,,
+8517,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Tecnologia e Design de Mobiliário,L1,6.0,130.5,Other,Polytechnic,,
+9056,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Contabilidade,L1,40.0,114.8,Other,Polytechnic,,
+9089,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Engenharia Civil,L1,3.0,113.8,Other,Polytechnic,,
+9109,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Engenharia Eletrotécnica,L1,7.0,137.3,Other,Polytechnic,,
+9119,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Engenharia Informática,L1,39.0,123.3,Other,Polytechnic,,
+9123,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Engenharia Mecânica,L1,8.0,121.8,Other,Polytechnic,,
+9152,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Gestão de Empresas,L1,70.0,132.0,Other,Polytechnic,,
+9205,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Marketing,L1,46.0,131.8,Other,Polytechnic,,
+9254,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Turismo,L1,13.0,116.5,Other,Polytechnic,,
+9491,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Tecnologias e Design de Multimédia,L1,27.0,115.3,Other,Polytechnic,,
+9709,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Ciências e Tecnologia do Ambiente,L1,3.0,138.3,Other,Polytechnic,,
+9994,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Viseu,Gestão de Empresas (regime pós-laboral),L1,8.0,110.0,Other,Polytechnic,,
+9016,Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu,Biotecnologia,L1,12.0,123.0,Other,Polytechnic,,
+9085,Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu,Enfermagem Veterinária,L1,45.0,131.0,Other,Polytechnic,,
+9086,Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu,Engenharia Agronómica,L1,3.0,161.0,Other,Polytechnic,,
+9087,Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu,Engenharia Alimentar,L1,0.0,,Other,Polytechnic,,
+9129,Instituto Politécnico de Viseu - Escola Superior Agrária de Viseu,Engenharia Zootécnica,L1,2.0,136.5,Other,Polytechnic,,
+9122,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,Engenharia Informática e Telecomunicações,L1,0.0,,Other,Polytechnic,,
+9168,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,Gestão e Informática,L1,5.0,125.3,Other,Polytechnic,,
+9179,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,"Gestão Turística, Cultural e Patrimonial",L1,1.0,138.8,Other,Polytechnic,,
+9238,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,Serviço Social,L1,11.0,122.0,Other,Polytechnic,,
+L021,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,Gestão Comercial,L1,6.0,117.3,Other,Polytechnic,,
+L116,Instituto Politécnico de Viseu - Escola Superior de Tecnologia e Gestão de Lamego,Secretariado de Administração,L1,4.0,118.5,Other,Polytechnic,,
+9056,Instituto Politécnico de Tomar - Escola Superior de Gestão de Tomar,Contabilidade,L1,8.0,109.5,Other,Polytechnic,,
+9152,Instituto Politécnico de Tomar - Escola Superior de Gestão de Tomar,Gestão de Empresas,L1,6.0,119.3,Other,Polytechnic,,
+9640,Instituto Politécnico de Tomar - Escola Superior de Gestão de Tomar,Gestão de Recursos Humanos e Comportamento Organizacional,L1,14.0,112.5,Other,Polytechnic,,
+L207,Instituto Politécnico de Tomar - Escola Superior de Gestão de Tomar,Turismo e Gestão do Património Cultural,L1,5.0,107.5,Other,Polytechnic,,
+9089,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Engenharia Civil,L1,0.0,,Other,Polytechnic,,
+9112,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Engenharia Eletrotécnica e de Computadores,L1,3.0,,Other,Polytechnic,,
+9119,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Engenharia Informática,L1,8.0,129.5,Other,Polytechnic,,
+9380,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Conservação e Restauro,L1,33.0,127.0,Other,Polytechnic,,
+9644,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Design e Tecnologia das Artes Gráficas,L1,44.0,106.0,Other,Polytechnic,,
+9645,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Fotografia,L1,19.0,116.8,Other,Polytechnic,,
+L142,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Tecnologia Química,L1,2.0,130.8,Other,Polytechnic,,
+L186,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Tomar,Gestão da Edificação e Obras,L1,1.0,119.5,Other,Polytechnic,,
+9123,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes,Engenharia Mecânica,L1,2.0,135.0,Other,Polytechnic,,
+L143,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes,Informática e Tecnologias Multimédia,L1,1.0,,Other,Polytechnic,,
+L211,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes,Computação e Logística,L1,0.0,,Other,Polytechnic,,
+L297,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes,Comunicação Social: Jornalismo e Comunicação Empresarial,L1,8.0,115.5,Other,Polytechnic,,
+L371,Instituto Politécnico de Tomar - Escola Superior de Tecnologia de Abrantes,Cinema e Média Digitais,L1,5.0,123.5,Other,Polytechnic,,
+9069,Instituto Politécnico do Porto - Escola Superior de Media Artes e Design,Design,L1,44.0,143.7,Porto,Polytechnic,41.1784,-8.6068
+9213,Instituto Politécnico do Porto - Escola Superior de Media Artes e Design,Multimédia,L1,25.0,174.0,Porto,Polytechnic,41.1784,-8.6068
+9645,Instituto Politécnico do Porto - Escola Superior de Media Artes e Design,Fotografia,L1,20.0,152.0,Porto,Polytechnic,41.1784,-8.6068
+9713,Instituto Politécnico do Porto - Escola Superior de Media Artes e Design,Cinema e Audiovisual,L1,28.0,147.4,Porto,Polytechnic,41.1784,-8.6068
+L071,Instituto Politécnico do Porto - Escola Superior de Media Artes e Design,Tecnologias e Sistemas de Informação para a Web,L1,17.0,124.8,Porto,Polytechnic,41.1784,-8.6068
+8399,Universidade do Porto - Faculdade de Belas-Artes,Desenho,L1,25.0,172.6,Porto,Public,41.1523,-8.636
+9007,Universidade do Porto - Faculdade de Belas-Artes,Artes Plásticas,L1,64.0,170.5,Porto,Public,41.1523,-8.636
+9070,Universidade do Porto - Faculdade de Belas-Artes,Design de Comunicação,L1,57.0,176.0,Porto,Public,41.1523,-8.636
+8014,ISCTE - Instituto Universitário de Lisboa,Serviço Social (regime pós-laboral),L1,14.0,146.5,Lisbon,Public,38.7482,-9.1484
+8029,ISCTE - Instituto Universitário de Lisboa,Finanças e Contabilidade,L1,72.0,157.3,Lisbon,Public,38.7482,-9.1484
+8109,ISCTE - Instituto Universitário de Lisboa,Sociologia (regime pós-laboral),L1,34.0,133.0,Lisbon,Public,38.7482,-9.1484
+8366,ISCTE - Instituto Universitário de Lisboa,Informática e Gestão de Empresas (regime pós-laboral),L1,35.0,147.0,Lisbon,Public,38.7482,-9.1484
+9019,ISCTE - Instituto Universitário de Lisboa,Ciência Política,L1,41.0,160.5,Lisbon,Public,38.7482,-9.1484
+9081,ISCTE - Instituto Universitário de Lisboa,Economia,L1,72.0,162.0,Lisbon,Public,38.7482,-9.1484
+9098,ISCTE - Instituto Universitário de Lisboa,Engenharia de Telecomunicações e Informática,L1,60.0,131.5,Lisbon,Public,38.7482,-9.1484
+9119,ISCTE - Instituto Universitário de Lisboa,Engenharia Informática,L1,90.0,150.8,Lisbon,Public,38.7482,-9.1484
+9147,ISCTE - Instituto Universitário de Lisboa,Gestão,L1,176.0,164.5,Lisbon,Public,38.7482,-9.1484
+9156,ISCTE - Instituto Universitário de Lisboa,Gestão de Marketing,L1,40.0,160.5,Lisbon,Public,38.7482,-9.1484
+9157,ISCTE - Instituto Universitário de Lisboa,Gestão de Recursos Humanos,L1,41.0,165.5,Lisbon,Public,38.7482,-9.1484
+9189,ISCTE - Instituto Universitário de Lisboa,Informática e Gestão de Empresas,L1,60.0,155.8,Lisbon,Public,38.7482,-9.1484
+9219,ISCTE - Instituto Universitário de Lisboa,Psicologia,L1,110.0,166.5,Lisbon,Public,38.7482,-9.1484
+9238,ISCTE - Instituto Universitário de Lisboa,Serviço Social,L1,25.0,158.5,Lisbon,Public,38.7482,-9.1484
+9240,ISCTE - Instituto Universitário de Lisboa,Sociologia,L1,63.0,147.8,Lisbon,Public,38.7482,-9.1484
+9257,ISCTE - Instituto Universitário de Lisboa,Arquitetura,MI,51.0,161.0,Lisbon,Public,38.7482,-9.1484
+9448,ISCTE - Instituto Universitário de Lisboa,Antropologia,L1,27.0,137.5,Lisbon,Public,38.7482,-9.1484
+9885,ISCTE - Instituto Universitário de Lisboa,Engenharia Informática (regime pós-laboral),L1,35.0,136.0,Lisbon,Public,38.7482,-9.1484
+9927,ISCTE - Instituto Universitário de Lisboa,História Moderna e Contemporânea,L1,33.0,146.3,Lisbon,Public,38.7482,-9.1484
+L030,ISCTE - Instituto Universitário de Lisboa,Gestão Industrial e Logística,L1,40.0,157.0,Lisbon,Public,38.7482,-9.1484
+L188,ISCTE - Instituto Universitário de Lisboa,Ciência de Dados,L1,60.0,157.8,Lisbon,Public,38.7482,-9.1484
+L189,ISCTE - Instituto Universitário de Lisboa,Ciência de Dados (regime pós-laboral),L1,30.0,143.8,Lisbon,Public,38.7482,-9.1484
+L273,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais e Automação,L1,8.0,122.5,Lisbon,Public,38.7482,-9.1484
+L274,ISCTE - Instituto Universitário de Lisboa (Sintra),"Política, Economia e Sociedade",L1,34.0,153.0,Lisbon,Public,38.7482,-9.1484
+L277,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais e Inteligência Artificial,L1,35.0,145.3,Lisbon,Public,38.7482,-9.1484
+L278,ISCTE - Instituto Universitário de Lisboa (Sintra),Desenvolvimento de Software e Aplicações,L1,35.0,114.5,Lisbon,Public,38.7482,-9.1484
+L280,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais e Gestão,L1,33.0,161.5,Lisbon,Public,38.7482,-9.1484
+L281,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais Educativas,L1,35.0,133.3,Lisbon,Public,38.7482,-9.1484
+L282,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais e Saúde,L1,35.0,146.0,Lisbon,Public,38.7482,-9.1484
+L311,ISCTE - Instituto Universitário de Lisboa (Sintra),"Tecnologias Digitais, Edifícios e Construção Sustentável",L1,29.0,115.8,Lisbon,Public,38.7482,-9.1484
+L321,ISCTE - Instituto Universitário de Lisboa (Sintra),Matemática Aplicada e Tecnologias Digitais,L1,34.0,125.5,Lisbon,Public,38.7482,-9.1484
+L329,ISCTE - Instituto Universitário de Lisboa (Sintra),Tecnologias Digitais e Segurança de Informação,L1,35.0,129.3,Lisbon,Public,38.7482,-9.1484
+9500,Escola Superior de Enfermagem de Lisboa,Enfermagem,L1,278.0,151.0,Lisbon,Public,,
+8138,Instituto Politécnico de Beja - Escola Superior de Saúde,Terapia Ocupacional,L1,15.0,113.8,Other,Polytechnic,,
+9500,Instituto Politécnico de Beja - Escola Superior de Saúde,Enfermagem,L1,37.0,126.3,Other,Polytechnic,,
+9500,Universidade do Minho - Escola Superior de Enfermagem,Enfermagem,L1,80.0,158.5,Braga,Public,41.5607,-8.397
+8149,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Dietética e Nutrição,L1,13.0,111.8,Braga,Polytechnic,41.8057,-6.7571
+9500,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Enfermagem,L1,50.0,138.0,Braga,Polytechnic,41.8057,-6.7571
+9501,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Enfermagem (entrada no 2.º semestre),L1,11.0,113.3,Braga,Polytechnic,41.8057,-6.7571
+9549,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Farmácia,L1,17.0,119.5,Braga,Polytechnic,41.8057,-6.7571
+9833,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Gerontologia,L1,0.0,,Braga,Polytechnic,41.8057,-6.7571
+L068,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança,Ciências Biomédicas Laboratoriais,L1,32.0,114.5,Braga,Polytechnic,41.8057,-6.7571
+9504,Instituto Politécnico de Bragança - Escola Superior de Saúde de Bragança (Chaves),Fisioterapia,L1,24.0,158.3,Braga,Polytechnic,41.8057,-6.7571
+9500,Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias,Enfermagem,L1,54.0,137.3,Other,Polytechnic,,
+9504,Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias,Fisioterapia,L1,35.0,148.8,Other,Polytechnic,,
+L066,Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias,Imagem Médica e Radioterapia,L1,24.0,137.5,Other,Polytechnic,,
+L067,Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias,Fisiologia Clínica,L1,26.0,133.0,Other,Polytechnic,,
+L068,Instituto Politécnico de Castelo Branco - Escola Superior de Saúde Dr. Lopes Dias,Ciências Biomédicas Laboratoriais,L1,32.0,124.5,Other,Polytechnic,,
+9500,Universidade de Évora - Escola Superior de Enfermagem de São João de Deus,Enfermagem,L1,65.0,140.8,Évora,Public,38.5729,-7.9081
+8149,Universidade do Algarve - Escola Superior de Saúde,Dietética e Nutrição,L1,28.0,128.3,Faro,Public,37.0194,-7.9322
+9500,Universidade do Algarve - Escola Superior de Saúde,Enfermagem,L1,40.0,143.8,Faro,Public,37.0194,-7.9322
+9504,Universidade do Algarve - Escola Superior de Saúde,Fisioterapia,L1,26.0,153.0,Faro,Public,37.0194,-7.9322
+9549,Universidade do Algarve - Escola Superior de Saúde,Farmácia,L1,23.0,112.3,Faro,Public,37.0194,-7.9322
+9890,Universidade do Algarve - Escola Superior de Saúde,Terapia da Fala,L1,21.0,123.3,Faro,Public,37.0194,-7.9322
+L066,Universidade do Algarve - Escola Superior de Saúde,Imagem Médica e Radioterapia,L1,30.0,135.3,Faro,Public,37.0194,-7.9322
+L068,Universidade do Algarve - Escola Superior de Saúde,Ciências Biomédicas Laboratoriais,L1,27.0,138.5,Faro,Public,37.0194,-7.9322
+9500,Instituto Politécnico da Guarda - Escola Superior de Saúde da Guarda,Enfermagem,L1,90.0,127.5,Other,Polytechnic,,
+9549,Instituto Politécnico da Guarda - Escola Superior de Saúde da Guarda,Farmácia,L1,10.0,112.3,Other,Polytechnic,,
+L068,Instituto Politécnico da Guarda - Escola Superior de Saúde da Guarda,Ciências Biomédicas Laboratoriais,L1,10.0,118.3,Other,Polytechnic,,
+L101,Instituto Politécnico da Guarda - Escola Superior de Saúde da Guarda,Biotecnologia Medicinal,L1,3.0,120.3,Other,Polytechnic,,
+8138,Instituto Politécnico de Leiria - Escola Superior de Saúde,Terapia Ocupacional,L1,35.0,135.3,Leiria,Polytechnic,39.7436,-8.807
+8149,Instituto Politécnico de Leiria - Escola Superior de Saúde,Dietética e Nutrição,L1,8.0,114.0,Leiria,Polytechnic,39.7436,-8.807
+9500,Instituto Politécnico de Leiria - Escola Superior de Saúde,Enfermagem,L1,85.0,139.0,Leiria,Polytechnic,39.7436,-8.807
+9504,Instituto Politécnico de Leiria - Escola Superior de Saúde,Fisioterapia,L1,34.0,143.8,Leiria,Polytechnic,39.7436,-8.807
+9890,Instituto Politécnico de Leiria - Escola Superior de Saúde,Terapia da Fala,L1,26.0,140.3,Leiria,Polytechnic,39.7436,-8.807
+9500,Instituto Politécnico de Portalegre - Escola Superior de Saúde,Enfermagem,L1,65.0,127.3,Other,Polytechnic,,
+9504,Instituto Politécnico de Portalegre - Escola Superior de Saúde,Fisioterapia,L1,25.0,145.0,Other,Polytechnic,,
+9556,Instituto Politécnico de Portalegre - Escola Superior de Saúde,Higiene Oral,L1,20.0,123.0,Other,Polytechnic,,
+9500,Instituto Politécnico de Santarém - Escola Superior de Saúde de Santarém,Enfermagem,L1,25.0,119.8,Other,Polytechnic,,
+9500,Instituto Politécnico de Viana do Castelo - Escola Superior de Saúde,Enfermagem,L1,70.0,148.8,Other,Polytechnic,41.6938,-8.8341
+9500,Universidade de Trás-os-Montes e Alto Douro - Escola Superior de Saúde,Enfermagem,L1,95.0,148.5,Other,Public,,
+9500,Instituto Politécnico de Viseu - Escola Superior de Saúde de Viseu,Enfermagem,L1,90.0,141.8,Other,Polytechnic,,
+9500,Universidade dos Açores - Escola Superior de Saúde - Angra do Heroísmo,Enfermagem,L1,39.0,113.3,Other,Public,,
+9500,Universidade dos Açores - Escola Superior de Saúde - Ponta Delgada,Enfermagem,L1,40.0,132.8,Other,Public,,
+9121,Escola Superior Náutica Infante D. Henrique,Engenharia Informática e de Computadores,L1,5.0,120.8,Other,Public,,
+9745,Escola Superior Náutica Infante D. Henrique,Engenharia de Máquinas Marítimas,L1,19.0,114.3,Other,Public,,
+9789,Escola Superior Náutica Infante D. Henrique,Pilotagem,L1,31.0,125.3,Other,Public,,
+9924,Escola Superior Náutica Infante D. Henrique,Gestão de Transportes e Logística,L1,30.0,101.0,Other,Public,,
+9926,Escola Superior Náutica Infante D. Henrique,Gestão Portuária,L1,21.0,135.8,Other,Public,,
+L118,Escola Superior Náutica Infante D. Henrique,Engenharia Eletrotécnica Marítima,L1,7.0,123.8,Other,Public,,
+8011,Escola Superior de Hotelaria e Turismo do Estoril,Produção Alimentar em Restauração (regime pós-laboral),L1,1.0,125.8,Other,Public,,
+9076,Escola Superior de Hotelaria e Turismo do Estoril,Direção e Gestão Hoteleira,L1,37.0,116.3,Other,Public,,
+9163,Escola Superior de Hotelaria e Turismo do Estoril,Gestão do Lazer e Animação Turística,L1,45.0,132.0,Other,Public,,
+9177,Escola Superior de Hotelaria e Turismo do Estoril,Gestão Turística,L1,28.0,110.3,Other,Public,,
+9183,Escola Superior de Hotelaria e Turismo do Estoril,Informação Turística,L1,40.0,115.8,Other,Public,,
+9217,Escola Superior de Hotelaria e Turismo do Estoril,Produção Alimentar em Restauração,L1,11.0,125.3,Other,Public,,
+9875,Escola Superior de Hotelaria e Turismo do Estoril,Direção e Gestão Hoteleira (regime pós-laboral),L1,4.0,103.0,Other,Public,,
+9995,Escola Superior de Hotelaria e Turismo do Estoril,Gestão do Lazer e Animação Turística (regime pós-laboral),L1,18.0,116.5,Other,Public,,
+9996,Escola Superior de Hotelaria e Turismo do Estoril,Gestão Turística (regime pós-laboral),L1,5.0,127.3,Other,Public,,
+8141,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Audiologia,L1,3.0,141.5,Coimbra,Polytechnic,40.2033,-8.4103
+8149,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Dietética e Nutrição,L1,24.0,120.0,Coimbra,Polytechnic,40.2033,-8.4103
+9504,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Fisioterapia,L1,43.0,151.0,Coimbra,Polytechnic,40.2033,-8.4103
+9549,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Farmácia,L1,13.0,124.0,Coimbra,Polytechnic,40.2033,-8.4103
+9861,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Saúde Ambiental,L1,2.0,,Coimbra,Polytechnic,40.2033,-8.4103
+L066,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Imagem Médica e Radioterapia,L1,23.0,112.0,Coimbra,Polytechnic,40.2033,-8.4103
+L067,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Fisiologia Clínica,L1,29.0,134.0,Coimbra,Polytechnic,40.2033,-8.4103
+L068,Instituto Politécnico de Coimbra - Escola Superior de Tecnologia da Saúde de Coimbra,Ciências Biomédicas Laboratoriais,L1,38.0,140.8,Coimbra,Polytechnic,40.2033,-8.4103
+8149,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Dietética e Nutrição,L1,46.0,125.3,Lisbon,Polytechnic,38.7223,-9.1393
+8152,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Ortoprotesia,L1,17.0,119.5,Lisbon,Polytechnic,38.7223,-9.1393
+9504,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Fisioterapia,L1,48.0,155.0,Lisbon,Polytechnic,38.7223,-9.1393
+9549,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Farmácia,L1,52.0,123.3,Lisbon,Polytechnic,38.7223,-9.1393
+9861,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Saúde Ambiental,L1,4.0,121.0,Lisbon,Polytechnic,38.7223,-9.1393
+L066,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Imagem Médica e Radioterapia,L1,57.0,104.8,Lisbon,Polytechnic,38.7223,-9.1393
+L067,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Fisiologia Clínica,L1,43.0,134.0,Lisbon,Polytechnic,38.7223,-9.1393
+L068,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Ciências Biomédicas Laboratoriais,L1,61.0,145.0,Lisbon,Polytechnic,38.7223,-9.1393
+L161,Instituto Politécnico de Lisboa - Escola Superior de Tecnologia da Saúde de Lisboa,Ortóptica e Ciências da Visão,L1,20.0,112.3,Lisbon,Polytechnic,38.7223,-9.1393
+8138,Instituto Politécnico do Porto - Escola Superior de Saúde,Terapia Ocupacional,L1,37.0,125.0,Porto,Polytechnic,41.1784,-8.6068
+8141,Instituto Politécnico do Porto - Escola Superior de Saúde,Audiologia,L1,20.0,143.5,Porto,Polytechnic,41.1784,-8.6068
+8143,Instituto Politécnico do Porto - Escola Superior de Saúde,Ortóptica,L1,22.0,145.8,Porto,Polytechnic,41.1784,-8.6068
+9504,Instituto Politécnico do Porto - Escola Superior de Saúde,Fisioterapia,L1,63.0,155.8,Porto,Polytechnic,41.1784,-8.6068
+9549,Instituto Politécnico do Porto - Escola Superior de Saúde,Farmácia,L1,50.0,129.0,Porto,Polytechnic,41.1784,-8.6068
+9861,Instituto Politécnico do Porto - Escola Superior de Saúde,Saúde Ambiental,L1,7.0,115.0,Porto,Polytechnic,41.1784,-8.6068
+9890,Instituto Politécnico do Porto - Escola Superior de Saúde,Terapia da Fala,L1,37.0,150.0,Porto,Polytechnic,41.1784,-8.6068
+L066,Instituto Politécnico do Porto - Escola Superior de Saúde,Imagem Médica e Radioterapia,L1,61.0,125.5,Porto,Polytechnic,41.1784,-8.6068
+L067,Instituto Politécnico do Porto - Escola Superior de Saúde,Fisiologia Clínica,L1,48.0,135.0,Porto,Polytechnic,41.1784,-8.6068
+L068,Instituto Politécnico do Porto - Escola Superior de Saúde,Ciências Biomédicas Laboratoriais,L1,60.0,149.0,Porto,Polytechnic,41.1784,-8.6068
+L101,Instituto Politécnico do Porto - Escola Superior de Saúde,Biotecnologia Medicinal,L1,31.0,131.8,Porto,Polytechnic,41.1784,-8.6068
+L136,Instituto Politécnico do Porto - Escola Superior de Saúde,Osteopatia,L1,21.0,143.0,Porto,Polytechnic,41.1784,-8.6068
+L304,Instituto Politécnico do Porto - Escola Superior de Saúde,Saúde Digital,L1,10.0,125.5,Porto,Polytechnic,41.1784,-8.6068
+9500,Universidade de Coimbra - Escola Superior de Enfermagem,Enfermagem,L1,272.0,114.3,Coimbra,Public,40.207,-8.424
+9500,Universidade do Porto - Escola Superior de Enfermagem,Enfermagem,L1,257.0,160.0,Porto,Public,41.1523,-8.636
