@@ -19,47 +19,7 @@ def render_student_dashboard(choice: str):
             "Grades Analysis", "University Finder"
     """
 
-    # init onboarding flag
-    if "student_onboarding_done" not in st.session_state:
-        st.session_state.student_onboarding_done = False
-
-    # onboarding gate to block all student tools until the user confirms they are students
-    if not st.session_state.student_onboarding_done:
-        st.header("Student Dashboard")
-        st.info(
-            """
-            This section is for **high school students** who are:
-            
-            ⟡ Planning to go to university  
-            ⟡ Exploring degrees and study paths  
-            ⟡ Comparing universities and entry grades  
-            
-            If you are already in **university** or have **work experience**, 
-            you’ll get better support in the **Professional Dashboard**.
-            """
-        )
-
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button(
-                "✌︎︎ I'm a High School Student!",
-                width='stretch',
-                type="primary",
-            ):
-                st.session_state.student_onboarding_done = True
-                st.rerun()
-        with col2:
-            if st.button(
-                "𖠿 Take me to the Professional Dashboard!",
-                width='stretch',
-            ):
-                st.session_state.user_type = "professional"
-                st.session_state.student_onboarding_done = False
-                st.rerun()
-
-        return  # do not render any student tools yet
-
-    # after onboarding we can route to actual pages
+    # student chat/tools are available right after login
     if choice == "Dashboard":
         render_dashboard_chat()
 
