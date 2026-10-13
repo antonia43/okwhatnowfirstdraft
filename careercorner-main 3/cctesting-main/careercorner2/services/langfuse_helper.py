@@ -312,14 +312,16 @@ def log_user_feedback(trace_id: str, score: float, comment: str = None):
 
 
 def get_user_id():
-    # Try multiple sources, fallback to email
-    return (
-        st.session_state.get("user_id") or 
-        st.session_state.get("username") or
-        st.session_state.user.get("email") or  # Full email as fallback
-        st.session_state.user.get("display_name") or
-        "anonymous"
+    """One id per student: the lowercase email, so password and Google login share the same account."""
+    user = st.session_state.get("user") or {}
+    uid = (
+        st.session_state.get("user_id")
+        or user.get("email")
+        or st.session_state.get("username")
+        or user.get("display_name")
+        or "anonymous"
     )
+    return str(uid).strip().lower()
 
 
 def get_session_id():
