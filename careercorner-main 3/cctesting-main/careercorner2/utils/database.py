@@ -1,12 +1,7 @@
-import sqlite3
 import json
-import tempfile
-from pathlib import Path
-DB_PATH = Path(tempfile.gettempdir()) / "career_corner.db"
-
+from utils.db import connect, IntegrityError, DB_PATH
 def init_database():
-    DB_PATH.parent.mkdir(exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    conn = connect()
     c = conn.cursor()
 
     # users table
@@ -70,6 +65,39 @@ def init_database():
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
+    # conversations table (one row per chat)
+    c.execute("""
+    CREATE TABLE IF NOT EXISTS conversations (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id TEXT NOT NULL,
+        title TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
+    # messages table (every chat message, in order)
+    c.execute("""
+    CREATE TABLE IF NOT EXISTS messages (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        conversation_id INTEGER NOT NULL,
+        user_id TEXT NOT NULL,
+        role TEXT NOT NULL,
+        content TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
+    # student_profile table (what the assistant knows about the student)
+    c.execute("""
+    CREATE TABLE IF NOT EXISTS student_profile (
+        user_id TEXT PRIMARY KEY,
+        data TEXT,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
+
 
     conn.commit()
     conn.close()
@@ -79,7 +107,7 @@ def init_database():
 # university functions
 def save_university(user_id: str, uni_data: dict) -> bool:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute('''
             INSERT INTO saved_universities 
@@ -95,7 +123,7 @@ def save_university(user_id: str, uni_data: dict) -> bool:
         conn.commit()
         conn.close()
         return True
-    except sqlite3.IntegrityError:
+    except IntegrityError:
         return False
     except Exception as e:
         print(f"Error saving university: {e}")
@@ -103,7 +131,7 @@ def save_university(user_id: str, uni_data: dict) -> bool:
 
 def get_saved_universities(user_id: str) -> list:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute('SELECT data, saved_at FROM saved_universities WHERE user_id = ? ORDER BY saved_at DESC', (user_id,))
         results = c.fetchall()
@@ -111,7 +139,7 @@ def get_saved_universities(user_id: str) -> list:
         universities = []
         for row in results:
             uni_data = json.loads(row[0])
-            uni_data['saved_at'] = row[1]
+            uni_data['saved_at'] = str(row[1])
             universities.append(uni_data)
         return universities
     except Exception as e:
@@ -120,7 +148,7 @@ def get_saved_universities(user_id: str) -> list:
 
 def remove_saved_university(user_id: str, institution_name: str, program_name: str) -> bool:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         
         # deleting from saved_universities table
@@ -145,7 +173,7 @@ def remove_saved_university(user_id: str, institution_name: str, program_name: s
 
 def is_university_saved(user_id: str, institution_name: str, program_name: str) -> bool:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute('SELECT COUNT(*) FROM saved_universities WHERE user_id = ? AND institution_name = ? AND program_name = ?', 
                  (user_id, institution_name, program_name))
@@ -158,7 +186,7 @@ def is_university_saved(user_id: str, institution_name: str, program_name: str) 
 
 def get_saved_count(user_id: str) -> int:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute('SELECT COUNT(*) FROM saved_universities WHERE user_id = ?', (user_id,))
         count = c.fetchone()[0]
@@ -170,7 +198,7 @@ def get_saved_count(user_id: str) -> int:
 
 def clear_all_saved(user_id: str) -> bool:
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute('DELETE FROM saved_universities WHERE user_id = ?', (user_id,))
         conn.commit()
@@ -184,7 +212,7 @@ def clear_all_saved(user_id: str) -> bool:
 def save_user_cv(user_id: str, parsed_data: dict):
     """Save parsed CV data (modern version)"""
     try:
-        conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        conn = connect()
         cur = conn.cursor()
         cur.execute("""
             INSERT INTO user_cvs (user_id, parsed_data)
@@ -201,7 +229,7 @@ def save_user_cv(user_id: str, parsed_data: dict):
 def load_user_cv(user_id: str):
     """Load user CV data"""
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("SELECT parsed_data FROM user_cvs WHERE user_id = ?", (user_id,))
         row = c.fetchone()
@@ -218,14 +246,15 @@ def load_user_cv(user_id: str):
 # reports functions
 def save_report(user_id: str, report_type: str, title: str, content: str, cv_data: dict = None):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         cv_json = json.dumps(cv_data) if cv_data else None
         c.execute("""
             INSERT INTO professional_reports (user_id, report_type, title, content, cv_json)
             VALUES (?, ?, ?, ?, ?)
+        RETURNING id
         """, (user_id, report_type, title, content, cv_json))
-        report_id = c.lastrowid
+        report_id = c.fetchone()[0]
         conn.commit()
         conn.close()
         return report_id
@@ -236,7 +265,7 @@ def save_report(user_id: str, report_type: str, title: str, content: str, cv_dat
 '''
 def load_reports(user_id: str, report_type: str):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("""
             SELECT id, title, content, cv_json 
@@ -262,13 +291,11 @@ def load_reports(user_id: str, report_type: str):
 
 def load_reports(user_id: str, report_type: str):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         
         # Check if cv_json column exists first (safe upgrade)
-        c.execute("PRAGMA table_info(professional_reports)")
-        columns = [col[1] for col in c.fetchall()]
-        has_cv_json = 'cv_json' in columns
+        has_cv_json = True
         
         if has_cv_json:
             c.execute("""
@@ -316,7 +343,7 @@ def load_reports(user_id: str, report_type: str):
 
 def delete_report(report_id: int):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("DELETE FROM professional_reports WHERE id = ?", (report_id,))
         result = c.rowcount > 0
@@ -330,7 +357,7 @@ def delete_report(report_id: int):
 
 def save_quiz_result(user_id: str, quiz_data: dict):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("""
             INSERT INTO user_quizzes (user_id, quiz_data)
@@ -349,7 +376,7 @@ def save_quiz_result(user_id: str, quiz_data: dict):
 
 def load_user_quiz(user_id: str):
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("SELECT quiz_data FROM user_quizzes WHERE user_id = ?", (user_id,))
         result = c.fetchone()
@@ -365,7 +392,7 @@ def load_user_quiz(user_id: str):
 def load_career_quiz_metadata(user_id: str):
     """Load latest career quiz cv_data (sectors) for Degree Picker"""
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = connect()
         c = conn.cursor()
         c.execute("""
             SELECT cv_json 
@@ -387,6 +414,116 @@ def load_career_quiz_metadata(user_id: str):
         print(f"✗ Error loading career quiz metadata: {e}")
         return None
 
+
+# chat history + student profile
+def create_conversation(user_id: str, title: str = "New chat"):
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("INSERT INTO conversations (user_id, title) VALUES (?, ?) RETURNING id", (user_id, title))
+        conv_id = c.fetchone()[0]
+        conn.commit()
+        conn.close()
+        return conv_id
+    except Exception as e:
+        print(f"Error creating conversation: {e}")
+        return None
+
+def add_message(conversation_id: int, user_id: str, role: str, content: str) -> bool:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("INSERT INTO messages (conversation_id, user_id, role, content) VALUES (?, ?, ?, ?)",
+                  (conversation_id, user_id, role, content))
+        c.execute("UPDATE conversations SET updated_at = CURRENT_TIMESTAMP WHERE id = ? AND user_id = ?",
+                  (conversation_id, user_id))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error adding message: {e}")
+        return False
+
+def get_conversations(user_id: str) -> list:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("SELECT id, title, updated_at FROM conversations WHERE user_id = ? ORDER BY updated_at DESC, id DESC", (user_id,))
+        rows = c.fetchall()
+        conn.close()
+        return [{"id": r[0], "title": r[1], "updated_at": str(r[2])} for r in rows]
+    except Exception as e:
+        print(f"Error loading conversations: {e}")
+        return []
+
+def get_messages(conversation_id: int, user_id: str) -> list:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("SELECT role, content FROM messages WHERE conversation_id = ? AND user_id = ? ORDER BY id", (conversation_id, user_id))
+        rows = c.fetchall()
+        conn.close()
+        return [{"role": r[0], "content": r[1]} for r in rows]
+    except Exception as e:
+        print(f"Error loading messages: {e}")
+        return []
+
+def rename_conversation(conversation_id: int, user_id: str, title: str) -> bool:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("UPDATE conversations SET title = ? WHERE id = ? AND user_id = ?", (title, conversation_id, user_id))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error renaming conversation: {e}")
+        return False
+
+def delete_conversation(conversation_id: int, user_id: str) -> bool:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("DELETE FROM messages WHERE conversation_id = ? AND user_id = ?", (conversation_id, user_id))
+        c.execute("DELETE FROM conversations WHERE id = ? AND user_id = ?", (conversation_id, user_id))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error deleting conversation: {e}")
+        return False
+
+def save_student_profile(user_id: str, data: dict) -> bool:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("""
+        INSERT INTO student_profile (user_id, data)
+        VALUES (?, ?)
+        ON CONFLICT(user_id) DO UPDATE SET
+            data = excluded.data,
+            updated_at = CURRENT_TIMESTAMP
+        """, (user_id, json.dumps(data)))
+        conn.commit()
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"Error saving student profile: {e}")
+        return False
+
+def load_student_profile(user_id: str) -> dict:
+    try:
+        conn = connect()
+        c = conn.cursor()
+        c.execute("SELECT data FROM student_profile WHERE user_id = ?", (user_id,))
+        row = c.fetchone()
+        conn.close()
+        if row and row[0]:
+            return json.loads(row[0])
+        return {}
+    except Exception as e:
+        print(f"Error loading student profile: {e}")
+        return {}
 
 # initialising on import
 if __name__ == "__main__":
