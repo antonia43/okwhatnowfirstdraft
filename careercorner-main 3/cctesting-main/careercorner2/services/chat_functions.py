@@ -81,4 +81,4 @@ def call_function(name, arguments, user_id):
 
 def load_all():
     """Import every module that registers functions."""
-    from services import grade_functions  # noqa: F401
+    from services import grade_functions, university_functions  # noqa: F401
