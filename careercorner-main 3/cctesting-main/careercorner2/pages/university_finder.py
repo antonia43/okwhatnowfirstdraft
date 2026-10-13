@@ -97,6 +97,20 @@ def extract_degrees_from_report(content):
     return []
 
 
+def degrees_for_report(report):
+    """Degree names for a saved degree report: structured data first, markdown as fallback."""
+    cv = report.get("cv_data")
+    if isinstance(cv, str):
+        try:
+            cv = json.loads(cv)
+        except ValueError:
+            cv = None
+    names = cv.get("degrees") if isinstance(cv, dict) else None
+    if names:
+        return [str(n).strip() for n in names if len(str(n).strip()) > 3]
+    return extract_degrees_from_report(report.get("content", ""))
+
+
 def select_degree_section():
     """Unified degree selection UI for both Portuguese and International modes"""
     user_id = get_user_id()
@@ -123,7 +137,7 @@ def select_degree_section():
 
         selected_report = next(r for r in degree_reports if r["title"] == selected_report_title)
         content = selected_report.get("content", "")
-        clean_degrees = extract_degrees_from_report(content)
+        clean_degrees = degrees_for_report(selected_report)
 
         if clean_degrees:
             degree = st.selectbox(
@@ -376,7 +390,7 @@ def render_portuguese_finder():
         pattern = r'###\s*\d+\.\s*([^(]+?)\s*\('
         selected_report = next(r for r in degree_reports if r["title"] == selected_report_title)
         content = selected_report.get("content", "")
-        degree_matches = re.findall(pattern, content)
+        degree_matches = degrees_for_report(selected_report)
 
         if degree_matches:
             clean_degrees = [d.strip() for d in degree_matches if len(d.strip()) > 3]
@@ -593,6 +607,8 @@ def search_universities(degree, location, uni_type, ranking, show_grade_filter=T
 
         uni_dict = {
             "name": row["institution_name"],
+            "course_code": row.get("course_code", ""),
+            "last_grade_200": float(row["last_grade"]) if "last_grade" in row.index and pd.notna(row.get("last_grade")) else None,
             "program_name": row["course_name"],
             "location": row["region"],
             "type": row["type"],
