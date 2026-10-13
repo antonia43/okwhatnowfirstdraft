@@ -21,6 +21,7 @@ from utils.database import (
 from services.langfuse_helper import LangfuseGeminiWrapper, get_user_id, get_session_id
 from datetime import datetime
 import traceback
+from utils.dges import normalize_text
 
 
 init_database()
@@ -83,13 +84,6 @@ def get_student_admission_average():
         return None
 
 
-def normalize_text(text):
-    """Remove accents and normalize text for matching"""
-    if pd.isna(text):
-        return ""
-    text = unicodedata.normalize("NFD", str(text))
-    text = "".join(char for char in text if unicodedata.category(char) != "Mn")
-    return text.lower()
 
 
 def extract_degrees_from_report(content):
