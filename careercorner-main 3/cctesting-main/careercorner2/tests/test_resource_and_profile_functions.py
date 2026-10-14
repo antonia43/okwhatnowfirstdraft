@@ -21,9 +21,6 @@ class FakeTools:
         return {"success": True, "answer": f"{name} {args}", "sources": [{"title": "T", "url": "https://x"}]}
 
     def get_study_resources_web(self, *a): return self._answer("study", *a)
-    def get_career_options(self, *a): return self._answer("career", *a)
-    def get_wage_info(self, *a): return self._answer("wage", *a)
-    def get_city_guide(self, *a): return self._answer("city", *a)
 
 
 @pytest.fixture
@@ -47,13 +44,7 @@ def test_links_work_for_guests(tools):
 def test_searches_pass_the_old_arguments(tools):
     assert call("find_study_resources", {"subject": " Python "})["result"]["answer"].startswith("study ('Python',)")
     assert tools.calls[-1] == ("study", ("Python",))
-    call("explore_career_options", {"degree": "Psychology"})
-    call("find_salaries", {"job_title": "Nurse"})
-    assert tools.calls[-1] == ("wage", ("Nurse", "Portugal"))
-    call("find_salaries", {"job_title": "Nurse", "country": "Spain"})
-    assert tools.calls[-1] == ("wage", ("Nurse", "Spain"))
-    call("get_city_guide", {"city": "Porto", "country": "Portugal"})
-    assert tools.calls[-1] == ("city", ("Porto", "Portugal"))
+    assert not call("find_salaries", {"job_title": "Nurse"})["ok"]  # left out on purpose
     assert call("find_study_resources", {"subject": "x"})["result"]["sources"][0]["url"] == "https://x"
 
 
@@ -61,7 +52,7 @@ def test_empty_input_and_search_failure_are_explained(tools):
     out = call("find_study_resources", {"subject": "  "})
     assert not out["ok"] and "which subject" in out["error"]
     tools.ok = False
-    out = call("get_city_guide", {"city": "Porto"})
+    out = call("find_study_resources", {"subject": "Python"})
     assert not out["ok"] and "no key" in out["error"]
 
 
