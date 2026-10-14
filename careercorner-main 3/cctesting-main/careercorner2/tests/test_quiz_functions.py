@@ -210,3 +210,15 @@ def test_degree_save_matches_the_old_degree_report_format(env):
     from utils.saved_data import extract_degree_names
     assert extract_degree_names(kw["content"]) == kw["cv_data"]["degrees"]
     assert not cf.call_function("save_degree_results", {}, "guest-ab12cd34", env.session)["ok"]
+
+
+
+def test_quiz_save_reports_a_failed_database_write(env):
+    env.reports.clear()
+    import utils.database as db
+    db.save_report = lambda **kw: None
+    call(env, "sector_quiz")
+    for i in range(10):
+        call(env, "sector_quiz", {"answer": f"a{i}"})
+    out = cf.call_function("save_sector_result", {}, "ana@x.com", env.session)
+    assert not out["ok"] and "Could not save" in out["error"]
