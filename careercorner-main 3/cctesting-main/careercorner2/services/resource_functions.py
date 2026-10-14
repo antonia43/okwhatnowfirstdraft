@@ -1,8 +1,8 @@
-"""Resource abilities: exam papers, scholarships and the Google-search helpers
-(study resources, career options, salaries, city guides).
+"""Resource abilities: exam papers, scholarships and study-resource search.
 
-The links and the search prompts are the same as the old Resources page
+The links and the search prompt are the same as the old Resources page
 (services/tools.py). Only the web search needs Gemini; it is loaded when used.
+Career options, salaries and city guides were left out on purpose.
 """
 from services.chat_functions import chat_function
 
@@ -74,36 +74,3 @@ def get_scholarships(user_id):
 def find_study_resources(user_id, subject):
     return _search("get_study_resources_web", _required(subject, "which subject to study"))
 
-
-@chat_function(
-    "explore_career_options",
-    "Search the web for the career paths, job titles, seniority levels, salary ranges and industries "
-    "that a degree leads to.",
-    {"properties": {"degree": {"type": "string", "description": "The degree or course, e.g. Psychology"}},
-     "required": ["degree"]},
-)
-def explore_career_options(user_id, degree):
-    return _search("get_career_options", _required(degree, "which degree to look at"))
-
-
-@chat_function(
-    "find_salaries",
-    "Search the web for entry, mid and senior salary ranges for a job title in a country (default Portugal).",
-    {"properties": {"job_title": {"type": "string", "description": "e.g. Nurse, Software Engineer"},
-                    "country": {"type": "string", "description": "Defaults to Portugal"}},
-     "required": ["job_title"]},
-)
-def find_salaries(user_id, job_title, country="Portugal"):
-    return _search("get_wage_info", _required(job_title, "which job title"), (country or "").strip() or "Portugal")
-
-
-@chat_function(
-    "get_city_guide",
-    "Search the web for a student guide to any city: universities, cost of living, student life, transport, "
-    "culture and practical information.",
-    {"properties": {"city": {"type": "string", "description": "e.g. Porto"},
-                    "country": {"type": "string", "description": "Optional, e.g. Portugal"}},
-     "required": ["city"]},
-)
-def get_city_guide(user_id, city, country=""):
-    return _search("get_city_guide", _required(city, "which city"), (country or "").strip())
