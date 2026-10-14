@@ -276,7 +276,7 @@ def save_sector_result(user_id, session):
         return {"saved": False, "error": "There is no finished sector quiz to save. Run the sector quiz first."}
     sector = result["primary_sector"] or "Career Discovery"
     sectors = result["sectors"]
-    database.save_report(
+    report_id = database.save_report(
         user_id=user_id,
         report_type="career_quiz",
         title=f"Career Quiz - {sector} - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
@@ -287,6 +287,8 @@ def save_sector_result(user_id, session):
             "sectors_display": ", ".join(f"{s} ({p}%)" for s, p in sectors.items()),
         },
     )
+    if report_id is None:
+        raise RuntimeError("Could not save the quiz result")
     return {"saved": True, "primary_sector": result["primary_sector"]}
 
 
@@ -500,11 +502,13 @@ def save_degree_results(user_id, session):
     lines = ["# Degree Quiz Results", "", f"Field: {result['field']}", ""]
     for i, p in enumerate(result["top_degrees"], 1):
         lines += [f"### {i}. {p['degree']} (Top match)", "", p["reason"], ""]
-    database.save_report(
+    report_id = database.save_report(
         user_id=user_id,
         report_type="degree",
         title=f"Degree Quiz - {result['field']} - {datetime.now().strftime('%Y-%m-%d %H:%M')}",
         content="\n".join(lines),
         cv_data={"degrees": degrees, "field": result["field"]},
     )
+    if report_id is None:
+        raise RuntimeError("Could not save the quiz result")
     return {"saved": True, "degrees": degrees}
