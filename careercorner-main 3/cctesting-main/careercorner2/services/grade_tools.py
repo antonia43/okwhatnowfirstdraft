@@ -131,7 +131,7 @@ def calculate_and_save_grade(user_id, grades_data, weights=None, save=True):
             }),
             cv_data=None,
         )
-        out["saved"] = True
+        out["saved"] = out["report_id"] is not None
     return out
 
 
@@ -154,7 +154,7 @@ def save_international_grades(user_id, grades_data):
         }),
         cv_data=None,
     )
-    out["saved"] = True
+    out["saved"] = out["report_id"] is not None
     return out
 
 
@@ -266,8 +266,9 @@ Rules:
 def _default_model():
     """Gemini wrapper, created only when needed so the app boots without a key."""
     from services.langfuse_helper import LangfuseGeminiWrapper
+    from utils.gemini_key import get_gemini_api_key
 
-    return LangfuseGeminiWrapper(api_key=os.getenv("GOOGLE_API_KEY"), model=GRADES_MODEL_NAME)
+    return LangfuseGeminiWrapper(api_key=get_gemini_api_key(), model=GRADES_MODEL_NAME)
 
 
 def parse_extraction(text):
