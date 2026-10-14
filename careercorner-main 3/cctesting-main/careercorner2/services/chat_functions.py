@@ -24,9 +24,10 @@ class ChatFunction:
     parameters: dict
     handler: Callable
     saves: bool = False  # writes to the student's account, so not for guests
+    uses_session: bool = False  # gets the chat's scratch space (e.g. quiz progress) as session=
 
 
-def chat_function(name, description, parameters=None, saves=False):
+def chat_function(name, description, parameters=None, saves=False, uses_session=False):
     """Register a function with the chat."""
     schema = {"type": "object", "properties": {}, "required": []}
     schema.update(parameters or {})
@@ -34,7 +35,7 @@ def chat_function(name, description, parameters=None, saves=False):
     def decorator(handler):
         if name in REGISTRY:
             raise ValueError(f"Chat function '{name}' is already registered")
-        REGISTRY[name] = ChatFunction(name, description, schema, handler, saves)
+        REGISTRY[name] = ChatFunction(name, description, schema, handler, saves, uses_session)
         return handler
 
     return decorator
@@ -53,8 +54,12 @@ def get_declarations(names=None):
     ]
 
 
-def call_function(name, arguments, user_id):
-    """Run a registered function for this user. Always returns a dict with 'ok'."""
+def call_function(name, arguments, user_id, session=None):
+    """Run a registered function for this user. Always returns a dict with 'ok'.
+
+    session is the chat's scratch dict (kept for the length of the conversation);
+    functions that need to remember something between turns, like a quiz, use it.
+    """
     function = REGISTRY.get(name)
     if function is None:
         return {"ok": False, "error": f"Unknown function '{name}'."}
@@ -73,6 +78,8 @@ def call_function(name, arguments, user_id):
     arguments = {k: v for k, v in arguments.items() if k in allowed}
 
     try:
+        if function.uses_session:
+            arguments["session"] = session if session is not None else {}
         result = function.handler(user_id, **arguments)
         return {"ok": True, "result": json.loads(json.dumps(result, default=str))}
     except Exception as e:  # the model explains the problem to the student
@@ -81,4 +88,4 @@ def call_function(name, arguments, user_id):
 
 def load_all():
     """Import every module that registers functions."""
-    from services import grade_functions, university_functions  # noqa: F401
+    from services import grade_functions, quiz_functions, university_functions  # noqa: F401
