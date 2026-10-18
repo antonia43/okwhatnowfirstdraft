@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).parent
 
 
 def apply_custom_css(
-    logo_path: str = "data/careercornerlogo2.png",
+    logo_path: str = "data/okaynowwhatlogo1.png",
     bg_image_path: str = "data/bg2.png",
 ):
     # main page background image (kept subtle so it sits under the dark gradient)
@@ -55,7 +55,7 @@ def apply_custom_css(
         }}
         """
 
-    sidebar_bg_base64 = get_base64_image(BASE_DIR / "data" / "crumpledpaper3.avif")
+    sidebar_bg_base64 = get_base64_image(BASE_DIR / "data" / "questionmarks1.jpg")
     sidebar_image_css = ""
     if sidebar_bg_base64:
         sidebar_image_css = f"""
@@ -67,7 +67,7 @@ def apply_custom_css(
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.06;
+            opacity: 0.2;
             mix-blend-mode: screen;
             pointer-events: none;
             z-index: 0;
