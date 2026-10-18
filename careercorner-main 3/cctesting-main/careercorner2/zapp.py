@@ -174,7 +174,7 @@ if st.session_state.get("logged_in") and st.session_state.user:
 
     with st.sidebar:
         BASE_DIR = Path(__file__).parent
-        st.image(BASE_DIR / "data" / "careercornermini.png", width='stretch')
+        st.image(BASE_DIR / "data" / "okaynowwhatlogo_white.png", width='stretch')
         st.success(f"Logged in as {st.session_state.user['display_name']}")
 
         def logout():
