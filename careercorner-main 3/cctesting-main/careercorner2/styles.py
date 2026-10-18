@@ -155,24 +155,42 @@ def apply_custom_css(
     }}
 
     /* Buttons */
-    .stButton > button {{
-        background: rgba(255, 255, 255, 0.08) !important;
-        color: {TEXT} !important;
-        border: 1px solid rgba(168, 85, 247, 0.6) !important;
+    .stButton > button,
+    [data-testid="stFormSubmitButton"] > button,
+    [data-testid="stLinkButton"] a,
+    .stLinkButton a,
+    .stDownloadButton > button {{
+        background: linear-gradient(135deg, #8B5CF6 0%, {PURPLE_LIGHT} 100%) !important;
+        color: #FFFFFF !important;
+        border: 1px solid rgba(233, 213, 255, 0.7) !important;
         border-radius: 15px !important;
         padding: 12px 24px !important;
         font-weight: 600 !important;
         font-size: 1rem !important;
         transition: all 0.3s ease !important;
-        box-shadow: 0 3px 12px rgba(123, 47, 247, 0.25) !important;
+        box-shadow: 0 0 14px rgba(168, 85, 247, 0.65), 0 0 32px rgba(168, 85, 247, 0.35) !important;
         font-family: 'Barlow', sans-serif !important;
+        text-decoration: none !important;
     }}
 
-    .stButton > button:hover {{
+    .stButton > button p,
+    [data-testid="stFormSubmitButton"] > button p,
+    [data-testid="stLinkButton"] a p,
+    .stLinkButton a p,
+    .stDownloadButton > button p {{
+        color: #FFFFFF !important;
+    }}
+
+    .stButton > button:hover,
+    [data-testid="stFormSubmitButton"] > button:hover,
+    [data-testid="stLinkButton"] a:hover,
+    .stLinkButton a:hover,
+    .stDownloadButton > button:hover {{
         transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(168, 85, 247, 0.55) !important;
-        background: rgba(168, 85, 247, 0.25) !important;
-        border-color: {PURPLE_LIGHT} !important;
+        box-shadow: 0 0 20px rgba(192, 132, 252, 0.95), 0 0 46px rgba(168, 85, 247, 0.6) !important;
+        background: linear-gradient(135deg, #A78BFA 0%, #C084FC 100%) !important;
+        border-color: #FFFFFF !important;
+        color: #FFFFFF !important;
     }}
 
     .stButton > button[kind="primary"] {{
@@ -201,11 +219,31 @@ def apply_custom_css(
     .stTextArea textarea,
     .stNumberInput input,
     .stSelectbox div[data-baseweb="select"] > div,
+    div[data-baseweb="input"],
+    div[data-baseweb="base-input"],
+    div[data-baseweb="textarea"],
     [data-testid="stChatInput"] textarea {{
-        background-color: rgba(10, 14, 61, 0.85) !important;
-        color: {TEXT} !important;
-        border: 1px solid rgba(168, 85, 247, 0.4) !important;
+        background-color: #FFFFFF !important;
+        color: #1A1A40 !important;
+        -webkit-text-fill-color: #1A1A40 !important;
+        border: 1px solid rgba(168, 85, 247, 0.5) !important;
         border-radius: 12px !important;
+    }}
+
+    /* password eye toggle and icons inside white inputs */
+    div[data-baseweb="input"] button,
+    div[data-baseweb="input"] svg {{
+        background-color: transparent !important;
+        color: #5B21B6 !important;
+        fill: #5B21B6 !important;
+    }}
+    div[data-baseweb="input"] span[data-testid="stIconMaterial"]::before {{
+        color: #5B21B6;
+    }}
+
+    ::placeholder {{
+        color: #8A87B8 !important;
+        -webkit-text-fill-color: #8A87B8 !important;
     }}
 
     .stTextInput input:focus,
@@ -221,6 +259,44 @@ def apply_custom_css(
 
     label, .stMarkdown, .stCaption, small {{
         color: {TEXT_MUTED} !important;
+    }}
+
+    /* Dialogs / modals and sidebar inner panel: dark blue, never white */
+    div[data-testid="stDialog"] div[role="dialog"],
+    div[data-testid="stModal"] div[role="dialog"],
+    div[role="dialog"] {{
+        background: linear-gradient(170deg, {NAVY_LIGHT} 0%, {NAVY_DEEP} 100%) !important;
+        border: 1px solid rgba(168, 85, 247, 0.45) !important;
+        box-shadow: 0 0 40px rgba(123, 47, 247, 0.4) !important;
+        color: {TEXT} !important;
+    }}
+
+    [data-testid="stSidebarContent"],
+    section[data-testid="stSidebar"] > div {{
+        background: transparent !important;
+    }}
+
+    div[role="dialog"] hr,
+    section[data-testid="stSidebar"] hr,
+    hr {{
+        border-color: rgba(168, 85, 247, 0.35) !important;
+        background-color: rgba(168, 85, 247, 0.35) !important;
+    }}
+
+    /* Tabs */
+    [data-baseweb="tab-list"] [data-baseweb="tab"] {{
+        color: {TEXT_MUTED} !important;
+    }}
+    [data-baseweb="tab-list"] [aria-selected="true"],
+    [data-baseweb="tab-list"] [aria-selected="true"] p {{
+        color: #FFFFFF !important;
+    }}
+    [data-baseweb="tab-highlight"] {{
+        background: linear-gradient(90deg, {PURPLE_LIGHT}, {MAGENTA}) !important;
+        background-color: {PURPLE_LIGHT} !important;
+    }}
+    [data-baseweb="tab-border"] {{
+        background-color: rgba(168, 85, 247, 0.3) !important;
     }}
 
     /* Chat bubbles */
