@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).parent
 
 def apply_custom_css(
     logo_path: str = "data/okaynowwhatlogo1.png",
-    bg_image_path: str = "data/bg2.png",
+    bg_image_path: str = "data/questionmarks1.jpg",
 ):
     # main page background image (kept subtle so it sits under the dark gradient)
     bg_image_base64 = get_base64_image(BASE_DIR / bg_image_path)
