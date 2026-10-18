@@ -77,7 +77,7 @@ def apply_custom_css(
     st.markdown(
         f"""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=Chakra+Petch:wght@500;600;700&display=swap');
 
     /* Global */
     .stApp {{
@@ -413,16 +413,14 @@ border: 2px solid #0B0B2E !important;
 box-shadow: 0 0 40px rgba(123, 47, 247, 0.35) !important;
 }}
 
-section[role="dialog"] > h2 {{
-padding: 0.6rem 1.5rem 0 !important;
-}}
+section[role="dialog"] > h2 {{ display: none !important; }}
 
 section[role="dialog"] > div {{
-padding: 0.25rem 1.5rem 1rem !important;
+padding: 1.25rem 1.75rem 1.5rem !important;
 }}
 
 section[role="dialog"] [data-testid="stVerticalBlock"] {{
-gap: 0.5rem !important;
+gap: 0.8rem !important;
 }}
 
 section[role="dialog"] p,
@@ -434,7 +432,7 @@ section[role="dialog"] small,
 section[role="dialog"] input,
 section[role="dialog"] [data-testid="stCaptionContainer"],
 section[role="dialog"] [data-testid="stWidgetLabel"] p {{
-font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-family: 'Chakra Petch', 'Barlow', sans-serif !important;
 font-weight: 600 !important;
 color: #0B0B2E !important;
 -webkit-text-fill-color: #0B0B2E !important;
@@ -444,7 +442,7 @@ letter-spacing: 0.02em;
 section[role="dialog"] p,
 section[role="dialog"] label {{
 font-size: 1rem !important;
-line-height: 1.3 !important;
+line-height: 1.45 !important;
 }}
 
 section[role="dialog"] h2 p {{
@@ -455,7 +453,7 @@ text-transform: none !important;
 
 section[role="dialog"] h3,
 section[role="dialog"] h3 span {{
-font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-family: 'Chakra Petch', 'Barlow', sans-serif !important;
 font-weight: 700 !important;
 font-size: 1.1rem !important;
 color: #0B0B2E !important;
@@ -465,7 +463,7 @@ letter-spacing: 0.02em;
 }}
 
 section[role="dialog"] h3 {{
-margin: 0 0 0.25rem !important;
+margin: 0 0 0.5rem !important;
 padding: 0 !important;
 }}
 
@@ -475,7 +473,7 @@ opacity: 1 !important;
 
 section[role="dialog"] [data-baseweb="tab-list"] [data-baseweb="tab"] p,
 section[role="dialog"] [role="tab"] p {{
-font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-family: 'Chakra Petch', 'Barlow', sans-serif !important;
 font-weight: 700 !important;
 font-size: 1.05rem !important;
 color: #0B0B2E !important;
@@ -490,7 +488,7 @@ section[role="dialog"] .stButton button,
 section[role="dialog"] [data-testid="stFormSubmitButton"] button,
 section[role="dialog"] .stLinkButton a,
 section[role="dialog"] [data-testid="stLinkButton"] a {{
-padding: 0.4rem 1rem !important;
+padding: 0.6rem 1.4rem !important;
 min-height: 0 !important;
 }}
 
@@ -498,21 +496,21 @@ section[role="dialog"] .stButton button p,
 section[role="dialog"] [data-testid="stFormSubmitButton"] button p,
 section[role="dialog"] .stLinkButton a p,
 section[role="dialog"] [data-testid="stLinkButton"] a p {{
-font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-family: 'Chakra Petch', 'Barlow', sans-serif !important;
 font-weight: 700 !important;
 color: #FFFFFF !important;
 -webkit-text-fill-color: #FFFFFF !important;
 }}
 
 section[role="dialog"] [data-testid="stImage"] img {{
-width: 200px !important;
+width: 230px !important;
 height: auto !important;
 display: block;
 margin: 0 auto;
 }}
 
 section[role="dialog"] hr {{
-margin: 0.25rem 0 !important;
+margin: 0.5rem 0 !important;
 }}
 
 /* Hide only menu + footer, not header (keep sidebar toggle) */
