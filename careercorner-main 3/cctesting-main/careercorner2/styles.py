@@ -77,7 +77,7 @@ def apply_custom_css(
     st.markdown(
         f"""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 
     /* Global */
     .stApp {{
@@ -406,7 +406,62 @@ def apply_custom_css(
         font-size: 1rem;
     }}
 
-    /* Hide only menu + footer, not header (keep sidebar toggle) */
+    /* Login popup: light card, dark thick pixel font */
+div[data-testid="stDialog"] div[role="dialog"],
+div[data-testid="stModal"] div[role="dialog"],
+div[role="dialog"] {{
+background: #FFFFFF !important;
+border: 2px solid #0B0B2E !important;
+box-shadow: 0 0 40px rgba(123, 47, 247, 0.35) !important;
+color: #0B0B2E !important;
+}}
+
+div[role="dialog"] p,
+div[role="dialog"] label,
+div[role="dialog"] h1,
+div[role="dialog"] h2,
+div[role="dialog"] h3,
+div[role="dialog"] small,
+div[role="dialog"] input,
+div[role="dialog"] [data-testid="stCaptionContainer"],
+div[role="dialog"] [data-testid="stWidgetLabel"] p {{
+font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-weight: 600 !important;
+color: #0B0B2E !important;
+-webkit-text-fill-color: #0B0B2E !important;
+letter-spacing: 0.02em;
+}}
+
+div[role="dialog"] h2 {{
+font-weight: 700 !important;
+font-size: 1.6rem !important;
+text-transform: none !important;
+}}
+
+div[role="dialog"] p,
+div[role="dialog"] label {{
+font-size: 1.05rem !important;
+}}
+
+div[role="dialog"] [data-baseweb="tab-list"] [data-baseweb="tab"] p {{
+font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-weight: 700 !important;
+font-size: 1.15rem !important;
+color: #0B0B2E !important;
+-webkit-text-fill-color: #0B0B2E !important;
+}}
+
+div[role="dialog"] .stButton button p,
+div[role="dialog"] [data-testid="stFormSubmitButton"] button p,
+div[role="dialog"] .stLinkButton a p,
+div[role="dialog"] [data-testid="stLinkButton"] a p {{
+font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-weight: 700 !important;
+color: #FFFFFF !important;
+-webkit-text-fill-color: #FFFFFF !important;
+}}
+
+/* Hide only menu + footer, not header (keep sidebar toggle) */
     #MainMenu {{visibility: hidden;}}
     footer {{visibility: hidden;}}
 
