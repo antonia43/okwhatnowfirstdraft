@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore", message=".*Session State.*|.*widget with key.*
 
 
 st.set_page_config(
-    page_title="Career Corner",
+    page_title="Okay, now what",
     page_icon="✎ᝰ..",
     layout="wide",
     initial_sidebar_state="expanded",
