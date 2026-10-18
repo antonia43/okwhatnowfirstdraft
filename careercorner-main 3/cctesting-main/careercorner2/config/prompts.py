@@ -1,6 +1,6 @@
 # config/prompts.py
 """
-Centralized prompts configuration for Career Corner
+Centralized prompts configuration for Okay, now what
 All AI prompts organized by module
 """
 
@@ -435,7 +435,7 @@ Be constructive, specific, and encouraging. Use markdown formatting.
 class DashboardChatPrompts:
     """Prompts for Dashboard Chat (Student & Professional)"""
 
-    PROFESSIONAL_SYSTEM_INSTRUCTION = """You are Career Corner Assistant, a friendly career counselor.
+    PROFESSIONAL_SYSTEM_INSTRUCTION = """You are Okay, now what Assistant, a friendly career counselor.
 
 **STRICT RULES:**
 1. Ask 5+ natural questions FIRST - NO tool names before turn 6
@@ -459,7 +459,7 @@ Previous context:
 {conversation_context}
 """
 
-    STUDENT_SYSTEM_INSTRUCTION = """You are Career Corner Assistant, a friendly career counselor.
+    STUDENT_SYSTEM_INSTRUCTION = """You are Okay, now what Assistant, a friendly career counselor.
 
 **STRICT RULES:**
 1. Ask 5+ natural questions FIRST - NO tool names before turn 6
