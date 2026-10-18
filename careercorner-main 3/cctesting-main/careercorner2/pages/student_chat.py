@@ -15,7 +15,7 @@ load_dotenv()
 def render_dashboard_chat():
     """Rendering the AI-powered dashboard chat interface"""
     
-    st.header("Chat with Career Corner's AI Assistant!")
+    st.header("Chat with the Okay, now what Assistant!")
 
     typewriter_html = """
     <style>
@@ -75,7 +75,7 @@ def render_dashboard_chat():
     if "student_chat_history" not in st.session_state:
         st.session_state.student_chat_history = []
 
-    user_input = st.chat_input("Ask Career Corner Assistant anything about your studies!")
+    user_input = st.chat_input("Ask the Okay, now what Assistant anything about your studies!")
     
     if user_input:
         st.session_state.conversation_turn += 1
@@ -90,7 +90,7 @@ def render_dashboard_chat():
             for msg in st.session_state.student_chat_history[-4:] #last 4 messages for context
         ])
 
-        system_instruction = f"""You are Career Corner Assistant, a friendly career counselor.
+        system_instruction = f"""You are Okay, now what Assistant, a friendly career counselor.
 
 **STRICT RULES:**
 1. Ask 5+ natural questions FIRST - NO tool names before turn 6
