@@ -406,25 +406,34 @@ def apply_custom_css(
         font-size: 1rem;
     }}
 
-    /* Login popup: light card, dark thick pixel font */
-div[data-testid="stDialog"] div[role="dialog"],
-div[data-testid="stModal"] div[role="dialog"],
-div[role="dialog"] {{
+    /* Login popup: compact light card, dark thick pixel font */
+[data-testid="stDialog"] > div {{
 background: #FFFFFF !important;
 border: 2px solid #0B0B2E !important;
 box-shadow: 0 0 40px rgba(123, 47, 247, 0.35) !important;
-color: #0B0B2E !important;
 }}
 
-div[role="dialog"] p,
-div[role="dialog"] label,
-div[role="dialog"] h1,
-div[role="dialog"] h2,
-div[role="dialog"] h3,
-div[role="dialog"] small,
-div[role="dialog"] input,
-div[role="dialog"] [data-testid="stCaptionContainer"],
-div[role="dialog"] [data-testid="stWidgetLabel"] p {{
+section[role="dialog"] > h2 {{
+padding: 0.6rem 1.5rem 0 !important;
+}}
+
+section[role="dialog"] > div {{
+padding: 0.25rem 1.5rem 1rem !important;
+}}
+
+section[role="dialog"] [data-testid="stVerticalBlock"] {{
+gap: 0.5rem !important;
+}}
+
+section[role="dialog"] p,
+section[role="dialog"] label,
+section[role="dialog"] h1,
+section[role="dialog"] h2,
+section[role="dialog"] h3,
+section[role="dialog"] small,
+section[role="dialog"] input,
+section[role="dialog"] [data-testid="stCaptionContainer"],
+section[role="dialog"] [data-testid="stWidgetLabel"] p {{
 font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
 font-weight: 600 !important;
 color: #0B0B2E !important;
@@ -432,33 +441,78 @@ color: #0B0B2E !important;
 letter-spacing: 0.02em;
 }}
 
-div[role="dialog"] h2 {{
+section[role="dialog"] p,
+section[role="dialog"] label {{
+font-size: 1rem !important;
+line-height: 1.3 !important;
+}}
+
+section[role="dialog"] h2 p {{
 font-weight: 700 !important;
-font-size: 1.6rem !important;
+font-size: 1.25rem !important;
 text-transform: none !important;
 }}
 
-div[role="dialog"] p,
-div[role="dialog"] label {{
-font-size: 1.05rem !important;
-}}
-
-div[role="dialog"] [data-baseweb="tab-list"] [data-baseweb="tab"] p {{
+section[role="dialog"] h3,
+section[role="dialog"] h3 span {{
 font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
 font-weight: 700 !important;
-font-size: 1.15rem !important;
+font-size: 1.1rem !important;
+color: #0B0B2E !important;
+-webkit-text-fill-color: #0B0B2E !important;
+text-transform: none !important;
+letter-spacing: 0.02em;
+}}
+
+section[role="dialog"] h3 {{
+margin: 0 0 0.25rem !important;
+padding: 0 !important;
+}}
+
+section[role="dialog"] [data-testid="stCaptionContainer"] {{
+opacity: 1 !important;
+}}
+
+section[role="dialog"] [data-baseweb="tab-list"] [data-baseweb="tab"] p,
+section[role="dialog"] [role="tab"] p {{
+font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
+font-weight: 700 !important;
+font-size: 1.05rem !important;
 color: #0B0B2E !important;
 -webkit-text-fill-color: #0B0B2E !important;
 }}
 
-div[role="dialog"] .stButton button p,
-div[role="dialog"] [data-testid="stFormSubmitButton"] button p,
-div[role="dialog"] .stLinkButton a p,
-div[role="dialog"] [data-testid="stLinkButton"] a p {{
+section[role="dialog"] [role="tab"][aria-selected="true"] > div:last-child {{
+background-color: #7B2FF7 !important;
+}}
+
+section[role="dialog"] .stButton button,
+section[role="dialog"] [data-testid="stFormSubmitButton"] button,
+section[role="dialog"] .stLinkButton a,
+section[role="dialog"] [data-testid="stLinkButton"] a {{
+padding: 0.4rem 1rem !important;
+min-height: 0 !important;
+}}
+
+section[role="dialog"] .stButton button p,
+section[role="dialog"] [data-testid="stFormSubmitButton"] button p,
+section[role="dialog"] .stLinkButton a p,
+section[role="dialog"] [data-testid="stLinkButton"] a p {{
 font-family: 'Pixelify Sans', 'Barlow', sans-serif !important;
 font-weight: 700 !important;
 color: #FFFFFF !important;
 -webkit-text-fill-color: #FFFFFF !important;
+}}
+
+section[role="dialog"] [data-testid="stImage"] img {{
+width: 200px !important;
+height: auto !important;
+display: block;
+margin: 0 auto;
+}}
+
+section[role="dialog"] hr {{
+margin: 0.25rem 0 !important;
 }}
 
 /* Hide only menu + footer, not header (keep sidebar toggle) */
