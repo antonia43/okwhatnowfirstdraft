@@ -136,7 +136,7 @@ if "code" in query_params and not st.session_state.get("logged_in", False):
 if "welcome_animated" not in st.session_state:
     st.session_state.welcome_animated = False
 
-@st.dialog("⟡ Welcome to Career Corner!")
+@st.dialog("Welcome")
 def login_modal():
     _logo_l, _logo_c, _logo_r = st.columns([1, 3, 1])
     with _logo_c:
