@@ -138,6 +138,10 @@ if "welcome_animated" not in st.session_state:
 
 @st.dialog("⟡ Welcome to Career Corner!")
 def login_modal():
+    _logo_l, _logo_c, _logo_r = st.columns([1, 3, 1])
+    with _logo_c:
+        st.image(str(BASE_DIR / "data" / "okaynowwhatlogo2.png"), width="stretch")
+
     st.caption("Please log in or register to continue")
 
     tab1, tab2 = st.tabs(["Login", "Register"])
