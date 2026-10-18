@@ -299,6 +299,53 @@ def apply_custom_css(
         background-color: rgba(168, 85, 247, 0.3) !important;
     }}
 
+    /* White bars: top header and bottom chat strip */
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"],
+    .main {{
+        background: transparent !important;
+    }}
+
+    header[data-testid="stHeader"],
+    [data-testid="stHeader"] {{
+        background: transparent !important;
+    }}
+
+    [data-testid="stToolbar"] *,
+    [data-testid="stHeader"] button,
+    [data-testid="stHeader"] a {{
+        color: {TEXT_MUTED} !important;
+    }}
+    [data-testid="stToolbar"] svg,
+    [data-testid="stHeader"] svg {{
+        fill: {TEXT_MUTED} !important;
+    }}
+
+    [data-testid="stBottom"],
+    [data-testid="stBottom"] > div,
+    [data-testid="stBottomBlockContainer"] {{
+        background: transparent !important;
+    }}
+
+    /* Chat input: dark outer shell, white text field, purple send button */
+    [data-testid="stChatInput"],
+    [data-testid="stChatInput"] > div {{
+        background: rgba(14, 20, 80, 0.85) !important;
+        border: 1px solid rgba(168, 85, 247, 0.5) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 0 18px rgba(123, 47, 247, 0.3) !important;
+    }}
+    [data-testid="stChatInput"] button,
+    [data-testid="stChatInputSubmitButton"] {{
+        background: linear-gradient(135deg, #8B5CF6, {PURPLE_LIGHT}) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 12px rgba(168, 85, 247, 0.6) !important;
+    }}
+    [data-testid="stChatInput"] button svg {{
+        fill: #FFFFFF !important;
+        color: #FFFFFF !important;
+    }}
+
     /* Chat bubbles */
     [data-testid="stChatMessage"] {{
         background-color: rgba(255, 255, 255, 0.05);
