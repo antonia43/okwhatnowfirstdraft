@@ -1,219 +1,268 @@
-import os
+"""The chat: one conversation that can do everything the app does.
+
+The assistant is given every registered chat function (services/chat_functions.py) as a Gemini
+tool. When the student asks for something, Gemini calls the function, we run it through
+call_function (which supplies the signed-in student's id, blocks guests from saving, and turns
+errors into messages), hand the result back, and Gemini writes the answer.
+
+Conversations are saved per account (conversations / messages tables) for signed-in students.
+"""
 import streamlit as st
-from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 
-from services.langfuse_helper import (
-    LangfuseGeminiWrapper,
-    get_user_id,
-    get_session_id,
-    log_user_feedback,
-)
+from services.chat_functions import call_function, get_declarations, is_guest, load_all
+from services.langfuse_helper import get_user_id
+from utils import database
+from utils.gemini_key import get_gemini_api_key
+
+MODEL = "gemini-2.5-flash"
+MAX_TOOL_ROUNDS = 8
+PLACEHOLDER = "Ask the Okay, now what Assistant anything about your studies!"
+IMAGE_TYPES = ["png", "jpg", "jpeg", "webp"]
+
+STARTERS = [
+    ("Find my best-fit career sector", "I don't know what I want to study. Can you help me find out?"),
+    ("Work out my admission grade", "Can you calculate my admission grade?"),
+    ("Find degrees and universities", "Help me find degrees and universities in Portugal."),
+    ("Study resources and exam papers", "Where can I find study resources and past exam papers?"),
+]
+
+SYSTEM_INSTRUCTION = """You are the Okay, now what Assistant, a warm, practical study guide for students \
+in Portugal who are working out what to study and where. You do the work yourself inside this chat. \
+Never send the student to a menu or another page, and never mention function or tool names to them.
+
+WHAT YOU CAN DO (use your functions, don't guess):
+- Learn about them: see what is already known (saved grades, quiz results, saved universities, \
+preferences) so you never ask something twice. For a signed-in student, check this at the start of \
+the conversation. Remember new details they share (year, track, interests, preferred regions).
+- Career Discovery quiz for students who don't know what they like. Degree quiz for students who \
+already named a field.
+- Admission grade: calculate it from grades they type or from a screenshot they attach, check chances \
+for a degree, and compare their saved universities with their grade.
+- Find Portuguese degree programs on a map, with the last-placed grade and chance colours, and save or \
+remove universities from their list.
+- Free study resources for any subject, official national exam papers, and scholarships.
+
+HOW TO RUN THINGS
+- Quizzes: ask each question exactly as given, one at a time, then pass the student's answer back. \
+Show the results clearly when they finish, then offer to save them.
+- Grades: read every subject and grade from a screenshot carefully, show what you read and ask them to \
+confirm before saving. School grades are 0-20, national exams 0-200, and the admission grade used by \
+DGES is on a 0-200 scale. Calculating does not save anything.
+- University search: a map appears automatically below your message. Don't list every program. \
+Mention the few that matter (best fits, notable reaches) and explain the colours: green is a high \
+chance, yellow possible, red low.
+- Only save when the student wants it. Guests can use everything except saving; if a guest wants to \
+save, tell them kindly to log in or register first.
+- Use only what the functions return. Never make up cut-off grades, universities, links or \
+deadlines. If a function reports an error or no result, say so plainly and offer another way forward.
+
+STYLE: friendly, short, one question at a time, plain language. You only help students with studies \
+and degree choices."""
 
 
-load_dotenv()
+# ---------------------------------------------------------------- state
+
+def _init_state():
+    st.session_state.setdefault("chat_messages", [])  # what is shown: role, content, maps
+    st.session_state.setdefault("chat_contents", [])  # what Gemini sees (includes function calls)
+    st.session_state.setdefault("chat_scratch", {})  # quiz progress etc., lives for one conversation
+    st.session_state.setdefault("chat_conversation_id", None)
+
+
+def _reset_chat():
+    st.session_state.chat_messages = []
+    st.session_state.chat_contents = []
+    st.session_state.chat_scratch = {}
+    st.session_state.chat_conversation_id = None
+
+
+def _load_conversation(user_id, conversation_id):
+    rows = database.get_messages(conversation_id, user_id)
+    _reset_chat()
+    st.session_state.chat_conversation_id = conversation_id
+    for row in rows:
+        st.session_state.chat_messages.append({"role": row["role"], "content": row["content"], "maps": []})
+        role = "user" if row["role"] == "user" else "model"
+        st.session_state.chat_contents.append(types.Content(role=role, parts=[types.Part.from_text(text=row["content"])]))
+
+
+# ---------------------------------------------------------------- Gemini loop
+
+def _tools():
+    declarations = [types.FunctionDeclaration(**d) for d in get_declarations()]
+    return [types.Tool(function_declarations=declarations)]
+
+
+def _text_of(content):
+    return "".join(p.text for p in (content.parts or []) if getattr(p, "text", None)).strip()
+
+
+def run_turn(client, contents, user_id, scratch, model=MODEL):
+    """Send the conversation to Gemini and run any functions it asks for until it answers.
+
+    contents is extended in place with everything that happened. Returns (answer, maps).
+    """
+    config = types.GenerateContentConfig(
+        system_instruction=SYSTEM_INSTRUCTION,
+        temperature=0.4,
+        tools=_tools(),
+        automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
+    )
+    maps = []
+    for _ in range(MAX_TOOL_ROUNDS):
+        response = client.models.generate_content(model=model, contents=contents, config=config)
+        candidate = response.candidates[0] if response.candidates else None
+        if candidate is None or candidate.content is None or not candidate.content.parts:
+            return "Sorry, I couldn't come up with an answer. Could you try asking again?", maps
+        contents.append(candidate.content)
+        calls = [p.function_call for p in candidate.content.parts if getattr(p, "function_call", None)]
+        if not calls:
+            return _text_of(candidate.content) or "Sorry, I couldn't come up with an answer.", maps
+
+        responses = []
+        for call in calls:
+            outcome = call_function(call.name, dict(call.args or {}), user_id, scratch)
+            if outcome.get("ok") and isinstance(outcome.get("result"), dict) \
+                    and outcome["result"].get("display") == "map":
+                maps.append(outcome["result"])
+            responses.append(types.Part.from_function_response(name=call.name, response=outcome))
+        contents.append(types.Content(role="user", parts=responses))
+    return "That took more steps than I expected. Could you tell me again what you'd like to do?", maps
+
+
+# ---------------------------------------------------------------- map
+
+_PIN_COLORS = {"green": "green", "yellow": "orange", "red": "red", "grey": "gray"}
+
+
+def _render_map(result, key):
+    import folium
+    from streamlit_folium import st_folium
+
+    programs = [p for p in result.get("universities", []) if p.get("coordinates")]
+    if not programs:
+        st.caption("No map pins available for these programs.")
+        return
+    fmap = folium.Map(location=[39.6, -8.0], zoom_start=6, tiles="CartoDB positron")
+    for p in programs:
+        last = p.get("last_grade_200")
+        popup = f"<b>{p['program_name']}</b><br>{p['institution_name']}<br>" \
+                f"Last placed: {last if last else 'n/a'} / 200"
+        folium.Marker(
+            [p["coordinates"]["lat"], p["coordinates"]["lon"]],
+            popup=folium.Popup(popup, max_width=280),
+            tooltip=p["institution_name"],
+            icon=folium.Icon(color=_PIN_COLORS.get(p.get("map_color"), "gray")),
+        ).add_to(fmap)
+    st_folium(fmap, height=380, use_container_width=True, returned_objects=[], key=key)
+    extra = result.get("without_map_pin")
+    if extra:
+        st.caption(f"{extra} program(s) have no map location.")
+
+
+# ---------------------------------------------------------------- page
+
+def _read_input(prompt):
+    """(text, image parts) from st.chat_input, which is a plain string or an object with files."""
+    if prompt is None:
+        return None, []
+    if isinstance(prompt, str):
+        return prompt, []
+    getter = prompt.get if hasattr(prompt, "get") else (lambda k, d=None: getattr(prompt, k, d))
+    text = getter("text", "") or ""
+    files = getter("files", []) or []
+    images = [types.Part.from_bytes(data=f.getvalue(), mime_type=f.type or "image/png") for f in files]
+    return text.strip(), images
+
 
 def render_dashboard_chat():
-    """Rendering the AI-powered dashboard chat interface"""
-    
-    st.header("Chat with the Okay, now what Assistant!")
+    """The student chat page."""
+    load_all()
+    _init_state()
+    user_id = get_user_id()
+    guest = is_guest(user_id)
 
-    typewriter_html = """
-    <style>
-    .typewriter {
-        font-family: monospace;
-        overflow: hidden;
-        border-right: .15em solid orange;
-        white-space: nowrap;
-        animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    }
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange; }
-    }
-    </style>
+    st.header("Okay, now what?")
 
-    <p class="typewriter">Pick an option from the side bar to start your journey!
-    If you're still unsure what option to pick, let me help you!</p>
-    """
-    st.markdown(typewriter_html, unsafe_allow_html=True)
-    
-    col1, col2 = st.columns([3, 1])
-    with col2:
-        if st.button("⟲ Start Over"):
-            st.session_state.student_chat_history = []
-            st.session_state.conversation_turn = 0
-            st.session_state.recommended_option = None
-            if "last_trace_ids" in st.session_state:
-                st.session_state.last_trace_ids = []
-            st.rerun()
-
-    load_dotenv()
-    api_key = os.getenv("GOOGLE_API_KEY")
-
+    api_key = get_gemini_api_key()
     if not api_key:
-        st.error("GOOGLE_API_KEY not found in your .env file.")
+        st.error("The Gemini API key is missing. Add GOOGLE_API_KEY to the app's secrets.")
         return
 
-    # initializing Langfuse-wrapped Gemini client
-    gemini_client = LangfuseGeminiWrapper(
-        api_key=api_key,
-        model="gemini-2.5-flash"
-    )
-
-    # getting user and session IDs for tracing
-    user_id = get_user_id()
-    session_id = get_session_id()
-    
-    # initialising conversation counter
-    if "conversation_turn" not in st.session_state:
-        st.session_state.conversation_turn = 0
-    
-    if "student_chat_history" not in st.session_state:
-        st.session_state.student_chat_history = []
-
-    user_input = st.chat_input("Ask the Okay, now what Assistant anything about your studies!")
-    
-    if user_input:
-        st.session_state.conversation_turn += 1
-        st.session_state.student_chat_history.append({
-            "role": "user", 
-            "content": user_input
-        })
-        
-        # building conversation context for the AI
-        conversation_context = "\n".join([
-            f"{msg['role'].upper()}: {msg['content']}" 
-            for msg in st.session_state.student_chat_history[-4:] #last 4 messages for context
-        ])
-
-        system_instruction = f"""You are Okay, now what Assistant, a friendly career counselor.
-
-**STRICT RULES:**
-1. Ask 5+ natural questions FIRST - NO tool names before turn 6
-2. NEVER mention tool names during conversation
-3. Turn 6+: "**[TOOL NAME]** would suit you best because [reason]" → then STOP
-
-Have completely natural conversations. Ask whatever feels right.
-
-**Understand their needs silently:**
-- Grades/performance talk → Grades Analysis (turn 6+)
-- Career confusion → Career Quiz (turn 6+)  
-- Degree/program → Degree Picker (turn 6+)
-- Universities → University Finder (turn 6+)
-- Jobs/work → Job Recommendations (turn 6+)
-
-Current turn: {st.session_state.conversation_turn}
-Previous context:
-{conversation_context}
-"""
-
-        try:
-            # generating response with langfuse tracing
-            ai_message = gemini_client.generate_content(
-                prompt=user_input,
-                system_instruction=system_instruction,
-                temperature=0.4,
-                user_id=user_id,
-                session_id=session_id,
-                metadata={
-                    "conversation_type": "student_dashboard_assistant",
-                    "user_type": "student",
-                    "turn": st.session_state.conversation_turn,
-                    "message_count": len(st.session_state.student_chat_history)
-                }
-            )
-            
-            # storing the trace id for potential feedback
-            current_trace_id = gemini_client.last_trace_id
-            if "last_trace_ids" not in st.session_state:
-                st.session_state.last_trace_ids = []
-            st.session_state.last_trace_ids.append(current_trace_id)
-            
-        except Exception as e:
-            ai_message = f"Error: {e}"
-            st.error("Something went wrong. Please try again.")
-
-        st.session_state.student_chat_history.append({
-            "role": "assistant", 
-            "content": ai_message
-        })
-
-        # checking if AI made a recommendation
-        options = ["Career Quiz", "Grades Analysis", "Job Recommendations"]
-        matched = [opt for opt in options if opt in ai_message]
-
-        if len(matched) == 1 and "would suit you best" in ai_message.lower():
-            st.session_state.recommended_option = matched[0]
-            # logging successful recommendation to langfuse
-            if current_trace_id:
-                log_user_feedback(
-                    current_trace_id, 
-                    score=1.0, 
-                    comment=f"Recommended: {matched[0]} after {st.session_state.conversation_turn} turns"
-                )
+    top_left, top_right = st.columns([3, 1])
+    with top_right:
+        if st.button("New chat", width="stretch"):
+            _reset_chat()
+            st.rerun()
+    with top_left:
+        if guest:
+            st.caption("You're a guest, so you can try everything, but nothing is saved. Log in to keep your results.")
         else:
-            st.session_state.recommended_option = None
-        
-        # Check if AI suggested professional dashboard
-        if "professional dashboard" in ai_message.lower():
-            st.session_state.show_professional_redirect = True
+            past = database.get_conversations(user_id)
+            if past:
+                with st.expander("Past chats"):
+                    for conv in past[:15]:
+                        if st.button(conv["title"] or "Chat", key=f"conv_{conv['id']}", width="stretch"):
+                            _load_conversation(user_id, conv["id"])
+                            st.rerun()
 
-    # displaying messages with feedback buttons
-    for idx, msg in enumerate(st.session_state.student_chat_history):
+    if not st.session_state.chat_messages:
+        st.markdown("Tell me what's on your mind, or pick a place to start. You can also attach a screenshot of your grades.")
+        columns = st.columns(2)
+        for i, (label, text) in enumerate(STARTERS):
+            if columns[i % 2].button(label, key=f"starter_{i}", width="stretch"):
+                st.session_state.chat_pending = text
+                st.rerun()
+
+    for i, msg in enumerate(st.session_state.chat_messages):
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
-            
-            '''# Add feedback buttons for assistant messages
-            if msg["role"] == "assistant":
-                assistant_message_index = idx // 2
-                
-                if "last_trace_ids" in st.session_state and assistant_message_index < len(st.session_state.last_trace_ids):
-                    trace_id = st.session_state.last_trace_ids[assistant_message_index]
-                    
-                    col1, col2, col3 = st.columns([1, 1, 10])
-                    with col1:
-                        if st.button("👍", key=f"thumbs_up_{idx}"):
-                            log_user_feedback(trace_id, score=1.0, comment="Helpful response")
-                            st.success("Thanks!")
-                    with col2:
-                        if st.button("👎", key=f"thumbs_down_{idx}"):
-                            log_user_feedback(trace_id, score=0.0, comment="Not helpful")
-                            st.warning("Thanks for your feedback!")'''
+            for j, result in enumerate(msg.get("maps", [])):
+                _render_map(result, key=f"map_{i}_{j}")
 
-    # showing redirect button if recommendation exists
-    if st.session_state.get("recommended_option") and st.session_state.get("student_choice") != st.session_state.recommended_option:
-        st.markdown("---")
-        st.success(f"⟡ Ready to get started with **{st.session_state.recommended_option}**?")
-        
-        def redirect_to_option():
-            st.session_state.redirect_to = st.session_state.recommended_option
-            st.session_state.recommended_option = None
-            st.session_state.conversation_turn = 0
-        
-        if st.button(f"Take me to {st.session_state.recommended_option}", width='stretch', on_click=redirect_to_option):
-            st.rerun()
-    
-    # showing professional dashboard redirect if suggested
-    if st.session_state.get("show_professional_redirect", False):
-        st.markdown("---")
-        st.info("✴ Based on your experience, the Professional Dashboard might be more helpful!")
-        col1, col2 = st.columns(2)
-        
-        def go_to_professional():
-            st.session_state.user_type = "professional"
-            st.session_state.show_professional_redirect = False
-            st.session_state.conversation_turn = 0
-        
-        def stay_student():
-            st.session_state.show_professional_redirect = False
-        
-        with col1:
-            if st.button("Go to Professional Dashboard", width='stretch', on_click=go_to_professional):
-                st.rerun()
-        with col2:
-            if st.button("Stay on Student Dashboard", width='stretch', on_click=stay_student):
-                st.rerun()
+    try:
+        prompt = st.chat_input(PLACEHOLDER, accept_file=True, file_type=IMAGE_TYPES)
+    except TypeError:  # older Streamlit without file attachments in the chat box
+        prompt = st.chat_input(PLACEHOLDER)
+
+    text, images = _read_input(prompt)
+    pending = st.session_state.pop("chat_pending", None)
+    if pending and not text:
+        text = pending
+    if not text and not images:
+        return
+    if not text:
+        text = "Here is a screenshot of my grades."
+
+    shown = text + (f"\n\n*(attached {len(images)} image{'s' if len(images) > 1 else ''})*" if images else "")
+    st.session_state.chat_messages.append({"role": "user", "content": shown, "maps": []})
+    base = len(st.session_state.chat_contents)
+    st.session_state.chat_contents.append(
+        types.Content(role="user", parts=[types.Part.from_text(text=text)] + images))
+    with st.chat_message("user"):
+        st.markdown(shown)
+
+    if not guest:
+        if st.session_state.chat_conversation_id is None:
+            st.session_state.chat_conversation_id = database.create_conversation(user_id, text[:60])
+        if st.session_state.chat_conversation_id:
+            database.add_message(st.session_state.chat_conversation_id, user_id, "user", shown)
+
+    client = genai.Client(api_key=api_key)
+    with st.chat_message("assistant"):
+        with st.spinner("Thinking..."):
+            try:
+                answer, maps = run_turn(client, st.session_state.chat_contents, user_id, st.session_state.chat_scratch)
+            except Exception as e:  # keep the conversation usable after a failed request
+                answer, maps = "Something went wrong reaching the AI. Please try again in a moment.", []
+                print(f"Chat error: {type(e).__name__}: {e}")
+                del st.session_state.chat_contents[base:]  # forget the failed turn so the next one starts cleanly
+        st.markdown(answer)
+        for j, result in enumerate(maps):
+            _render_map(result, key=f"map_new_{len(st.session_state.chat_messages)}_{j}")
+
+    st.session_state.chat_messages.append({"role": "assistant", "content": answer, "maps": maps})
+    if not guest and st.session_state.chat_conversation_id:
+        database.add_message(st.session_state.chat_conversation_id, user_id, "assistant", answer)
