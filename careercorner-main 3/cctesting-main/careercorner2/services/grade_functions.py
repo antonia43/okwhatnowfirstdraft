@@ -161,3 +161,48 @@ def compare_saved_universities(user_id, grade_200=None):
     if grade is None:
         return {"error": "No grade known yet. Ask for the student's grades first."}
     return grade_tools.compare_with_saved_universities(user_id, grade)
+
+
+def grades_to_entries(grades):
+    """Flatten the transcript structure {'10th': {name: grade}, ..., 'exams': {...}} into chat entries.
+
+    Returns (entries, skipped) where skipped lists anything that was not a usable number.
+    """
+    entries, skipped = [], []
+    for period, subjects in (grades or {}).items():
+        key = "exam" if period == "exams" else period
+        if key not in PERIODS or not isinstance(subjects, dict):
+            continue
+        for name, value in subjects.items():
+            try:
+                grade = float(value)
+            except (TypeError, ValueError):
+                skipped.append(f"{name} ({key}): {value}")
+                continue
+            scale = SCALE_200 if key == "exam" else SCALE_20
+            if not 0 <= grade <= scale:
+                skipped.append(f"{name} ({key}): {value}")
+                continue
+            entries.append({"name": str(name).strip(), "grade": grade, "period": key})
+    return entries, skipped
+
+
+@chat_function(
+    "read_uploaded_grades",
+    "Read the grades from the screenshot or PDF the student just uploaded (a Portuguese school transcript). "
+    "Nothing is calculated or saved. Show the student what was read and ask them to check it, then use "
+    "calculate_admission_grade or save_grades with the corrected entries.",
+    uses_session=True,
+)
+def read_uploaded_grades(user_id, session):
+    upload = (session or {}).get("upload")
+    if not upload:
+        return {"error": "No file has been uploaded. Ask the student to attach a screenshot or PDF of their grades."}
+    data = grade_tools.extract_grades_from_file(upload["bytes"], upload["mime"], "portuguese", user_id=user_id)
+    if data.get("student_type") != "portuguese":
+        return {"error": "This looks like a non-Portuguese transcript. Grades from other countries are not supported yet."}
+    entries, skipped = grades_to_entries(data.get("grades"))
+    if not entries:
+        return {"error": "No grades could be read from this file. Ask for a clearer picture or the grades typed in."}
+    return {"entries": entries, "count": len(entries), "skipped": skipped,
+            "current_year": data.get("current_year"), "track": data.get("track")}
