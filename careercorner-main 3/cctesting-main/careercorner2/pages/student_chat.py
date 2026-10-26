@@ -143,9 +143,8 @@ def _render_map(result, key):
 
     programs = [p for p in result.get("universities", []) if p.get("coordinates")]
     if not programs:
-        st.caption("No map pins available for these programs.")
         return
-    fmap = folium.Map(location=[39.6, -8.0], zoom_start=6, tiles="CartoDB positron")
+    fmap = folium.Map(location=[39.6, -8.0], zoom_start=6, tiles="OpenStreetMap")
     for p in programs:
         last = p.get("last_grade_200")
         popup = f"<b>{p['program_name']}</b><br>{p['institution_name']}<br>" \
@@ -156,6 +155,12 @@ def _render_map(result, key):
             tooltip=p["institution_name"],
             icon=folium.Icon(color=_PIN_COLORS.get(p.get("map_color"), "gray")),
         ).add_to(fmap)
+    lats = [p["coordinates"]["lat"] for p in programs]
+    lons = [p["coordinates"]["lon"] for p in programs]
+    if len(programs) > 1:
+        fmap.fit_bounds([[min(lats), min(lons)], [max(lats), max(lons)]], padding=(30, 30), max_zoom=9)
+    else:
+        fmap.location, fmap.options["zoom"] = [lats[0], lons[0]], 9
     st_folium(fmap, height=380, use_container_width=True, returned_objects=[], key=key)
     extra = result.get("without_map_pin")
     if extra:
@@ -208,7 +213,9 @@ def render_dashboard_chat():
                             _load_conversation(user_id, conv["id"])
                             st.rerun()
 
+    starters = st.empty()
     if not st.session_state.chat_messages:
+      with starters.container():
         st.markdown("Tell me what's on your mind, or pick a place to start. You can also attach a screenshot of your grades.")
         columns = st.columns(2)
         for i, (label, text) in enumerate(STARTERS):
@@ -235,6 +242,7 @@ def render_dashboard_chat():
         return
     if not text:
         text = "Here is a screenshot of my grades."
+    starters.empty()
 
     shown = text + (f"\n\n*(attached {len(images)} image{'s' if len(images) > 1 else ''})*" if images else "")
     st.session_state.chat_messages.append({"role": "user", "content": shown, "maps": []})
