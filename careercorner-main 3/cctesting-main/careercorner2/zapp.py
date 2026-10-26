@@ -7,9 +7,10 @@ import streamlit as st
 from dotenv import load_dotenv
 from services.authentication import init_db, login_ui, register_ui, google_login_button, get_redirect_uri, DB_PATH
 from services.langfuse_helper import get_user_id
-from pages.student_dashboard import render_student_dashboard
+from pages.chat import render_chat, start_new_chat
+from pages.saved import render_saved
 from styles import apply_custom_css
-from utils.database import load_user_quiz
+from utils.database import init_database
 import traceback
 import warnings
 warnings.filterwarnings("ignore", message=".*Session State.*|.*widget with key.*")
@@ -59,6 +60,14 @@ if st.session_state["universities_df"].empty and not DATA_PATH.exists():
     st.error("DGES data not found")
 
 conn = init_db()
+
+@st.cache_resource
+def _prepare_database():
+    init_database()  # creates the tables the chat, saved items and profile use
+    return True
+
+
+_prepare_database()
 
 if "user_type" not in st.session_state:
     st.session_state.user_type = None
@@ -168,59 +177,42 @@ if not st.session_state.get("logged_in") or not st.session_state.user:
     login_modal()
     st.stop()
 
-# NOW USER IS LOGGED IN - Load their data
-if st.session_state.get("logged_in") and st.session_state.user:
-    user_id = get_user_id()
-    is_guest = st.session_state.user.get("is_guest", False)
-    quiz_row = None if is_guest else load_user_quiz(user_id)
-    if quiz_row:
-        st.session_state.quiz_result = quiz_row
+# NOW USER IS LOGGED IN
+user_id = get_user_id()
+is_guest = st.session_state.user.get("is_guest", False)
 
-    with st.sidebar:
-        BASE_DIR = Path(__file__).parent
-        st.image(BASE_DIR / "data" / "okaynowwhatlogo_white.png", width='stretch')
-        st.success(f"Logged in as {st.session_state.user['display_name']}")
+NAV_OPTIONS = ["Chat", "Saved"]
+CHAT_STATE_KEYS = ("chat_messages", "chat_session", "conversation_id", "chat_tag", "chat_first",
+                   "saved_pins", "pending_open", "student_choice")
 
-        def logout():
-            st.session_state.logged_in = False
-            st.session_state.username = None
-            st.session_state.user_type = None
-            st.session_state.user = None
-            st.session_state.user_id = None
-            st.session_state.welcome_animated = False  # Reset animation flag
 
-        st.button("Logout", on_click=logout)
-        st.markdown("---")
+def logout():
+    st.session_state.logged_in = False
+    st.session_state.username = None
+    st.session_state.user_type = None
+    st.session_state.user = None
+    st.session_state.user_id = None
+    st.session_state.welcome_animated = False  # Reset animation flag
+    for key in CHAT_STATE_KEYS:  # the next student starts with a clean chat
+        st.session_state.pop(key, None)
 
-# STUDENT DASHBOARD
-if st.session_state.get("logged_in") and st.session_state.user:
-    st.sidebar.title("Student Menu")
 
-    STUDENT_OPTIONS = [
-        "Dashboard",
-        "Career Quiz",
-        "Degree Picker",
-        "Grades Analysis",
-        "University Finder",
-        "Resources",
-        "My Reports"
-    ]
+with st.sidebar:
+    BASE_DIR = Path(__file__).parent
+    st.image(BASE_DIR / "data" / "okaynowwhatlogo_white.png", width='stretch')
+    st.success(f"Logged in as {st.session_state.user['display_name']}")
+    st.button("Logout", on_click=logout)
+    st.markdown("---")
 
-    redirect_target = st.session_state.get("redirect_to")
-    if redirect_target and redirect_target in STUDENT_OPTIONS:
-        st.session_state.student_choice = redirect_target
-        del st.session_state.redirect_to
+    if st.session_state.get("student_choice") not in NAV_OPTIONS:
+        st.session_state.student_choice = "Chat"
+    if st.button("New chat", width="stretch"):
+        start_new_chat()
+        st.session_state.student_choice = "Chat"
         st.rerun()
+    choice = st.radio("Go to:", NAV_OPTIONS, key="student_choice")
 
-    current = st.session_state.get("student_choice", "Dashboard")
-    if current not in STUDENT_OPTIONS:
-        current = "Dashboard"
-
-    choice = st.sidebar.radio(
-        "Go to:",
-        STUDENT_OPTIONS,
-        index=STUDENT_OPTIONS.index(current),
-        key="student_choice",
-    )
-
-    render_student_dashboard(choice)
+if choice == "Saved":
+    render_saved()
+else:
+    render_chat()
