@@ -64,6 +64,7 @@ class LangfuseGeminiWrapper:
                     config = types.GenerateContentConfig(
                         system_instruction=system_instruction,
                         temperature=temperature,
+                        thinking_config=types.ThinkingConfig(thinking_budget=0),
                     )
                     
                     response = self.client.models.generate_content(
@@ -99,6 +100,7 @@ class LangfuseGeminiWrapper:
         config = types.GenerateContentConfig(
             system_instruction=system_instruction,
             temperature=temperature,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
         )
         
         response = self.client.models.generate_content(
