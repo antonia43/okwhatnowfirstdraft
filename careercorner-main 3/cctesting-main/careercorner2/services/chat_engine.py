@@ -113,6 +113,7 @@ class GeminiAdapter:
         tool = types.Tool(function_declarations=[types.FunctionDeclaration(**api_declaration(d)) for d in function_declarations])
         config = types.GenerateContentConfig(
             system_instruction=system_instruction, tools=[tool], temperature=TEMPERATURE,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
             automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
         )
         response = self.client.models.generate_content(
