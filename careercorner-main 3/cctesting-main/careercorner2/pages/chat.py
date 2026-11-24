@@ -140,6 +140,8 @@ def _render_message(index, message, user_id):
         if message.get("file"):
             st.caption(f"Attached: {message['file']}")
         st.markdown(message["content"])
+        if message.get("error"):
+            st.caption(f"Technical detail: {message['error']}")
         for j, event in enumerate(message.get("events", [])):
             result = event.get("result") or {}
             if event.get("ok") and result.get("display") == "map":
@@ -222,12 +224,14 @@ def render_chat():
         with st.spinner("Thinking..."):
             try:
                 out = chat_engine.run_turn(_adapter(), history, prompt, user_id, ss.chat_session, image=image)
-            except Exception:
+            except Exception as exc:
                 traceback.print_exc()
-                out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": []}
+                out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": [],
+                       "error": f"{type(exc).__name__}: {str(exc)[:300]}"}
 
     ss.chat_messages.append({"role": "user", "content": prompt, "file": file_name})
-    ss.chat_messages.append({"role": "assistant", "content": out["text"], "events": out["events"]})
+    ss.chat_messages.append({"role": "assistant", "content": out["text"], "events": out["events"],
+                             "error": out.get("error")})
     _persist(user_id, prompt, out["text"], out["events"])
     ss.upload_round += 1  # clears the file box
     st.rerun()
