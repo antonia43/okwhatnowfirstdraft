@@ -447,7 +447,7 @@ def _degree_finish(state, session, user_id, excluded=None):
     "degree_quiz",
     "Run the degree quiz for a field the student names (e.g. 'computer science'). It asks 3 to 15 questions, "
     "each answer rules out some degrees offered in Portugal, and it ends with the 3 best-fitting degrees. "
-    "Call with field to start, then once per answer. Ask each question exactly as returned.",
+    "Call with field to start, then once per answer with ONLY the answer (leave field out). Ask each question exactly as returned.",
     {"properties": {
         "field": {"type": "string", "description": "The field or sector to explore; needed to start"},
         "answer": {"type": "string", "description": "The student's answer to the current question"},
@@ -456,8 +456,9 @@ def _degree_finish(state, session, user_id, excluded=None):
 )
 def degree_quiz(user_id, session, field=None, answer=None, restart=False):
     state = session.get("degree_quiz")
+    answering = state is not None and not state.get("done") and answer is not None and str(answer).strip()
     wants_new = restart or state is None or state.get("done") or (
-        field and state["field"].strip().lower() != field.strip().lower())
+        not answering and field and state["field"].strip().lower() != field.strip().lower())
     if wants_new:
         if not field or not field.strip():
             return {"done": False, "error": "Ask the student which field they want to explore, then call again with field."}
