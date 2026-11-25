@@ -10,7 +10,7 @@ import json
 
 from services import chat_functions
 
-MODEL_NAME = "gemini-2.5-flash"
+MODEL_NAME = "gemini-3.8-flash"
 MAX_ROUNDS = 6
 TEMPERATURE = 0.4
 
