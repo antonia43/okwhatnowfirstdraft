@@ -112,6 +112,26 @@ class GeminiAdapter:
             out.append(types.Content(role=m["role"], parts=parts))
         return out
 
+    def _call(self, model, contents, config, tries=RETRIES):
+        for attempt in range(tries):
+            try:
+                return self.client.models.generate_content(model=model, contents=contents, config=config)
+            except Exception as exc:  # briefly busy (503) or rate limited (429): wait and try again
+                if getattr(exc, "code", None) not in (429, 500, 503) or attempt == tries - 1:
+                    raise
+                time.sleep(RETRY_WAIT[min(attempt, len(RETRY_WAIT) - 1)])
+
+    def _other_models(self):
+        """Other text models this key can use, Flash ones first, newest names first."""
+        try:
+            names = [m.name.replace("models/", "") for m in self.client.models.list()
+                     if "generateContent" in (getattr(m, "supported_actions", None) or ["generateContent"])]
+        except Exception:
+            return []
+        names = [n for n in names if n != self.model and n.startswith("gemini") and "flash" in n
+                 and not any(x in n for x in ("image", "tts", "live", "audio", "embedding", "thinking", "robotics"))]
+        return sorted(names, reverse=True)[:3]
+
     def generate(self, messages, system_instruction, function_declarations):
         from google.genai import types
 
@@ -122,15 +142,21 @@ class GeminiAdapter:
             automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
         )
         contents = self._contents(messages)
-        for attempt in range(RETRIES):
-            try:
-                response = self.client.models.generate_content(model=self.model, contents=contents, config=config)
-                break
-            except Exception as exc:  # the AI service is briefly busy (503) or rate limited (429): wait and retry
-                code = getattr(exc, "code", None)
-                if code not in (429, 500, 503) or attempt == RETRIES - 1:
-                    raise
-                time.sleep(RETRY_WAIT[attempt])
+        try:
+            response = self._call(self.model, contents, config)
+        except Exception as exc:
+            if getattr(exc, "code", None) not in (404, 429, 500, 503):
+                raise
+            response = None
+            for other in self._other_models():  # the main model is unavailable: try the other Flash models
+                try:
+                    response = self._call(other, contents, config, tries=2)
+                    self.model = other
+                    break
+                except Exception:
+                    continue
+            if response is None:
+                raise exc
         content = response.candidates[0].content if response.candidates else None
         calls = [{"name": c.name, "args": _plain(dict(c.args or {}))} for c in (response.function_calls or [])]
         text = "".join(p.text for p in (content.parts if content else []) if getattr(p, "text", None) and not getattr(p, "thought", False))
