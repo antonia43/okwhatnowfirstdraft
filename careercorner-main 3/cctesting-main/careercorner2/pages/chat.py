@@ -167,6 +167,16 @@ def _persist(user_id, prompt, answer, events):
         database.add_message(ss.conversation_id, user_id, "assistant", answer)
 
 
+def _available_models():
+    """Technical detail for the error line: which Gemini models this key can use."""
+    try:
+        names = [m.name.replace("models/", "") for m in _adapter().client.models.list()]
+        names = [n for n in names if n.startswith("gemini") and not any(x in n for x in ("embedding", "tts", "image"))]
+        return " | Models available: " + ", ".join(names[:25])
+    except Exception as exc:
+        return f" | Could not list models: {type(exc).__name__}"
+
+
 def _adapter():
     if ADAPTER is not None:
         return ADAPTER
@@ -227,7 +237,7 @@ def render_chat():
             except Exception as exc:
                 traceback.print_exc()
                 out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": [],
-                       "error": f"{type(exc).__name__}: {str(exc)[:300]}"}
+                       "error": f"{type(exc).__name__}: {str(exc)[:300]}{_available_models()}"}
 
     ss.chat_messages.append({"role": "user", "content": prompt, "file": file_name})
     ss.chat_messages.append({"role": "assistant", "content": out["text"], "events": out["events"],
