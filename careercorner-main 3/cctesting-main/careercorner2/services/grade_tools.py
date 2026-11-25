@@ -22,7 +22,7 @@ from utils.grades import (
     normalize_grades_data,
 )
 
-GRADES_MODEL_NAME = "gemini-2.5-flash"
+GRADES_MODEL_NAME = "gemini-3.8-flash"
 DEFAULT_YEAR = "12th Grade (Completed)"
 YEARS = ("10th", "11th", "12th")
 
