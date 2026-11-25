@@ -7,12 +7,15 @@ stand-in model. GeminiAdapter is the real model; tests pass a fake with the same
 generate() method.
 """
 import json
+import time
 
 from services import chat_functions
 
 MODEL_NAME = "gemini-3.8-flash"
 MAX_ROUNDS = 6
 TEMPERATURE = 0.4
+RETRIES = 4
+RETRY_WAIT = (2, 5, 10)
 
 OPENING_MESSAGE = (
     "Hi! I'm here to help you figure out what to study in Portugal and which universities fit you.\n\n"
@@ -118,8 +121,16 @@ class GeminiAdapter:
             thinking_config=types.ThinkingConfig(thinking_budget=0),
             automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
         )
-        response = self.client.models.generate_content(
-            model=self.model, contents=self._contents(messages), config=config)
+        contents = self._contents(messages)
+        for attempt in range(RETRIES):
+            try:
+                response = self.client.models.generate_content(model=self.model, contents=contents, config=config)
+                break
+            except Exception as exc:  # the AI service is briefly busy (503) or rate limited (429): wait and retry
+                code = getattr(exc, "code", None)
+                if code not in (429, 500, 503) or attempt == RETRIES - 1:
+                    raise
+                time.sleep(RETRY_WAIT[attempt])
         content = response.candidates[0].content if response.candidates else None
         calls = [{"name": c.name, "args": _plain(dict(c.args or {}))} for c in (response.function_calls or [])]
         text = "".join(p.text for p in (content.parts if content else []) if getattr(p, "text", None) and not getattr(p, "thought", False))
