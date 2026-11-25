@@ -14,7 +14,7 @@ from services import chat_functions
 MODEL_NAME = "gemini-3.8-flash"
 MAX_ROUNDS = 6
 TEMPERATURE = 0.4
-RETRIES = 4
+RETRIES = 2
 RETRY_WAIT = (2, 5, 10)
 
 OPENING_MESSAGE = (
@@ -117,7 +117,7 @@ class GeminiAdapter:
             try:
                 return self.client.models.generate_content(model=model, contents=contents, config=config)
             except Exception as exc:  # briefly busy (503) or rate limited (429): wait and try again
-                if getattr(exc, "code", None) not in (429, 500, 503) or attempt == tries - 1:
+                if getattr(exc, "code", None) not in (500, 503) or attempt == tries - 1:
                     raise
                 time.sleep(RETRY_WAIT[min(attempt, len(RETRY_WAIT) - 1)])
 
@@ -130,7 +130,7 @@ class GeminiAdapter:
             return []
         names = [n for n in names if n != self.model and n.startswith("gemini") and "flash" in n
                  and not any(x in n for x in ("image", "tts", "live", "audio", "embedding", "thinking", "robotics"))]
-        return sorted(names, reverse=True)[:3]
+        return sorted(names, reverse=True)[:2]
 
     def generate(self, messages, system_instruction, function_declarations):
         from google.genai import types
@@ -145,7 +145,7 @@ class GeminiAdapter:
         try:
             response = self._call(self.model, contents, config)
         except Exception as exc:
-            if getattr(exc, "code", None) not in (404, 429, 500, 503):
+            if getattr(exc, "code", None) not in (404, 500, 503):
                 raise
             response = None
             for other in self._other_models():  # the main model is unavailable: try the other Flash models
