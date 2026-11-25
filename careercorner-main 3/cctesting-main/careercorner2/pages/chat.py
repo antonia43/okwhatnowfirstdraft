@@ -170,12 +170,12 @@ def _persist(user_id, prompt, answer, events):
 def _adapter():
     if ADAPTER is not None:
         return ADAPTER
-    return _real_adapter(get_gemini_api_key())
+    return _real_adapter(get_gemini_api_key(), chat_engine.MODEL_NAME)
 
 
 @st.cache_resource
-def _real_adapter(api_key):
-    return chat_engine.GeminiAdapter(api_key)
+def _real_adapter(api_key, model):
+    return chat_engine.GeminiAdapter(api_key, model)
 
 
 # ---- the page ----------------------------------------------------------------------
