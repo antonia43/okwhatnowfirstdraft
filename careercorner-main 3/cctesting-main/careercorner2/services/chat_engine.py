@@ -18,7 +18,7 @@ RETRIES = 2
 RETRY_WAIT = (2, 5, 10)
 
 OPENING_MESSAGE = (
-    "Hi! I'm here to help you figure out what to study in Portugal and which universities fit you.\n\n"
+    "Hi! I'm an AI study advisor, here to help you figure out what to study in Portugal and which universities fit you. I can make mistakes, so please check important details with DGES or the university.\n\n"
     "What's your main question right now? You can ask about degrees, grades and your chances, "
     "universities, or study resources. If you're not sure where to start, just tell me what you "
     "already know about yourself."
