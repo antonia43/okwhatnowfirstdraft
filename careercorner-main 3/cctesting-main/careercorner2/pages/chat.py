@@ -122,7 +122,7 @@ def _trend_text(uni):
         return ""
     arrow = "▲" if change > 0 else "▼" if change < 0 else "="
     word = "harder" if change > 0 else "easier" if change < 0 else "same"
-    return f" \nvs 2025: {arrow} {abs(change):.1f}/200 ({word})"
+    return f"  \nvs 2025: {arrow} {abs(change):.1f}/200 ({word})"
 
 
 def _program_card(key, uni, user_id):
