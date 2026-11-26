@@ -3,7 +3,10 @@
 All the thinking lives in services/chat_engine.py. This page only draws the conversation,
 the map for university searches, and the buttons.
 """
+import base64
+import json
 import traceback
+import zlib
 
 import folium
 import streamlit as st
@@ -48,11 +51,45 @@ def open_conversation(conversation_id, user_id):
     title = next((c["title"] for c in database.get_conversations(user_id) if c["id"] == conversation_id), "")
     tag, text = h.split_title(title)
     messages = database.get_messages(conversation_id, user_id)
-    ss.chat_messages = [dict(OPENING)] + [{"role": m["role"], "content": m["content"]} for m in messages]
+    ss.chat_messages = [dict(OPENING)]
+    for m in messages:
+        body, events = _split_maps(m["content"]) if m["role"] == "assistant" else (m["content"], [])
+        ss.chat_messages.append({"role": m["role"], "content": body, "events": events})
     ss.chat_session = {}
     ss.conversation_id = conversation_id
     ss.chat_tag = tag
     ss.chat_first = text
+
+
+MAP_MARK = "<!--map:"
+
+
+def _with_maps(answer, events):
+    """The answer plus a hidden copy of any map result, so a reopened chat shows its map again."""
+    out = answer
+    for event in events or []:
+        result = event.get("result") or {}
+        if event.get("ok") and result.get("display") == "map":
+            blob = base64.b64encode(zlib.compress(json.dumps(result).encode("utf-8"))).decode("ascii")
+            out += f"\n{MAP_MARK}{blob}-->"
+    return out
+
+
+def _split_maps(content):
+    """The visible text of a stored message and the map results hidden in it."""
+    events = []
+    while MAP_MARK in content:
+        start = content.index(MAP_MARK)
+        end = content.find("-->", start)
+        if end == -1:
+            break
+        try:
+            result = json.loads(zlib.decompress(base64.b64decode(content[start + len(MAP_MARK):end])))
+            events.append({"ok": True, "result": result})
+        except Exception:
+            pass
+        content = content[:start].rstrip() + content[end + 3:]
+    return content, events
 
 
 def _saved_pins(user_id):
@@ -140,8 +177,6 @@ def _render_message(index, message, user_id):
         if message.get("file"):
             st.caption(f"Attached: {message['file']}")
         st.markdown(message["content"])
-        if message.get("error"):
-            st.caption(f"Technical detail: {message['error']}")
         for j, event in enumerate(message.get("events", [])):
             result = event.get("result") or {}
             if event.get("ok") and result.get("display") == "map":
@@ -164,17 +199,7 @@ def _persist(user_id, prompt, answer, events):
         database.rename_conversation(ss.conversation_id, user_id, h.make_title(ss.chat_tag, ss.chat_first))
     if ss.conversation_id:
         database.add_message(ss.conversation_id, user_id, "user", prompt)
-        database.add_message(ss.conversation_id, user_id, "assistant", answer)
-
-
-def _available_models():
-    """Technical detail for the error line: which Gemini models this key can use."""
-    try:
-        names = [m.name.replace("models/", "") for m in _adapter().client.models.list()]
-        names = [n for n in names if n.startswith("gemini") and not any(x in n for x in ("embedding", "tts", "image"))]
-        return " | Models available: " + ", ".join(names[:25])
-    except Exception as exc:
-        return f" | Could not list models: {type(exc).__name__}"
+        database.add_message(ss.conversation_id, user_id, "assistant", _with_maps(answer, events))
 
 
 def _adapter():
@@ -236,12 +261,10 @@ def render_chat():
                 out = chat_engine.run_turn(_adapter(), history, prompt, user_id, ss.chat_session, image=image)
             except Exception as exc:
                 traceback.print_exc()
-                out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": [],
-                       "error": f"{type(exc).__name__}: {str(exc)[:300]}{_available_models()}"}
+                out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": []}
 
     ss.chat_messages.append({"role": "user", "content": prompt, "file": file_name})
-    ss.chat_messages.append({"role": "assistant", "content": out["text"], "events": out["events"],
-                             "error": out.get("error")})
+    ss.chat_messages.append({"role": "assistant", "content": out["text"], "events": out["events"]})
     _persist(user_id, prompt, out["text"], out["events"])
     ss.upload_round += 1  # clears the file box
     st.rerun()
