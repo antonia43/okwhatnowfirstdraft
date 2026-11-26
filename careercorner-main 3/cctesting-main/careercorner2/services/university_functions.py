@@ -43,6 +43,9 @@ def program_from_row(row, grade_200=None):
     last = _number(row.get("last_grade"))
     last = last if last and last > 0 else None
     lat, lon = _number(row.get("lat")), _number(row.get("lon"))
+    before = _number(row.get("last_grade_2025"))
+    before = before if before and before > 0 else None
+    year = int(_number(row.get("year")) or 2026)
     program = {
         "course_code": _text(row.get("course_code")),
         "institution_name": _text(row.get("institution_name")),
@@ -53,6 +56,11 @@ def program_from_row(row, grade_200=None):
         "last_grade_200": last,
         "last_grade_20": round(last / 10, 2) if last else None,
         "coordinates": {"lat": lat, "lon": lon} if lat is not None and lon is not None else None,
+        "data_year": year,
+        "previous_year": 2025 if before else None,
+        "previous_grade_200": before,
+        "trend_change_200": round(last - before, 1) if last and before else None,
+        "trend": ("up" if last > before + 0.05 else "down" if last < before - 0.05 else "stable") if last and before else None,
     }
     if grade_200 is not None:
         comparison = compare_with_cutoff(grade_200, last)
