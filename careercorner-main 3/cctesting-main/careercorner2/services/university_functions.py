@@ -21,6 +21,8 @@ DEGREE_LEVELS = {
 COLORS = {"safe": "green", "target": "yellow", "reach": "red", "unknown": "grey"}
 DEFAULT_LIMIT = 30
 MAX_LIMIT = 60
+REGION_ALIASES = {"lisboa": "lisbon", "greater lisbon": "lisbon", "lisbon area": "lisbon", "oporto": "porto"}
+REGIONS_TEXT = "Lisbon, Porto, Coimbra, Braga, Aveiro, Leiria, Faro, Evora, Covilha, Setubal, Other"
 
 
 def _number(value):
@@ -69,6 +71,7 @@ def search_programs(degree_name, grade_200=None, region=None, limit=DEFAULT_LIMI
     matches = find_programs(degree_name, df)
     if region and not matches.empty:
         wanted = normalize_text(region).strip()
+        wanted = REGION_ALIASES.get(wanted, wanted)
         matches = matches[matches["region"].apply(normalize_text).str.contains(wanted, regex=False)]
     total = len(matches)
     if total:
@@ -122,14 +125,14 @@ def saved_record(program):
     {"properties": {
         "degree_name": {"type": "string", "description": "Degree name, e.g. 'Engenharia Informática'"},
         "grade_200": {"type": "number", "description": "Student's grade on the 0-200 scale, if known"},
-        "region": {"type": "string", "description": "Only programs in this region or city, if the student has a preference"},
+        "region": {"type": "string", "description": "Region or city. ALWAYS set this when the student names a city or area (e.g. Lisbon). One of: " + REGIONS_TEXT},
         "limit": {"type": "integer", "description": f"How many programs to return (default {DEFAULT_LIMIT}, max {MAX_LIMIT})"}},
      "required": ["degree_name"]},
 )
 def search_universities(user_id, degree_name, grade_200=None, region=None, limit=DEFAULT_LIMIT):
     result = search_programs(degree_name, _grade_to_use(user_id, grade_200), region, limit)
     if not result["total_found"]:
-        result["message"] = f"No programs found for '{degree_name}'. Try a different name."
+        result["message"] = (f"No programs found for '{degree_name}' in {region}. Regions in the data: {REGIONS_TEXT}." if region else f"No programs found for '{degree_name}'. Try a different name.")
     return result
 
 
