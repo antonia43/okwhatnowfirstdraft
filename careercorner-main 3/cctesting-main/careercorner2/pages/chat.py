@@ -115,6 +115,16 @@ def _save_pin(user_id, course_code, institution_name, program_name):
         st.toast(out.get("error") or result.get("error") or "That could not be saved.")
 
 
+def _trend_text(uni):
+    """How this year's cut-off moved against 2025, for the program card."""
+    change = uni.get("trend_change_200")
+    if change is None or not uni.get("previous_grade_200"):
+        return ""
+    arrow = "▲" if change > 0 else "▼" if change < 0 else "="
+    word = "harder" if change > 0 else "easier" if change < 0 else "same"
+    return f" \nvs 2025: {arrow} {abs(change):.1f}/200 ({word})"
+
+
 def _program_card(key, uni, user_id):
     guest = chat_functions.is_guest(user_id)
     pins = _saved_pins(user_id)
@@ -123,7 +133,7 @@ def _program_card(key, uni, user_id):
     chance = h.CHANCE_WORDS.get(uni.get("chance"), "")
     with left:
         st.markdown(f"**{uni['institution_name']}**  \n{uni['program_name']} · {uni.get('region', '')}  \n"
-                    f"Last placed: {h.grade_text(uni)}" + (f" · **{chance}**" if chance else ""))
+                    f"Last placed: {h.grade_text(uni)}" + (f" · **{chance}**" if chance else "") + _trend_text(uni))
     with right:
         if guest:
             st.caption("Log in to save")
