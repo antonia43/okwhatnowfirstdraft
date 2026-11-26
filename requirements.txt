@@ -9,3 +9,5 @@ streamlit-folium>=0.25.0
 PyPDF2
 docx2txt
 psycopg[binary]>=3.2.10
+xlrd>=2.0.1
+requests
