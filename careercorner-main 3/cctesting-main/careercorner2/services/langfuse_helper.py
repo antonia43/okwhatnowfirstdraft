@@ -22,6 +22,21 @@ except Exception as e:
     LANGFUSE_ENABLED = False
 
 
+def _trace_update(**kwargs):
+    """Tracing is optional: a missing Langfuse method must never repeat a model call."""
+    try:
+        langfuse.update_current_trace(**kwargs)
+    except Exception:
+        pass
+
+
+def _trace_id():
+    try:
+        return langfuse.get_current_trace_id()
+    except Exception:
+        return None
+
+
 class LangfuseGeminiWrapper:
     """Wrapper for Google Gemini API calls with Langfuse tracing (v3 API)"""
     
@@ -79,14 +94,14 @@ class LangfuseGeminiWrapper:
                     generation.update(output=output_text)
                     
                     # Update trace-level attributes
-                    langfuse.update_current_trace(
+                    _trace_update(
                         user_id=user_id,
                         session_id=session_id,
                         input=prompt,
                         output=output_text
                     )
                     
-                    self.last_trace_id = langfuse.get_current_trace_id()
+                    self.last_trace_id = _trace_id()
                     print(f"🟢 Generation logged with trace ID: {self.last_trace_id}")
                     
                     return output_text
@@ -161,14 +176,14 @@ class LangfuseGeminiWrapper:
                     
                     generation.update(output=output_text)
                     
-                    langfuse.update_current_trace(
+                    _trace_update(
                         user_id=user_id,
                         session_id=session_id,
                         input={"prompt": prompt, "mime_type": mime_type},
                         output=output_text
                     )
                     
-                    self.last_trace_id = langfuse.get_current_trace_id()
+                    self.last_trace_id = _trace_id()
                     print(f"🟢 Multimodal generation logged with trace ID: {self.last_trace_id}")
                     
                     return output_text
