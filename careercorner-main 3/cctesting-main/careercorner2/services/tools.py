@@ -9,13 +9,27 @@ from google.genai import types
 load_dotenv()
 
 # Raw client for built-in tools
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+TOOLS_MODEL = "gemini-3.8-flash"
+
+
+class _LazyClient:
+    """Builds the Gemini client on first use, with the key from the app's secrets."""
+    _real = None
+
+    def __getattr__(self, name):
+        if _LazyClient._real is None:
+            from utils.gemini_key import get_gemini_api_key
+            _LazyClient._real = genai.Client(api_key=get_gemini_api_key() or os.getenv("GOOGLE_API_KEY"))
+        return getattr(_LazyClient._real, name)
+
+
+client = _LazyClient()
 
 def get_study_resources_web(subject: str) -> dict:
     """Web search for study resources using Google Search built-in tool"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Find the best free study resources for {subject}. 
 
 Provide DIRECT LINKS to:
@@ -46,7 +60,7 @@ def get_career_options(course_name: str) -> dict:
     """Get career paths using Google Search"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""What are the top career options and job positions for someone with a degree in {course_name}? 
 
 Provide:
@@ -76,7 +90,7 @@ def get_wage_info(job_title: str, country: str = "Portugal") -> dict:
     """Get salary information using Google Search"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""What is the typical salary range for {job_title} in {country}? 
 
 Provide a clear, well-formatted response with:
@@ -104,7 +118,7 @@ def get_job_search_results(role: str, location: str = "Portugal") -> dict:
     """Job search using Google Search built-in tool"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Find current job opportunities for {role} in {location}.
 
 Provide DIRECT LINKS to:
@@ -133,7 +147,7 @@ def get_course_recommendations(skill: str) -> dict:
     """Course search using Google Search"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Find the best online courses to learn {skill}. 
 
 Provide DIRECT LINKS to courses from:
@@ -167,7 +181,7 @@ def get_linkedin_profile_optimization(current_headline: str, current_about: str,
     """LinkedIn profile optimization using Google Search"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Optimize this LinkedIn profile for a {target_role} in {industry}.
 
 Current Profile:
@@ -202,7 +216,7 @@ def get_company_research(company_name: str) -> dict:
     """Company research using Google Search"""
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Research {company_name} and provide a comprehensive company profile.
 
 Structure your response exactly like this:
@@ -272,7 +286,7 @@ def fetch_job_description_from_url(url: str) -> dict:
             clean_url = 'https://' + clean_url
         
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Analyze this URL and determine if it contains a job posting or job description.
             
             If it IS a job posting:
@@ -313,7 +327,7 @@ def get_city_guide(city_name: str, country: str = "") -> dict:
         location = f"{city_name}, {country}" if country else city_name
         
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=TOOLS_MODEL,
             contents=f"""Create a comprehensive student guide for {location}.
 
 Structure your response exactly like this:
