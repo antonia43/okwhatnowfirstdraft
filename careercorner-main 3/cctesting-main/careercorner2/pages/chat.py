@@ -62,6 +62,7 @@ def open_conversation(conversation_id, user_id):
 
 
 MAP_MARK = "<!--map:"
+SRC_MARK = "<!--src:"
 
 
 def _with_maps(answer, events):
@@ -72,12 +73,25 @@ def _with_maps(answer, events):
         if event.get("ok") and result.get("display") == "map":
             blob = base64.b64encode(zlib.compress(json.dumps(result).encode("utf-8"))).decode("ascii")
             out += f"\n{MAP_MARK}{blob}-->"
+    sources = h.sources_for(events)
+    if sources:
+        out += f"\n{SRC_MARK}{json.dumps(sources, ensure_ascii=True)}-->"
     return out
 
 
 def _split_maps(content):
     """The visible text of a stored message and the map results hidden in it."""
     events = []
+    while SRC_MARK in content:
+        start = content.index(SRC_MARK)
+        end = content.find("-->", start)
+        if end == -1:
+            break
+        try:
+            events.append({"sources": json.loads(content[start + len(SRC_MARK):end])})
+        except Exception:
+            pass
+        content = content[:start].rstrip() + content[end + 3:]
     while MAP_MARK in content:
         start = content.index(MAP_MARK)
         end = content.find("-->", start)
@@ -182,7 +196,7 @@ def _render_map(key, result, user_id):
             _program_card(f"{key}_{i}", uni, user_id)
 
 
-def _render_message(index, message, user_id):
+def _render_message(index, message, user_id, is_last=False):
     with st.chat_message(message["role"]):
         if message.get("file"):
             st.caption(f"Attached: {message['file']}")
@@ -191,6 +205,18 @@ def _render_message(index, message, user_id):
             result = event.get("result") or {}
             if event.get("ok") and result.get("display") == "map":
                 _render_map(f"{index}_{j}", result, user_id)
+        if message["role"] == "assistant" and not message.get("opening"):
+            line = h.sources_line(h.sources_for(message.get("events", [])))
+            if line:
+                st.caption(line)
+            if is_last:
+                buttons = h.follow_up_buttons(message.get("events", []))
+                if buttons:
+                    columns = st.columns(len(buttons))
+                    for column, (label, shown, detail) in zip(columns, buttons):
+                        if column.button(label, key=f"follow_{index}_{label}", width="stretch"):
+                            st.session_state.pending_prompt = {"show": shown, "send": f"{shown} {detail}"}
+                            st.rerun()
 
 
 # ---- saving the conversation -----------------------------------------------------
@@ -239,7 +265,7 @@ def render_chat():
         st.caption("You're chatting as a guest. Log in or register to save your results and chats.")
 
     for i, message in enumerate(ss.chat_messages):
-        _render_message(i, message, user_id)
+        _render_message(i, message, user_id, is_last=(i == len(ss.chat_messages) - 1))
 
     if ADAPTER is None and not get_gemini_api_key():
         st.error("The AI is not set up yet: the Gemini API key is missing from the app's secrets.")
@@ -251,8 +277,12 @@ def render_chat():
         st.caption("It is only used to read your grades. I'll show you what I read so you can check it.")
 
     prompt = st.chat_input("Ask me anything about studying in Portugal")
+    send = prompt
     if not prompt:
-        return
+        follow = ss.pop("pending_prompt", None)
+        if not follow:
+            return
+        prompt, send = follow["show"], follow["send"]
 
     image, file_name = None, None
     if upload is not None:
@@ -268,7 +298,7 @@ def render_chat():
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             try:
-                out = chat_engine.run_turn(_adapter(), history, prompt, user_id, ss.chat_session, image=image)
+                out = chat_engine.run_turn(_adapter(), history, send, user_id, ss.chat_session, image=image)
             except Exception as exc:
                 traceback.print_exc()
                 out = {"text": "I couldn't reach the AI just now. Please try again in a moment.", "events": []}
