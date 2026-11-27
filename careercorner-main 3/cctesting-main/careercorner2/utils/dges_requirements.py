@@ -45,6 +45,9 @@ def _number(value):
         return None
     return None if math.isnan(value) else value
 
+def _text_ok(value):
+    return value is not None and str(value).strip() not in ("", "nan")
+
 def _code(value):
     value = str(value).strip()
     return value[:-2] if value.endswith(".0") else value
@@ -79,6 +82,8 @@ def requirements_for(course_code, institution_name):
         "last_grade_2024": _number(row.get("last_grade_2024_f1")),
         "candidates_2025": _number(row.get("candidates_2025")),
         "places_2025": _number(row.get("vagas_2025")),
+        "cnaef": _code(row.get("cnaef")) if _text_ok(row.get("cnaef")) else None,
+        "field": row.get("cnaef_name") if _text_ok(row.get("cnaef_name")) else None,
     }
 
 def exam_options_text(req):
@@ -97,6 +102,8 @@ def _student_exams(exams):
         grade = _number(grade)
         if grade and grade > 0:
             out[exam_key(name)] = max(grade, out.get(exam_key(name), 0))
+    if "matematica a" in out:  # DGES lists some programs as "Matemática" and others as "Matemática A"; Matemática A counts for both
+        out["matematica"] = max(out["matematica a"], out.get("matematica", 0))
     return out
 
 def _best_exam_set(req, have):
@@ -151,3 +158,25 @@ def competition_text(req):
     if cand and places:
         return f"{cand:g} candidates for {places:g} places in 2025 (1st phase)"
     return None
+
+
+def what_if(req, secondary_200, exams, exam_boost=0.0, school_boost=0.0):
+    """admission_for with the exam grades and/or the school average raised (0-200 points, capped at 200)."""
+    boosted = {}
+    for name, grade in (exams or {}).items():
+        grade = _number(grade)
+        if grade and grade > 0:
+            boosted[name] = min(200.0, grade + exam_boost)
+    return admission_for(req, min(200.0, secondary_200 + school_boost), boosted)
+
+def exam_average_needed(req, secondary_200, target_grade):
+    """The exam average (0-200) that gives target_grade with the school average, or None when over 200."""
+    if not req or not req.get("w_exams"):
+        return None
+    need = (target_grade * 100.0 - req["w_secondary"] * secondary_200) / req["w_exams"]
+    return round(need, 1) if need <= 200 else None
+
+def same_field(cnaef):
+    """(course_code, institution_name) of every program in one DGES field of study (CNAEF code)."""
+    return [(_code(row["course_code"]), row["institution_name"]) for row in _table().values()
+            if _text_ok(row.get("cnaef")) and _code(row["cnaef"]) == str(cnaef)]
