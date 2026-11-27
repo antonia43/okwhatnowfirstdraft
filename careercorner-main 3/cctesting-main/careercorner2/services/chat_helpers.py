@@ -74,3 +74,76 @@ def grade_text(uni):
 
 
 CHANCE_WORDS = {"safe": "Safe", "target": "Target", "reach": "Reach", "unknown": ""}
+
+
+# ---- sources shown under an answer --------------------------------------------------
+
+DGES_SITE = "https://www.dges.gov.pt"
+_DGES_FUNCTIONS = {"search_universities", "check_chances_for_degree", "check_program_requirements",
+                   "find_safer_alternatives", "compare_saved_universities", "get_saved_universities"}
+_GRADE_FUNCTIONS = {"calculate_admission_grade", "read_uploaded_grades", "get_saved_grades"}
+_LINK_FUNCTIONS = {"find_study_resources", "get_exam_papers", "get_scholarships"}
+_DGES_LABEL = {"check_program_requirements": "DGES course page, 2026 applications"}
+MAX_SOURCES = 4
+
+
+def sources_for(events):
+    """What the answer was based on: [{'label', 'url' (may be '')}], in the order the functions ran.
+
+    Only functions that ran successfully count, so the line under an answer never names a source
+    the answer did not use. Degree text names the university page it came from.
+    """
+    out, seen = [], set()
+
+    def add(label, url=""):
+        if (label, url) not in seen and len(out) < MAX_SOURCES:
+            seen.add((label, url))
+            out.append({"label": label, "url": url})
+
+    for event in events or []:
+        if event.get("sources"):  # a stored copy from an earlier session
+            for item in event["sources"]:
+                add(item.get("label", ""), item.get("url", ""))
+            continue
+        if not event.get("ok"):
+            continue
+        name, result = event.get("name"), event.get("result") or {}
+        if name in _DGES_FUNCTIONS:
+            add(_DGES_LABEL.get(name, "DGES 2026 first-phase results"), DGES_SITE)
+        elif name in _GRADE_FUNCTIONS:
+            add("Your grades, as entered")
+        elif name == "search_degree_info":
+            for passage in result.get("passages") or []:
+                if passage.get("source_url"):
+                    add(f"{passage.get('school') or 'University'} degree page", passage["source_url"])
+        elif name in _LINK_FUNCTIONS:
+            links = [x for x in (result.get("sources") or []) if isinstance(x, dict) and x.get("url")]
+            for x in links[:2]:
+                add(x.get("title") or x["url"], x["url"])
+            if not links:
+                add({"find_study_resources": "Web search for study resources", "get_exam_papers": "IAVE exam archive",
+                     "get_scholarships": "Scholarship pages (DGES, FCT, Erasmus+)"}[name])
+    return out
+
+
+def sources_line(sources):
+    """The caption text: 'Source: [DGES 2026 first-phase results](https://...) · Your grades, as entered'."""
+    parts = [f"[{s['label']}]({s['url']})" if s.get("url") else s["label"] for s in sources]
+    if not parts:
+        return ""
+    return ("Source: " if len(parts) == 1 else "Sources: ") + " · ".join(parts)
+
+
+def follow_up_buttons(events):
+    """Buttons for the last answer: [(label, shown text, hidden detail)]. Only after a program check that was not safe."""
+    for event in reversed(events or []):
+        result = event.get("result") or {}
+        if event.get("ok") and event.get("name") == "check_program_requirements" \
+                and result.get("chance") in ("reach", "target", "not_eligible") and "admission_grade_200" in result:
+            args = event.get("args") or {}
+            program = f"{result.get('program_name')} at {result.get('institution_name')}"
+            detail = f"[course_code={args.get('course_code')}; institution_name={args.get('institution_name')}]"
+            buttons = [("What if I raise my exam grades?", f"What if I raise my exam grades by 10 points (1 out of 20) for {program}?", detail)]
+            buttons.append(("Show safer alternatives", f"Show me similar programs where I would be safer than {program}.", detail))
+            return buttons
+    return []
