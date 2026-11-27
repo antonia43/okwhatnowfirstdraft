@@ -125,6 +125,32 @@ def saved_record(program):
     }
 
 
+def _apply_program_formulas(programs, user_id):
+    """With saved exam grades, judge each program by its own formula: accepted exams, weights, minimums."""
+    from services.grade_functions import _has_grades, _stored
+    from utils.dges_requirements import admission_for, requirements_for
+    from utils.grades import secondary_average
+
+    data = _stored(user_id)
+    exams = data["grades"].get("exams")
+    if not _has_grades(data) or not exams:
+        return
+    school = secondary_average(data["grades"]) * 10
+    for program in programs:
+        req = requirements_for(program["course_code"], program["institution_name"])
+        result = admission_for(req, school, exams) if req else None
+        if not result or result["status"] != "ok":
+            continue
+        program["admission_grade_200"] = result["admission_grade_200"]
+        if not result["meets_minimums"]:
+            program["chance"], program["margin_200"] = "reach", None
+            program["not_eligible"] = "; ".join(result["problems"])
+        elif program["last_grade_200"]:
+            comparison = compare_with_cutoff(result["admission_grade_200"], program["last_grade_200"])
+            program["chance"], program["margin_200"] = comparison["status"], comparison["margin_200"]
+        program["map_color"] = COLORS[program["chance"]]
+
+
 @chat_function(
     "search_universities",
     "Find Portuguese university programs for a degree, shown as pins on a map with the last-placed grade. "
@@ -139,6 +165,10 @@ def saved_record(program):
 )
 def search_universities(user_id, degree_name, grade_200=None, region=None, limit=DEFAULT_LIMIT):
     result = search_programs(degree_name, _grade_to_use(user_id, grade_200), region, limit)
+    try:
+        _apply_program_formulas(result["universities"], user_id)
+    except Exception:
+        pass  # the general colour stays if the exam data cannot be used
     if not result["total_found"]:
         result["message"] = (f"No programs found for '{degree_name}' in {region}. Regions in the data: {REGIONS_TEXT}." if region else f"No programs found for '{degree_name}'. Try a different name.")
     return result
